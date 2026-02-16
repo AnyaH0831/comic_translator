@@ -26,4 +26,4 @@ async def translate(request: TranslateRequest):
 
 # @app.get("/api/data")
 # def get_data():
-#     return {"message": "Hello from FastAPI backend!"}
+#     return {"message": "Hello from FastAPI backend!"}       
