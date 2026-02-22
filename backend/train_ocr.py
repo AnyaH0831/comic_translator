@@ -17,22 +17,31 @@ FONTS = [
 
 def generate_training_image(text):
 
+    # Test
+    font_size = 24
+    text_size_x = 5
+    text_size_y = 10
+    angle = 0
+
+    # Test
+
+
     bg_color = random.choice(["white", (240, 240, 240), (250, 250, 250)])
 
     img = Image.new(mode, size, color=bg_color)
     draw = ImageDraw.Draw(img)
 
     font_path = random.choice(FONTS)
-    font_size = random.randint(18,28)
+    # font_size = random.randint(18,28)
     font = ImageFont.truetype(font_path, font_size)
 
-    text_size_x = random.randint(8,20)
-    text_size_y = random.randint(8,20)
+    # text_size_x = random.randint(8,20)
+    # text_size_y = random.randint(8,20)
 
 
     draw.text((text_size_x, text_size_y), text, fill="black", font=font)
 
-    angle = random.uniform(-3,3)
+    # angle = random.uniform(-3,3)
     img = img.rotate(angle, fillcolor=bg_color if isinstance(bg_color, tuple) else(255,255,255))
 
     if random.random() < 0.3:
@@ -205,12 +214,12 @@ TEXTS = [
     "TALK HARSHLY",
     "BE SWEET",
     "ACT BITTERLY",
-    "POSION",
+    "POISON",
     "DEMONIC",
     "ANGELIC",
     "OH MY GOD",
     "READERS",
-    "VILLIAGERS",
+    "VILLAGERS",
     "OFFICIAL"
 ]
 
@@ -221,7 +230,7 @@ if os.path.exists("training_data"):
 os.makedirs("training_data/train")
 os.makedirs("training_data/val")
 
-for i in range(5000):
+for i in range(100):
 
 
     text = random.choice(TEXTS)
@@ -231,7 +240,7 @@ for i in range(5000):
     content = f"{img_name}\t{text}\n"
 
 
-    if i<4000:
+    if i<80:
 
         img.save(f"training_data/train/{img_name}")
 

@@ -1,16 +1,15 @@
 Global:
   use_gpu: false
-  epoch_num: 50
+  epoch_num: 20
   log_smooth_window: 20
   save_model_dir: ./output/custom_model
-  save_epoch_step: 10
+  save_epoch_step: 5
   eval_batch_step:
   - 0
-  - 100
-  print_batch_step: 10
+  - 50
+  print_batch_step: 5
   character_dict_path: PaddleOCR/ppocr/utils/en_dict.txt
-  character_type: en
-  max_text_length: 25
+  max_text_length: 35
   use_space_char: true
 Optimizer:
   name: Adam
@@ -29,7 +28,27 @@ Train:
     - DecodeImage:
         img_mode: RGB
         channel_first: false
-    - RecAug: {}
+    - RecAug:
+        rotate:
+        - -5
+        - 5
+        random_crop: true
+        keep_ratio: true
+        brightness:
+        - 0.8
+        - 1.2
+        contrast:
+        - 0.8
+        - 1.2
+        saturation:
+        - 0.8
+        - 1.2
+        hue:
+        - -0.05
+        - 0.05
+        gaussian_noise:
+        - 0
+        - 0.01
     - CTCLabelEncode: {}
     - RecResizeImg:
         image_shape:
@@ -43,8 +62,8 @@ Train:
         - length
   loader:
     shuffle: true
-    batch_size_per_card: 32
-    drop_last: true
+    batch_size_per_card: 4
+    drop_last: false
     num_workers: 2
 Eval:
   dataset:
@@ -69,7 +88,7 @@ Eval:
         - length
   loader:
     shuffle: false
-    batch_size_per_card: 32
+    batch_size_per_card: 4
     drop_last: false
     num_workers: 2
 Architecture:
@@ -87,6 +106,7 @@ Architecture:
   Head:
     name: CTCHead
     fc_decay: 1.0e-05
+    out_channels: 95
 Metric:
   name: RecMetric
   main_indicator: acc
