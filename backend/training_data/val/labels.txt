@@ -1,0 +1,200 @@
+training_800.png	IT FEELS WRONG
+training_801.png	THE DUKE OF
+training_802.png	ROMANCE NOVEL
+training_803.png	WAIT
+training_804.png	WAIT
+training_805.png	THAT'S THE...
+training_806.png	MAGIC
+training_807.png	LOOK OUT
+training_808.png	KINGDOM
+training_809.png	IT FEELS WRONG
+training_810.png	WHAT?!
+training_811.png	LOOK OUT
+training_812.png	THE DUKE OF
+training_813.png	AH
+training_814.png	MALE LEAD
+training_815.png	SWORDSMANSHIP
+training_816.png	FEMALE LEAD
+training_817.png	Huh?
+training_818.png	THE DUKE OF
+training_819.png	WAIT
+training_820.png	VILLANESS
+training_821.png	ROMANCE NOVEL
+training_822.png	THE PRINCESS
+training_823.png	AH
+training_824.png	AH
+training_825.png	FEMALE LEAD
+training_826.png	How can it be
+training_827.png	VILLANESS
+training_828.png	WHAT?!
+training_829.png	LOOK OUT
+training_830.png	MAGIC
+training_831.png	WHAT?!
+training_832.png	MALE LEAD
+training_833.png	How can it be
+training_834.png	LOOK OUT
+training_835.png	THAT'S THE...
+training_836.png	SWORDSMANSHIP
+training_837.png	AH
+training_838.png	MALE LEAD
+training_839.png	AH
+training_840.png	LOOK OUT!
+training_841.png	THE DUKE OF
+training_842.png	HAPPY ENDING
+training_843.png	MAGIC
+training_844.png	MALE LEAD
+training_845.png	WAIT
+training_846.png	HAPPY ENDING
+training_847.png	ROMANCE NOVEL
+training_848.png	WAIT
+training_849.png	ROMANCE NOVEL
+training_850.png	KINGDOM
+training_851.png	IT FEELS WRONG
+training_852.png	MAGIC
+training_853.png	SWORDSMANSHIP
+training_854.png	MAGIC
+training_855.png	THE PRINCESS
+training_856.png	KINGDOM
+training_857.png	WHAT?!
+training_858.png	LOOK OUT!
+training_859.png	ROMANCE NOVEL
+training_860.png	ROMANCE NOVEL
+training_861.png	IT FEELS WRONG
+training_862.png	Huh?
+training_863.png	AH
+training_864.png	Huh?
+training_865.png	KINGDOM
+training_866.png	IT FEELS WRONG
+training_867.png	THE PRINCESS
+training_868.png	How can it be
+training_869.png	How can it be
+training_870.png	THE PRINCESS
+training_871.png	FEMALE LEAD
+training_872.png	LOOK OUT
+training_873.png	VILLANESS
+training_874.png	KINGDOM
+training_875.png	SWORDSMANSHIP
+training_876.png	SWORDSMANSHIP
+training_877.png	MAGIC
+training_878.png	How can it be
+training_879.png	LOOK OUT!
+training_880.png	VILLANESS
+training_881.png	SWORDSMANSHIP
+training_882.png	FEMALE LEAD
+training_883.png	LOOK OUT!
+training_884.png	HAPPY ENDING
+training_885.png	AH
+training_886.png	THE PRINCESS
+training_887.png	HAPPY ENDING
+training_888.png	VILLANESS
+training_889.png	FEMALE LEAD
+training_890.png	THE DUKE OF
+training_891.png	WHAT?!
+training_892.png	MALE LEAD
+training_893.png	WAIT
+training_894.png	Huh?
+training_895.png	WHAT?!
+training_896.png	WHAT?!
+training_897.png	MALE LEAD
+training_898.png	How can it be
+training_899.png	WAIT
+training_900.png	MAGIC
+training_901.png	LOOK OUT!
+training_902.png	Huh?
+training_903.png	VILLANESS
+training_904.png	IT FEELS WRONG
+training_905.png	WAIT
+training_906.png	VILLANESS
+training_907.png	MALE LEAD
+training_908.png	VILLANESS
+training_909.png	How can it be
+training_910.png	WAIT
+training_911.png	IT FEELS WRONG
+training_912.png	WAIT
+training_913.png	SWORDSMANSHIP
+training_914.png	WAIT
+training_915.png	WAIT
+training_916.png	AH
+training_917.png	SWORDSMANSHIP
+training_918.png	LOOK OUT
+training_919.png	WAIT
+training_920.png	LOOK OUT
+training_921.png	SWORDSMANSHIP
+training_922.png	THAT'S THE...
+training_923.png	FEMALE LEAD
+training_924.png	ROMANCE NOVEL
+training_925.png	LOOK OUT!
+training_926.png	THAT'S THE...
+training_927.png	LOOK OUT
+training_928.png	WHAT?!
+training_929.png	ROMANCE NOVEL
+training_930.png	THE DUKE OF
+training_931.png	WAIT
+training_932.png	THAT'S THE...
+training_933.png	SWORDSMANSHIP
+training_934.png	WAIT
+training_935.png	IT FEELS WRONG
+training_936.png	How can it be
+training_937.png	THAT'S THE...
+training_938.png	KINGDOM
+training_939.png	VILLANESS
+training_940.png	ROMANCE NOVEL
+training_941.png	IT FEELS WRONG
+training_942.png	Huh?
+training_943.png	HAPPY ENDING
+training_944.png	WAIT
+training_945.png	AH
+training_946.png	AH
+training_947.png	IT FEELS WRONG
+training_948.png	LOOK OUT
+training_949.png	How can it be
+training_950.png	WHAT?!
+training_951.png	SWORDSMANSHIP
+training_952.png	ROMANCE NOVEL
+training_953.png	LOOK OUT
+training_954.png	Huh?
+training_955.png	VILLANESS
+training_956.png	ROMANCE NOVEL
+training_957.png	LOOK OUT
+training_958.png	KINGDOM
+training_959.png	MAGIC
+training_960.png	THE DUKE OF
+training_961.png	THAT'S THE...
+training_962.png	KINGDOM
+training_963.png	FEMALE LEAD
+training_964.png	HAPPY ENDING
+training_965.png	AH
+training_966.png	How can it be
+training_967.png	LOOK OUT
+training_968.png	KINGDOM
+training_969.png	MAGIC
+training_970.png	HAPPY ENDING
+training_971.png	LOOK OUT
+training_972.png	THAT'S THE...
+training_973.png	LOOK OUT!
+training_974.png	ROMANCE NOVEL
+training_975.png	MALE LEAD
+training_976.png	KINGDOM
+training_977.png	MALE LEAD
+training_978.png	WHAT?!
+training_979.png	How can it be
+training_980.png	WAIT
+training_981.png	THE DUKE OF
+training_982.png	AH
+training_983.png	THE PRINCESS
+training_984.png	THE DUKE OF
+training_985.png	THE PRINCESS
+training_986.png	ROMANCE NOVEL
+training_987.png	THAT'S THE...
+training_988.png	THE PRINCESS
+training_989.png	HAPPY ENDING
+training_990.png	THE PRINCESS
+training_991.png	Huh?
+training_992.png	MALE LEAD
+training_993.png	HAPPY ENDING
+training_994.png	How can it be
+training_995.png	MAGIC
+training_996.png	FEMALE LEAD
+training_997.png	MALE LEAD
+training_998.png	ROMANCE NOVEL
+training_999.png	LOOK OUT!

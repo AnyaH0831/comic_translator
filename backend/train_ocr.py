@@ -2,6 +2,8 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 import random
 import os
 import shutil
+import paddle
+# print(paddle.device.get_device())
 
 mode = "RGB"
 size = (200, 100) 
@@ -65,7 +67,8 @@ TEXTS = [
 
 if os.path.exists("training_data"):
     shutil.rmtree("training_data")
-os.makedirs("training_data")
+os.makedirs("training_data/train")
+os.makedirs("training_data/val")
 
 for i in range(1000):
 
@@ -74,12 +77,19 @@ for i in range(1000):
     img_name = f"training_{i}.png"
 
     img = generate_training_image(text)
-
-    img.save(f"training_data/{img_name}")
-
-    file_path = "training_data/labels.txt"
     content = f"{img_name}\t{text}\n"
 
-    with open(file_path, 'a') as file:
-        file.write(content)
+
+    if i<800:
+
+        img.save(f"training_data/train/{img_name}")
+
+        with open("training_data/train/labels.txt", 'a') as file:
+            file.write(content)
+    else:
+
+        img.save(f"training_data/val/{img_name}")
+
+        with open("training_data/val/labels.txt", 'a') as file:
+            file.write(content)
 
