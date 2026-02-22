@@ -4,13 +4,22 @@ from fastapi.middleware.cors import CORSMiddleware
 
 import base64
 import io 
+import os
 from PIL import Image
 
 from paddleocr import PaddleOCR
 import numpy as np
 
 app = FastAPI()
-ocr = PaddleOCR(use_angle_cls=True, lang='en', drop_score=0.1)
+custom_model_path = os.path.abspath('output/custom_model/best_accuracy')
+
+# ocr = PaddleOCR(use_angle_cls=True, lang='en', drop_score=0.1)
+ocr = PaddleOCR(
+    use_angle_cls=True, 
+    lang='en',
+    rec_model_dir=custom_model_path,
+    drop_score=0.1
+)
 
 app.add_middleware(
     CORSMiddleware,

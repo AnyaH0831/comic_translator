@@ -1,11 +1,12 @@
 Global:
   use_gpu: false
   epoch_num: 50
+  log_smooth_window: 20
   save_model_dir: ./output/custom_model
   save_epoch_step: 10
-  eval_batch_step: [0,100]
+  eval_batch_step: [0,100] 
   print_batch_step: 10
-  character_dict_path: ppocr/utils/en_dict.txt
+  character_dict_path: PaddleOCR/ppocr/utils/en_dict.txt
   character_type: en
   max_text_length: 25
   use_space_char: true 
@@ -15,7 +16,7 @@ Optimizer:
   beta1: 0.9
   beta2: 0.999
   lr:
-    name: Cosine
+    name: Cosine 
     learning_rate: 0.001
   
 Train:
@@ -31,7 +32,7 @@ Train:
       - RecAug: {}
       - CTCLabelEncode: {}
       - RecResizeImg:
-          image_shape: [3, 32, 320]
+          image_shape: [3, 48, 400]
       - KeepKeys:
           keep_keys: ['image', 'label', 'length']
 
@@ -53,7 +54,7 @@ Eval:
           channel_first: false
       - CTCLabelEncode: {}
       - RecResizeImg:
-          image_shape: [3, 32, 320]
+          image_shape: [3, 48, 400]
       - KeepKeys:
           keep_keys: ['image', 'label', 'length']
 
@@ -85,3 +86,6 @@ Metric:
 
 Loss:
   name: CTCLoss
+
+PostProcess:
+  name: CTCLabelDecode

@@ -1,800 +1,4000 @@
-training_0.png	THE PRINCESS
-training_1.png	THE PRINCESS
-training_2.png	MALE LEAD
-training_3.png	VILLANESS
-training_4.png	AH
-training_5.png	AH
-training_6.png	LOOK OUT!
-training_7.png	How can it be
-training_8.png	ROMANCE NOVEL
-training_9.png	How can it be
-training_10.png	HAPPY ENDING
-training_11.png	LOOK OUT!
-training_12.png	HAPPY ENDING
+training_0.png	STAY CLOSE
+training_1.png	MOVE GRACEFULLY
+training_2.png	BEGIN NOW
+training_3.png	PLEASE
+training_4.png	FEEL FREE
+training_5.png	COME ON
+training_6.png	WELCOME
+training_7.png	TRY AGAIN
+training_8.png	ACT VIOLENTLY
+training_9.png	STAY CALM
+training_10.png	OOPS
+training_11.png	FEEL ANXIOUS
+training_12.png	LOOK OUT!
 training_13.png	VILLANESS
-training_14.png	VILLANESS
-training_15.png	MAGIC
-training_16.png	LOOK OUT
-training_17.png	THE PRINCESS
-training_18.png	THAT'S THE...
-training_19.png	AH
-training_20.png	WAIT
-training_21.png	ROMANCE NOVEL
-training_22.png	Huh?
-training_23.png	THE PRINCESS
-training_24.png	Huh?
-training_25.png	THE DUKE OF
-training_26.png	THE DUKE OF
-training_27.png	ROMANCE NOVEL
-training_28.png	SWORDSMANSHIP
-training_29.png	ROMANCE NOVEL
-training_30.png	MAGIC
-training_31.png	KINGDOM
-training_32.png	HAPPY ENDING
-training_33.png	LOOK OUT!
-training_34.png	WHAT?!
-training_35.png	KINGDOM
+training_14.png	VILLIAGERS
+training_15.png	I'M HERE
+training_16.png	FEEL FREE
+training_17.png	WAIT
+training_18.png	ACT RANDOMLY
+training_19.png	IT FEELS WRONG
+training_20.png	MAKE NOISE
+training_21.png	BEGIN NOW
+training_22.png	FEEL FREE
+training_23.png	SEARCH HERE
+training_24.png	DRAW SOMETHING
+training_25.png	I DID IT
+training_26.png	TRY AGAIN
+training_27.png	IT'S OVER
+training_28.png	FEEL SAD
+training_29.png	TIME TO EAT
+training_30.png	GO HOME
+training_31.png	GOOD LUCK
+training_32.png	HANDSOME
+training_33.png	YAY
+training_34.png	KEEP SECRETS
+training_35.png	FEEL SAD
 training_36.png	WHAT?!
-training_37.png	THAT'S THE...
-training_38.png	LOOK OUT
-training_39.png	IT FEELS WRONG
-training_40.png	HAPPY ENDING
-training_41.png	THE DUKE OF
-training_42.png	THE DUKE OF
-training_43.png	FEMALE LEAD
-training_44.png	LOOK OUT
-training_45.png	LOOK OUT
-training_46.png	THAT'S THE...
-training_47.png	MALE LEAD
-training_48.png	AH
-training_49.png	AH
-training_50.png	SWORDSMANSHIP
-training_51.png	THAT'S THE...
-training_52.png	MALE LEAD
-training_53.png	MALE LEAD
-training_54.png	FEMALE LEAD
-training_55.png	THE PRINCESS
-training_56.png	KINGDOM
-training_57.png	LOOK OUT
-training_58.png	MALE LEAD
-training_59.png	IT FEELS WRONG
-training_60.png	Huh?
-training_61.png	LOOK OUT!
+training_37.png	BE SWEET
+training_38.png	FEEL HAPPY
+training_39.png	THE DUKE OF
+training_40.png	FEEL RELUCTANT
+training_41.png	GO BACK
+training_42.png	MOVE DOWN
+training_43.png	WAIT PATIENTLY
+training_44.png	WATCH OUT
+training_45.png	MAKE NOISE
+training_46.png	STAY CLOSE
+training_47.png	OOPS
+training_48.png	AGAIN PLEASE
+training_49.png	STAY PEACEFUL
+training_50.png	STUDY TIME
+training_51.png	WE WIN
+training_52.png	VILLIAGERS
+training_53.png	HELP
+training_54.png	COME INSIDE
+training_55.png	EMPIRE
+training_56.png	MOVE DOWN
+training_57.png	READ THIS
+training_58.png	WATCH THIS
+training_59.png	GO ALONE
+training_60.png	BE BRAVE
+training_61.png	GO FAR
 training_62.png	IT FEELS WRONG
-training_63.png	How can it be
-training_64.png	LOOK OUT
-training_65.png	MAGIC
-training_66.png	WAIT
-training_67.png	How can it be
-training_68.png	THE PRINCESS
-training_69.png	AH
-training_70.png	THAT'S THE...
-training_71.png	HAPPY ENDING
-training_72.png	VILLANESS
-training_73.png	WAIT
-training_74.png	KINGDOM
-training_75.png	ROMANCE NOVEL
-training_76.png	FEMALE LEAD
-training_77.png	THE PRINCESS
-training_78.png	Huh?
-training_79.png	ROMANCE NOVEL
-training_80.png	THE PRINCESS
-training_81.png	AH
-training_82.png	THE PRINCESS
-training_83.png	How can it be
-training_84.png	MALE LEAD
-training_85.png	LOOK OUT!
-training_86.png	LOOK OUT
-training_87.png	How can it be
-training_88.png	AH
-training_89.png	IT FEELS WRONG
-training_90.png	AH
-training_91.png	LOOK OUT
-training_92.png	HAPPY ENDING
-training_93.png	MALE LEAD
-training_94.png	IT FEELS WRONG
-training_95.png	AH
-training_96.png	VILLANESS
-training_97.png	HAPPY ENDING
-training_98.png	IT FEELS WRONG
-training_99.png	IT FEELS WRONG
-training_100.png	SWORDSMANSHIP
-training_101.png	THE PRINCESS
-training_102.png	HAPPY ENDING
-training_103.png	How can it be
-training_104.png	IT FEELS WRONG
-training_105.png	MALE LEAD
-training_106.png	ROMANCE NOVEL
-training_107.png	LOOK OUT!
-training_108.png	IT FEELS WRONG
-training_109.png	THAT'S THE...
-training_110.png	MAGIC
-training_111.png	LOOK OUT
-training_112.png	AH
-training_113.png	ROMANCE NOVEL
-training_114.png	MAGIC
-training_115.png	WAIT
-training_116.png	THE PRINCESS
-training_117.png	SWORDSMANSHIP
-training_118.png	IT FEELS WRONG
-training_119.png	KINGDOM
-training_120.png	ROMANCE NOVEL
-training_121.png	KINGDOM
-training_122.png	LOOK OUT!
-training_123.png	SWORDSMANSHIP
-training_124.png	WAIT
-training_125.png	WHAT?!
-training_126.png	FEMALE LEAD
-training_127.png	LOOK OUT
-training_128.png	SWORDSMANSHIP
-training_129.png	WAIT
-training_130.png	WAIT
-training_131.png	THE PRINCESS
-training_132.png	LOOK OUT
-training_133.png	MALE LEAD
-training_134.png	KINGDOM
-training_135.png	LOOK OUT!
-training_136.png	LOOK OUT!
-training_137.png	FEMALE LEAD
-training_138.png	FEMALE LEAD
-training_139.png	IT FEELS WRONG
-training_140.png	SWORDSMANSHIP
-training_141.png	How can it be
-training_142.png	WAIT
-training_143.png	KINGDOM
-training_144.png	IT FEELS WRONG
-training_145.png	LOOK OUT!
-training_146.png	AH
-training_147.png	THAT'S THE...
-training_148.png	SWORDSMANSHIP
-training_149.png	SWORDSMANSHIP
-training_150.png	MAGIC
-training_151.png	MALE LEAD
-training_152.png	AH
-training_153.png	MALE LEAD
-training_154.png	FEMALE LEAD
-training_155.png	THE DUKE OF
-training_156.png	WAIT
-training_157.png	THE DUKE OF
-training_158.png	LOOK OUT!
-training_159.png	HAPPY ENDING
-training_160.png	IT FEELS WRONG
-training_161.png	HAPPY ENDING
-training_162.png	How can it be
-training_163.png	WAIT
-training_164.png	AH
-training_165.png	THAT'S THE...
-training_166.png	THAT'S THE...
-training_167.png	AH
-training_168.png	How can it be
-training_169.png	FEMALE LEAD
-training_170.png	VILLANESS
-training_171.png	MAGIC
-training_172.png	LOOK OUT
-training_173.png	MAGIC
-training_174.png	MAGIC
-training_175.png	LOOK OUT
-training_176.png	THAT'S THE...
-training_177.png	LOOK OUT
-training_178.png	MALE LEAD
-training_179.png	THAT'S THE...
-training_180.png	AH
-training_181.png	ROMANCE NOVEL
-training_182.png	MAGIC
-training_183.png	THE PRINCESS
-training_184.png	FEMALE LEAD
-training_185.png	THE DUKE OF
-training_186.png	LOOK OUT
-training_187.png	SWORDSMANSHIP
-training_188.png	WHAT?!
-training_189.png	HAPPY ENDING
-training_190.png	VILLANESS
-training_191.png	THAT'S THE...
-training_192.png	WAIT
-training_193.png	HAPPY ENDING
-training_194.png	ROMANCE NOVEL
-training_195.png	IT FEELS WRONG
-training_196.png	THE PRINCESS
-training_197.png	KINGDOM
-training_198.png	THAT'S THE...
-training_199.png	KINGDOM
-training_200.png	ROMANCE NOVEL
-training_201.png	WHAT?!
-training_202.png	SWORDSMANSHIP
-training_203.png	Huh?
-training_204.png	LOOK OUT
-training_205.png	THE PRINCESS
-training_206.png	LOOK OUT!
-training_207.png	THAT'S THE...
-training_208.png	Huh?
-training_209.png	HAPPY ENDING
-training_210.png	AH
-training_211.png	How can it be
-training_212.png	THE PRINCESS
-training_213.png	THAT'S THE...
-training_214.png	WHAT?!
-training_215.png	AH
-training_216.png	MAGIC
-training_217.png	How can it be
-training_218.png	FEMALE LEAD
-training_219.png	WHAT?!
-training_220.png	WAIT
-training_221.png	THE PRINCESS
-training_222.png	THE DUKE OF
-training_223.png	THE PRINCESS
-training_224.png	LOOK OUT
-training_225.png	IT FEELS WRONG
-training_226.png	MALE LEAD
-training_227.png	KINGDOM
-training_228.png	How can it be
-training_229.png	LOOK OUT
-training_230.png	How can it be
-training_231.png	IT FEELS WRONG
-training_232.png	Huh?
-training_233.png	MAGIC
-training_234.png	THE PRINCESS
-training_235.png	THE PRINCESS
-training_236.png	How can it be
-training_237.png	How can it be
-training_238.png	KINGDOM
-training_239.png	MALE LEAD
-training_240.png	ROMANCE NOVEL
-training_241.png	HAPPY ENDING
-training_242.png	How can it be
-training_243.png	IT FEELS WRONG
-training_244.png	VILLANESS
-training_245.png	THE DUKE OF
-training_246.png	KINGDOM
-training_247.png	THE DUKE OF
-training_248.png	IT FEELS WRONG
-training_249.png	THE PRINCESS
-training_250.png	THE PRINCESS
-training_251.png	MAGIC
-training_252.png	How can it be
-training_253.png	MAGIC
-training_254.png	FEMALE LEAD
-training_255.png	ROMANCE NOVEL
-training_256.png	AH
-training_257.png	THE PRINCESS
-training_258.png	LOOK OUT!
-training_259.png	THE PRINCESS
-training_260.png	MAGIC
-training_261.png	How can it be
-training_262.png	FEMALE LEAD
-training_263.png	LOOK OUT
-training_264.png	KINGDOM
-training_265.png	WAIT
-training_266.png	AH
-training_267.png	WAIT
-training_268.png	WAIT
-training_269.png	How can it be
-training_270.png	FEMALE LEAD
-training_271.png	ROMANCE NOVEL
-training_272.png	HAPPY ENDING
-training_273.png	WAIT
-training_274.png	LOOK OUT!
-training_275.png	MAGIC
-training_276.png	MALE LEAD
-training_277.png	KINGDOM
-training_278.png	MALE LEAD
-training_279.png	THAT'S THE...
-training_280.png	ROMANCE NOVEL
-training_281.png	HAPPY ENDING
-training_282.png	VILLANESS
-training_283.png	LOOK OUT
-training_284.png	MAGIC
-training_285.png	MALE LEAD
-training_286.png	LOOK OUT!
-training_287.png	KINGDOM
-training_288.png	LOOK OUT!
-training_289.png	THAT'S THE...
-training_290.png	MAGIC
-training_291.png	MALE LEAD
-training_292.png	LOOK OUT!
-training_293.png	THE DUKE OF
-training_294.png	SWORDSMANSHIP
-training_295.png	LOOK OUT
-training_296.png	THE PRINCESS
-training_297.png	LOOK OUT!
-training_298.png	FEMALE LEAD
-training_299.png	KINGDOM
-training_300.png	HAPPY ENDING
-training_301.png	THAT'S THE...
-training_302.png	IT FEELS WRONG
-training_303.png	MALE LEAD
-training_304.png	HAPPY ENDING
-training_305.png	How can it be
-training_306.png	THAT'S THE...
-training_307.png	Huh?
-training_308.png	LOOK OUT!
-training_309.png	IT FEELS WRONG
-training_310.png	MALE LEAD
-training_311.png	WAIT
-training_312.png	THAT'S THE...
-training_313.png	LOOK OUT
-training_314.png	ROMANCE NOVEL
-training_315.png	How can it be
-training_316.png	FEMALE LEAD
-training_317.png	MAGIC
-training_318.png	KINGDOM
-training_319.png	Huh?
-training_320.png	AH
-training_321.png	How can it be
-training_322.png	VILLANESS
-training_323.png	ROMANCE NOVEL
-training_324.png	SWORDSMANSHIP
-training_325.png	MAGIC
-training_326.png	WAIT
-training_327.png	SWORDSMANSHIP
-training_328.png	THE PRINCESS
-training_329.png	WHAT?!
-training_330.png	IT FEELS WRONG
-training_331.png	ROMANCE NOVEL
-training_332.png	Huh?
-training_333.png	HAPPY ENDING
-training_334.png	MALE LEAD
-training_335.png	WAIT
-training_336.png	IT FEELS WRONG
-training_337.png	THE PRINCESS
-training_338.png	WAIT
-training_339.png	THE DUKE OF
-training_340.png	IT FEELS WRONG
-training_341.png	MALE LEAD
-training_342.png	LOOK OUT!
-training_343.png	FEMALE LEAD
-training_344.png	HAPPY ENDING
-training_345.png	WAIT
-training_346.png	MALE LEAD
-training_347.png	MAGIC
-training_348.png	WAIT
-training_349.png	WAIT
-training_350.png	LOOK OUT
-training_351.png	Huh?
-training_352.png	FEMALE LEAD
-training_353.png	VILLANESS
-training_354.png	AH
-training_355.png	WAIT
-training_356.png	FEMALE LEAD
-training_357.png	LOOK OUT!
-training_358.png	ROMANCE NOVEL
-training_359.png	THE DUKE OF
-training_360.png	How can it be
-training_361.png	AH
-training_362.png	WHAT?!
-training_363.png	How can it be
-training_364.png	KINGDOM
-training_365.png	ROMANCE NOVEL
-training_366.png	VILLANESS
-training_367.png	THAT'S THE...
-training_368.png	MAGIC
-training_369.png	MALE LEAD
-training_370.png	MALE LEAD
-training_371.png	THE PRINCESS
-training_372.png	KINGDOM
-training_373.png	AH
-training_374.png	FEMALE LEAD
-training_375.png	MAGIC
-training_376.png	SWORDSMANSHIP
-training_377.png	MALE LEAD
-training_378.png	WAIT
-training_379.png	WAIT
-training_380.png	AH
-training_381.png	THE PRINCESS
-training_382.png	MAGIC
-training_383.png	MAGIC
-training_384.png	VILLANESS
-training_385.png	LOOK OUT
-training_386.png	MAGIC
-training_387.png	THAT'S THE...
-training_388.png	THE PRINCESS
-training_389.png	THAT'S THE...
-training_390.png	Huh?
-training_391.png	WAIT
-training_392.png	MALE LEAD
-training_393.png	VILLANESS
-training_394.png	LOOK OUT!
-training_395.png	AH
-training_396.png	VILLANESS
-training_397.png	THE DUKE OF
-training_398.png	THE DUKE OF
-training_399.png	FEMALE LEAD
-training_400.png	HAPPY ENDING
-training_401.png	VILLANESS
-training_402.png	WHAT?!
-training_403.png	KINGDOM
-training_404.png	HAPPY ENDING
-training_405.png	LOOK OUT!
-training_406.png	LOOK OUT
-training_407.png	HAPPY ENDING
-training_408.png	VILLANESS
-training_409.png	KINGDOM
-training_410.png	AH
-training_411.png	SWORDSMANSHIP
-training_412.png	WAIT
-training_413.png	IT FEELS WRONG
-training_414.png	SWORDSMANSHIP
-training_415.png	WHAT?!
-training_416.png	THAT'S THE...
-training_417.png	MALE LEAD
-training_418.png	LOOK OUT!
-training_419.png	IT FEELS WRONG
-training_420.png	VILLANESS
-training_421.png	AH
-training_422.png	WAIT
-training_423.png	VILLANESS
-training_424.png	Huh?
-training_425.png	WHAT?!
-training_426.png	SWORDSMANSHIP
-training_427.png	IT FEELS WRONG
-training_428.png	LOOK OUT!
-training_429.png	SWORDSMANSHIP
-training_430.png	SWORDSMANSHIP
-training_431.png	MALE LEAD
-training_432.png	SWORDSMANSHIP
-training_433.png	Huh?
-training_434.png	IT FEELS WRONG
-training_435.png	THE DUKE OF
-training_436.png	THE PRINCESS
-training_437.png	How can it be
-training_438.png	LOOK OUT!
-training_439.png	VILLANESS
-training_440.png	THE PRINCESS
-training_441.png	WAIT
-training_442.png	HAPPY ENDING
-training_443.png	WAIT
-training_444.png	SWORDSMANSHIP
-training_445.png	HAPPY ENDING
-training_446.png	WHAT?!
-training_447.png	KINGDOM
-training_448.png	MALE LEAD
-training_449.png	LOOK OUT!
-training_450.png	Huh?
-training_451.png	LOOK OUT!
-training_452.png	KINGDOM
-training_453.png	Huh?
-training_454.png	IT FEELS WRONG
-training_455.png	AH
-training_456.png	LOOK OUT!
-training_457.png	WHAT?!
-training_458.png	LOOK OUT
-training_459.png	KINGDOM
-training_460.png	VILLANESS
-training_461.png	THE DUKE OF
-training_462.png	VILLANESS
-training_463.png	LOOK OUT!
-training_464.png	SWORDSMANSHIP
-training_465.png	WHAT?!
-training_466.png	MAGIC
-training_467.png	VILLANESS
-training_468.png	THE PRINCESS
-training_469.png	HAPPY ENDING
-training_470.png	MALE LEAD
-training_471.png	KINGDOM
-training_472.png	LOOK OUT!
-training_473.png	How can it be
-training_474.png	VILLANESS
-training_475.png	ROMANCE NOVEL
-training_476.png	LOOK OUT
-training_477.png	WHAT?!
-training_478.png	MAGIC
-training_479.png	KINGDOM
-training_480.png	THE DUKE OF
-training_481.png	ROMANCE NOVEL
-training_482.png	SWORDSMANSHIP
-training_483.png	Huh?
-training_484.png	HAPPY ENDING
-training_485.png	THE PRINCESS
-training_486.png	MAGIC
-training_487.png	How can it be
-training_488.png	WAIT
-training_489.png	MAGIC
-training_490.png	IT FEELS WRONG
-training_491.png	AH
-training_492.png	KINGDOM
-training_493.png	WAIT
-training_494.png	LOOK OUT
-training_495.png	WAIT
-training_496.png	WHAT?!
-training_497.png	WHAT?!
-training_498.png	THE PRINCESS
-training_499.png	THE PRINCESS
-training_500.png	SWORDSMANSHIP
-training_501.png	THE DUKE OF
-training_502.png	HAPPY ENDING
-training_503.png	KINGDOM
-training_504.png	ROMANCE NOVEL
-training_505.png	MALE LEAD
-training_506.png	SWORDSMANSHIP
-training_507.png	LOOK OUT
-training_508.png	WHAT?!
-training_509.png	MALE LEAD
-training_510.png	FEMALE LEAD
-training_511.png	KINGDOM
-training_512.png	MALE LEAD
-training_513.png	MAGIC
-training_514.png	FEMALE LEAD
-training_515.png	IT FEELS WRONG
-training_516.png	FEMALE LEAD
-training_517.png	THE PRINCESS
-training_518.png	THE PRINCESS
-training_519.png	THE DUKE OF
-training_520.png	ROMANCE NOVEL
-training_521.png	LOOK OUT!
-training_522.png	WHAT?!
-training_523.png	Huh?
-training_524.png	IT FEELS WRONG
-training_525.png	LOOK OUT
-training_526.png	LOOK OUT!
-training_527.png	HAPPY ENDING
-training_528.png	VILLANESS
-training_529.png	LOOK OUT!
-training_530.png	THAT'S THE...
-training_531.png	AH
-training_532.png	LOOK OUT
-training_533.png	THE PRINCESS
-training_534.png	MALE LEAD
-training_535.png	AH
-training_536.png	How can it be
-training_537.png	MAGIC
-training_538.png	How can it be
-training_539.png	IT FEELS WRONG
-training_540.png	WAIT
-training_541.png	MAGIC
-training_542.png	ROMANCE NOVEL
-training_543.png	MALE LEAD
-training_544.png	IT FEELS WRONG
-training_545.png	AH
-training_546.png	How can it be
-training_547.png	MALE LEAD
-training_548.png	FEMALE LEAD
-training_549.png	WAIT
-training_550.png	AH
-training_551.png	THAT'S THE...
-training_552.png	AH
-training_553.png	THAT'S THE...
-training_554.png	Huh?
-training_555.png	IT FEELS WRONG
-training_556.png	THE PRINCESS
-training_557.png	MALE LEAD
-training_558.png	VILLANESS
-training_559.png	Huh?
-training_560.png	KINGDOM
-training_561.png	KINGDOM
-training_562.png	THE PRINCESS
-training_563.png	MALE LEAD
-training_564.png	WAIT
-training_565.png	KINGDOM
-training_566.png	IT FEELS WRONG
-training_567.png	Huh?
-training_568.png	Huh?
-training_569.png	KINGDOM
-training_570.png	THE PRINCESS
-training_571.png	THE DUKE OF
-training_572.png	KINGDOM
-training_573.png	THAT'S THE...
-training_574.png	ROMANCE NOVEL
-training_575.png	THE PRINCESS
-training_576.png	THE DUKE OF
-training_577.png	LOOK OUT!
-training_578.png	MAGIC
-training_579.png	MALE LEAD
-training_580.png	HAPPY ENDING
-training_581.png	WAIT
-training_582.png	WAIT
-training_583.png	FEMALE LEAD
-training_584.png	FEMALE LEAD
-training_585.png	FEMALE LEAD
-training_586.png	FEMALE LEAD
-training_587.png	MALE LEAD
-training_588.png	LOOK OUT!
-training_589.png	Huh?
-training_590.png	AH
-training_591.png	THE PRINCESS
-training_592.png	KINGDOM
-training_593.png	AH
-training_594.png	Huh?
-training_595.png	LOOK OUT
-training_596.png	KINGDOM
-training_597.png	HAPPY ENDING
-training_598.png	KINGDOM
-training_599.png	WAIT
-training_600.png	MAGIC
-training_601.png	FEMALE LEAD
-training_602.png	WHAT?!
-training_603.png	THE PRINCESS
-training_604.png	IT FEELS WRONG
-training_605.png	ROMANCE NOVEL
-training_606.png	LOOK OUT!
-training_607.png	LOOK OUT
-training_608.png	THE PRINCESS
-training_609.png	VILLANESS
-training_610.png	KINGDOM
-training_611.png	Huh?
-training_612.png	MAGIC
-training_613.png	VILLANESS
-training_614.png	LOOK OUT!
-training_615.png	AH
-training_616.png	IT FEELS WRONG
-training_617.png	HAPPY ENDING
-training_618.png	KINGDOM
-training_619.png	KINGDOM
-training_620.png	Huh?
-training_621.png	Huh?
-training_622.png	Huh?
-training_623.png	WHAT?!
-training_624.png	FEMALE LEAD
-training_625.png	MAGIC
-training_626.png	WAIT
-training_627.png	ROMANCE NOVEL
-training_628.png	THAT'S THE...
-training_629.png	SWORDSMANSHIP
-training_630.png	THAT'S THE...
-training_631.png	LOOK OUT!
-training_632.png	MAGIC
-training_633.png	How can it be
-training_634.png	AH
-training_635.png	THE PRINCESS
-training_636.png	FEMALE LEAD
-training_637.png	ROMANCE NOVEL
-training_638.png	AH
-training_639.png	IT FEELS WRONG
-training_640.png	VILLANESS
-training_641.png	AH
-training_642.png	MAGIC
-training_643.png	THE DUKE OF
-training_644.png	MAGIC
-training_645.png	KINGDOM
-training_646.png	LOOK OUT
-training_647.png	THAT'S THE...
-training_648.png	MALE LEAD
-training_649.png	MAGIC
-training_650.png	LOOK OUT
-training_651.png	VILLANESS
-training_652.png	ROMANCE NOVEL
-training_653.png	ROMANCE NOVEL
-training_654.png	LOOK OUT!
-training_655.png	SWORDSMANSHIP
-training_656.png	IT FEELS WRONG
-training_657.png	MALE LEAD
-training_658.png	ROMANCE NOVEL
-training_659.png	MAGIC
-training_660.png	WAIT
-training_661.png	HAPPY ENDING
-training_662.png	MAGIC
-training_663.png	THE DUKE OF
-training_664.png	IT FEELS WRONG
-training_665.png	LOOK OUT!
-training_666.png	KINGDOM
-training_667.png	SWORDSMANSHIP
-training_668.png	THAT'S THE...
-training_669.png	MAGIC
-training_670.png	KINGDOM
-training_671.png	How can it be
-training_672.png	FEMALE LEAD
-training_673.png	THE DUKE OF
-training_674.png	How can it be
-training_675.png	FEMALE LEAD
-training_676.png	THAT'S THE...
-training_677.png	WAIT
-training_678.png	MALE LEAD
-training_679.png	Huh?
-training_680.png	HAPPY ENDING
-training_681.png	THE DUKE OF
-training_682.png	LOOK OUT!
-training_683.png	WHAT?!
-training_684.png	THE DUKE OF
-training_685.png	MAGIC
-training_686.png	THE DUKE OF
-training_687.png	VILLANESS
-training_688.png	THE DUKE OF
-training_689.png	SWORDSMANSHIP
-training_690.png	IT FEELS WRONG
-training_691.png	HAPPY ENDING
-training_692.png	HAPPY ENDING
-training_693.png	AH
-training_694.png	SWORDSMANSHIP
-training_695.png	How can it be
-training_696.png	WAIT
-training_697.png	HAPPY ENDING
-training_698.png	WHAT?!
-training_699.png	HAPPY ENDING
-training_700.png	KINGDOM
-training_701.png	WAIT
-training_702.png	MALE LEAD
-training_703.png	THE PRINCESS
-training_704.png	VILLANESS
-training_705.png	THE PRINCESS
-training_706.png	Huh?
-training_707.png	ROMANCE NOVEL
-training_708.png	FEMALE LEAD
-training_709.png	LOOK OUT
-training_710.png	HAPPY ENDING
-training_711.png	LOOK OUT
-training_712.png	THAT'S THE...
-training_713.png	AH
-training_714.png	ROMANCE NOVEL
-training_715.png	LOOK OUT!
-training_716.png	VILLANESS
-training_717.png	KINGDOM
-training_718.png	LOOK OUT!
-training_719.png	MALE LEAD
-training_720.png	THE DUKE OF
-training_721.png	How can it be
-training_722.png	WHAT?!
-training_723.png	FEMALE LEAD
-training_724.png	THAT'S THE...
-training_725.png	MAGIC
-training_726.png	How can it be
-training_727.png	How can it be
-training_728.png	How can it be
-training_729.png	LOOK OUT!
-training_730.png	Huh?
-training_731.png	THE PRINCESS
-training_732.png	MALE LEAD
-training_733.png	MAGIC
-training_734.png	KINGDOM
-training_735.png	FEMALE LEAD
-training_736.png	KINGDOM
-training_737.png	THE PRINCESS
-training_738.png	How can it be
-training_739.png	SWORDSMANSHIP
-training_740.png	WAIT
-training_741.png	LOOK OUT
-training_742.png	WAIT
-training_743.png	HAPPY ENDING
-training_744.png	LOOK OUT
-training_745.png	AH
-training_746.png	THE PRINCESS
-training_747.png	LOOK OUT!
-training_748.png	MALE LEAD
-training_749.png	Huh?
-training_750.png	HAPPY ENDING
-training_751.png	KINGDOM
-training_752.png	WAIT
-training_753.png	THE PRINCESS
-training_754.png	Huh?
-training_755.png	HAPPY ENDING
-training_756.png	SWORDSMANSHIP
-training_757.png	IT FEELS WRONG
-training_758.png	HAPPY ENDING
-training_759.png	LOOK OUT!
-training_760.png	Huh?
-training_761.png	How can it be
-training_762.png	THE PRINCESS
-training_763.png	KINGDOM
-training_764.png	Huh?
-training_765.png	WAIT
-training_766.png	THE PRINCESS
-training_767.png	THE PRINCESS
-training_768.png	FEMALE LEAD
-training_769.png	MAGIC
-training_770.png	VILLANESS
-training_771.png	Huh?
-training_772.png	KINGDOM
-training_773.png	LOOK OUT
-training_774.png	ROMANCE NOVEL
-training_775.png	IT FEELS WRONG
-training_776.png	WHAT?!
-training_777.png	MAGIC
-training_778.png	ROMANCE NOVEL
-training_779.png	FEMALE LEAD
-training_780.png	MAGIC
-training_781.png	THE DUKE OF
-training_782.png	WAIT
-training_783.png	How can it be
-training_784.png	AH
-training_785.png	VILLANESS
-training_786.png	MAGIC
-training_787.png	FEMALE LEAD
-training_788.png	LOOK OUT!
-training_789.png	Huh?
-training_790.png	THE DUKE OF
-training_791.png	AH
-training_792.png	ROMANCE NOVEL
-training_793.png	How can it be
-training_794.png	THAT'S THE...
-training_795.png	WAIT
-training_796.png	MAGIC
-training_797.png	IT FEELS WRONG
-training_798.png	MALE LEAD
-training_799.png	VILLANESS
+training_63.png	AGAIN PLEASE
+training_64.png	HURRY UP
+training_65.png	MOVE DOWN
+training_66.png	BEGIN NOW
+training_67.png	BE DISORDERLY
+training_68.png	TALK NOW
+training_69.png	HELP OUT
+training_70.png	TURN RIGHT
+training_71.png	STOP
+training_72.png	SHOW JOY
+training_73.png	ANGELIC
+training_74.png	BUILD IT
+training_75.png	ALMOST THERE
+training_76.png	COME INSIDE
+training_77.png	STAY SAFE
+training_78.png	ACT BITTERLY
+training_79.png	WAIT PATIENTLY
+training_80.png	SEE YOU
+training_81.png	TRY AGAIN
+training_82.png	MOVE GRACEFULLY
+training_83.png	NOT AGAIN
+training_84.png	BE SERIOUS
+training_85.png	TIME TO EAT
+training_86.png	WHAT?!
+training_87.png	ACT PURPOSEFUL
+training_88.png	GO ALONE
+training_89.png	SEE YOU
+training_90.png	STAY SILENT
+training_91.png	MOVE DOWN
+training_92.png	FEEL HAPPY
+training_93.png	BUILD IT
+training_94.png	ACT VIOLENTLY
+training_95.png	FEEL RELUCTANT
+training_96.png	WRITE IT DOWN
+training_97.png	TO BE CONTINUED...
+training_98.png	SHOW JOY
+training_99.png	STAY SILENT
+training_100.png	GO ALONE
+training_101.png	GO SLOWLY
+training_102.png	WELCOME
+training_103.png	BE LAZY
+training_104.png	COME ON
+training_105.png	WORK SYSTEMATICALLY
+training_106.png	MAGIC
+training_107.png	BE BRAVE
+training_108.png	TO BE CONTINUED...
+training_109.png	ACT CARELESS
+training_110.png	FEEL NERVOUS
+training_111.png	BE SWEET
+training_112.png	GOTCHA
+training_113.png	WATCH OUT
+training_114.png	WAIT PATIENTLY
+training_115.png	BE SWEET
+training_116.png	GO FAR
+training_117.png	ALL DONE
+training_118.png	THINK METHODICALLY
+training_119.png	ALMOST THERE
+training_120.png	AH
+training_121.png	STAY SILENT
+training_122.png	TALK NOW
+training_123.png	WHY?
+training_124.png	CREATE ART
+training_125.png	MOVE FORWARD
+training_126.png	BE SWEET
+training_127.png	LOOK OUT!
+training_128.png	BE AIMLESS
+training_129.png	DEMONIC
+training_130.png	THANK YOU
+training_131.png	I'M HERE
+training_132.png	I'M READY
+training_133.png	ALL DONE
+training_134.png	NOT AGAIN
+training_135.png	STAY PEACEFUL
+training_136.png	YAY
+training_137.png	BE DETERMINED
+training_138.png	THE END
+training_139.png	RIGHT NOW
+training_140.png	OOPS
+training_141.png	START NOW
+training_142.png	ACT CAREFULLY
+training_143.png	GO SOON
+training_144.png	BE DISORDERLY
+training_145.png	ALL DONE
+training_146.png	TALK NOW
+training_147.png	HELP
+training_148.png	PLEASE
+training_149.png	NO
+training_150.png	STAY CLOSE
+training_151.png	THINK DEEPLY
+training_152.png	LOOK OUT!
+training_153.png	GO HOME
+training_154.png	GO SLOWLY
+training_155.png	FEMALE LEAD
+training_156.png	ACT RANDOMLY
+training_157.png	RIGHT NOW
+training_158.png	BEGIN NOW
+training_159.png	TO BE CONTINUED...
+training_160.png	BE BRAVE
+training_161.png	WHY?
+training_162.png	HAPPY ENDING
+training_163.png	ACT SUSPICIOUS
+training_164.png	START NOW
+training_165.png	I'M READY
+training_166.png	WATCH OUT
+training_167.png	JUST A MINUTE
+training_168.png	YES
+training_169.png	COME INSIDE
+training_170.png	TURN RIGHT
+training_171.png	ACT ROUGH
+training_172.png	WHY?
+training_173.png	TRY AGAIN
+training_174.png	TRY AGAIN
+training_175.png	READ THIS
+training_176.png	KEEP SECRETS
+training_177.png	NO WAY
+training_178.png	BE QUIET
+training_179.png	I'M HERE
+training_180.png	MAGIC
+training_181.png	STAY CALM
+training_182.png	STUDY TIME
+training_183.png	VILLIAGERS
+training_184.png	DRAW SOMETHING
+training_185.png	SHOW JOY
+training_186.png	NOT AGAIN
+training_187.png	MOVE UP
+training_188.png	BEAUTIFUL
+training_189.png	BE LOUD
+training_190.png	IT FEELS WRONG
+training_191.png	STAY PEACEFUL
+training_192.png	TALK NOW
+training_193.png	TURN RIGHT
+training_194.png	WORK SYSTEMATICALLY
+training_195.png	YES
+training_196.png	HURRY UP
+training_197.png	IT'S OVER
+training_198.png	TOGETHER NOW
+training_199.png	YES
+training_200.png	THINK METHODICALLY
+training_201.png	FEEL FEAR
+training_202.png	BE BRAVE
+training_203.png	TRY AGAIN
+training_204.png	NO WAY
+training_205.png	TOGETHER NOW
+training_206.png	MOVE UP
+training_207.png	TALK NOW
+training_208.png	ALMOST THERE
+training_209.png	ROMANCE NOVEL
+training_210.png	I DID IT
+training_211.png	HIDE QUICKLY
+training_212.png	TURN LEFT
+training_213.png	BE LOUD
+training_214.png	STAY BUSY
+training_215.png	SEE YOU
+training_216.png	SAVE US
+training_217.png	MOVE FORWARD
+training_218.png	OH MY GOD
+training_219.png	ACT CARELESS
+training_220.png	AGAIN PLEASE
+training_221.png	WELCOME
+training_222.png	STAY SAFE
+training_223.png	ACT BITTERLY
+training_224.png	ACT SUSPICIOUS
+training_225.png	HANDSOME
+training_226.png	STAY SAFE
+training_227.png	BE LOUD
+training_228.png	GO ALONE
+training_229.png	OOPS
+training_230.png	BE EAGER
+training_231.png	PLAY AROUND
+training_232.png	HELP OUT
+training_233.png	TURN LEFT
+training_234.png	EXPLORE MORE
+training_235.png	TRY LATER
+training_236.png	KINGDOM
+training_237.png	EMPIRE
+training_238.png	CREATE ART
+training_239.png	HAPPY ENDING
+training_240.png	ACT SUSPICIOUS
+training_241.png	LOOK OUT!
+training_242.png	BE CURIOUS
+training_243.png	FEEL SAD
+training_244.png	FEMALE LEAD
+training_245.png	I DID IT
+training_246.png	MOVE UP
+training_247.png	WATCH OUT
+training_248.png	GOOD LUCK
+training_249.png	SLOW DOWN
+training_250.png	HIDE QUICKLY
+training_251.png	KEEP STEADY
+training_252.png	SEE YOU
+training_253.png	WAIT HERE
+training_254.png	GET EXCITED
+training_255.png	THINK DEEPLY
+training_256.png	THINK DEEPLY
+training_257.png	WORK SYSTEMATICALLY
+training_258.png	BE CURIOUS
+training_259.png	SEARCH HERE
+training_260.png	BE LAZY
+training_261.png	BEAUTIFUL
+training_262.png	HOPE FOR BEST
+training_263.png	STAY ORDERLY
+training_264.png	BE DETERMINED
+training_265.png	BE BRAVE
+training_266.png	FEEL RELUCTANT
+training_267.png	START NOW
+training_268.png	OH MY GOD
+training_269.png	THINK METHODICALLY
+training_270.png	I'M HERE
+training_271.png	STAY SILENT
+training_272.png	I'M READY
+training_273.png	SHOW JOY
+training_274.png	FEEL SAD
+training_275.png	MOVE UP
+training_276.png	HOPE FOR BEST
+training_277.png	SEE YOU
+training_278.png	RIGHT NOW
+training_279.png	I'M HERE
+training_280.png	POSION
+training_281.png	BE GENTLE
+training_282.png	STAY PEACEFUL
+training_283.png	GO TO SLEEP
+training_284.png	GO SOON
+training_285.png	GOTCHA
+training_286.png	KEEP STEADY
+training_287.png	EXPLORE MORE
+training_288.png	STAY PEACEFUL
+training_289.png	BE LAZY
+training_290.png	YES
+training_291.png	WHY?
+training_292.png	WE WIN
+training_293.png	BE CURIOUS
+training_294.png	ALL DONE
+training_295.png	PLAY AROUND
+training_296.png	TALK NOW
+training_297.png	I'M HERE
+training_298.png	STAY CALM
+training_299.png	TRY AGAIN
+training_300.png	STAY PEACEFUL
+training_301.png	NO
+training_302.png	I'M READY
+training_303.png	IT FEELS WRONG
+training_304.png	SEE YOU
+training_305.png	GO FASTER
+training_306.png	ACT CARELESS
+training_307.png	HELP OUT
+training_308.png	STUDY TIME
+training_309.png	VILLANESS
+training_310.png	AH
+training_311.png	STAY BUSY
+training_312.png	ACT SUSPICIOUS
+training_313.png	FIGHT ON
+training_314.png	MOVE GRACEFULLY
+training_315.png	VILLIAGERS
+training_316.png	WELCOME
+training_317.png	SEE YOU
+training_318.png	RUN AWAY
+training_319.png	WAIT
+training_320.png	THE DUKE OF
+training_321.png	NO WAY
+training_322.png	VILLIAGERS
+training_323.png	CONGRATS
+training_324.png	NO WAY
+training_325.png	TRY AGAIN
+training_326.png	WHY?
+training_327.png	TURN RIGHT
+training_328.png	GET ANGRY
+training_329.png	COME ON
+training_330.png	FEMALE LEAD
+training_331.png	HAPPY ENDING
+training_332.png	ALL DONE
+training_333.png	WHY?
+training_334.png	Huh?
+training_335.png	ACT RANDOMLY
+training_336.png	MOVE GRACEFULLY
+training_337.png	STAY ORDERLY
+training_338.png	TRY AGAIN
+training_339.png	MAKE NOISE
+training_340.png	HELP OUT
+training_341.png	THINK DEEPLY
+training_342.png	ACT CONFIDENT
+training_343.png	TALK HARSHLY
+training_344.png	BE LAZY
+training_345.png	SEE YOU
+training_346.png	ALL DONE
+training_347.png	STUDY TIME
+training_348.png	I'M SORRY
+training_349.png	GO HOME
+training_350.png	NO WAY
+training_351.png	SLOW DOWN
+training_352.png	READERS
+training_353.png	BE SERIOUS
+training_354.png	FEEL FREE
+training_355.png	ACT CHAOTICALLY
+training_356.png	WHAT?!
+training_357.png	SWORDSMANSHIP
+training_358.png	STAY INSIDE
+training_359.png	WE WIN
+training_360.png	BE DISORDERLY
+training_361.png	RUN AWAY
+training_362.png	I'M READY
+training_363.png	AGAIN PLEASE
+training_364.png	VILLIAGERS
+training_365.png	AGAIN PLEASE
+training_366.png	Huh?
+training_367.png	TO BE CONTINUED...
+training_368.png	STUDY TIME
+training_369.png	WELCOME
+training_370.png	WORK SYSTEMATICALLY
+training_371.png	BEAUTIFUL
+training_372.png	BE BRAVE
+training_373.png	TIME TO EAT
+training_374.png	BUILD IT
+training_375.png	I'M HERE
+training_376.png	HAPPY ENDING
+training_377.png	WE WIN
+training_378.png	OH MY GOD
+training_379.png	HIDE QUICKLY
+training_380.png	STAY BUSY
+training_381.png	BE QUIET
+training_382.png	EXPLORE MORE
+training_383.png	THINK DEEPLY
+training_384.png	ESCAPE NOW
+training_385.png	GOOD LUCK
+training_386.png	BUILD IT
+training_387.png	FEEL RELUCTANT
+training_388.png	KINGDOM
+training_389.png	THE END
+training_390.png	I'M HERE
+training_391.png	SEE YOU
+training_392.png	GO TO SLEEP
+training_393.png	BE LAZY
+training_394.png	DESTROY IT
+training_395.png	MOVE FORWARD
+training_396.png	NOT AGAIN
+training_397.png	GO BACK
+training_398.png	OH MY GOD
+training_399.png	SO COOL
+training_400.png	OH MY GOD
+training_401.png	STAY BUSY
+training_402.png	I'M READY
+training_403.png	SEE YOU
+training_404.png	STAY PEACEFUL
+training_405.png	PLEASE
+training_406.png	TURN RIGHT
+training_407.png	BEAUTIFUL
+training_408.png	FIGHT ON
+training_409.png	STOP
+training_410.png	BE QUIET
+training_411.png	READERS
+training_412.png	KINGDOM
+training_413.png	FEEL FEAR
+training_414.png	MAKE NOISE
+training_415.png	AGAIN PLEASE
+training_416.png	ACT ROUGH
+training_417.png	BE QUIET
+training_418.png	FEEL RELUCTANT
+training_419.png	TRY LATER
+training_420.png	WE WIN
+training_421.png	NOT AGAIN
+training_422.png	GO FAR
+training_423.png	WORK HARD
+training_424.png	BE LAZY
+training_425.png	KEEP SECRETS
+training_426.png	ACT PURPOSEFUL
+training_427.png	ESCAPE NOW
+training_428.png	EMPIRE
+training_429.png	FEEL RELUCTANT
+training_430.png	COME INSIDE
+training_431.png	THANK YOU
+training_432.png	FEEL UNSTEADY
+training_433.png	STOP
+training_434.png	START NOW
+training_435.png	SLOW DOWN
+training_436.png	BEGIN NOW
+training_437.png	AH
+training_438.png	WATCH THIS
+training_439.png	BE GENTLE
+training_440.png	Huh?
+training_441.png	WHY?
+training_442.png	NO
+training_443.png	WELCOME
+training_444.png	JUST IN TIME
+training_445.png	LET'S PLAY
+training_446.png	ALL DONE
+training_447.png	STAY ORDERLY
+training_448.png	FEEL FREE
+training_449.png	GO ALONE
+training_450.png	KINGDOM
+training_451.png	VILLANESS
+training_452.png	BE SWEET
+training_453.png	TO BE CONTINUED...
+training_454.png	COME INSIDE
+training_455.png	FEEL NERVOUS
+training_456.png	GO HOME
+training_457.png	GET ANGRY
+training_458.png	I'M HERE
+training_459.png	BE DETERMINED
+training_460.png	NO WAY
+training_461.png	PLEASE
+training_462.png	BE OPEN
+training_463.png	TRY LATER
+training_464.png	FEEL ANXIOUS
+training_465.png	STUDY TIME
+training_466.png	LOOK OUT!
+training_467.png	TURN RIGHT
+training_468.png	WORK HARD
+training_469.png	CONGRATS
+training_470.png	WRITE IT DOWN
+training_471.png	TAKE A REST
+training_472.png	FEEL ANXIOUS
+training_473.png	AGAIN PLEASE
+training_474.png	AGAIN PLEASE
+training_475.png	VILLANESS
+training_476.png	MOVE DOWN
+training_477.png	RUN AWAY
+training_478.png	SO COOL
+training_479.png	HANDSOME
+training_480.png	ACT PURPOSEFUL
+training_481.png	WAIT
+training_482.png	SO COOL
+training_483.png	COME INSIDE
+training_484.png	MOVE QUICKLY
+training_485.png	FEEL FREE
+training_486.png	FEEL UNSTEADY
+training_487.png	THE END
+training_488.png	ALMOST THERE
+training_489.png	WHAT'S UP
+training_490.png	BE LAZY
+training_491.png	BE LOUD
+training_492.png	TIME TO EAT
+training_493.png	GO HOME
+training_494.png	OFFICIAL
+training_495.png	OOPS
+training_496.png	GO SLOWLY
+training_497.png	MALE LEAD
+training_498.png	THANK YOU
+training_499.png	SPEAK SOFTLY
+training_500.png	GO FASTER
+training_501.png	GO SLOWLY
+training_502.png	BEGIN NOW
+training_503.png	BEGIN NOW
+training_504.png	WORK SYSTEMATICALLY
+training_505.png	I'M READY
+training_506.png	TRY AGAIN
+training_507.png	WAIT
+training_508.png	FEEL UNSTEADY
+training_509.png	BE AIMLESS
+training_510.png	VILLIAGERS
+training_511.png	RIGHT NOW
+training_512.png	IT FEELS WRONG
+training_513.png	VILLIAGERS
+training_514.png	TALK HARSHLY
+training_515.png	ACT SUSPICIOUS
+training_516.png	THE PRINCESS
+training_517.png	ACT PURPOSEFUL
+training_518.png	FEEL HAPPY
+training_519.png	TOGETHER NOW
+training_520.png	TURN RIGHT
+training_521.png	BE GENTLE
+training_522.png	BUILD IT
+training_523.png	MAGIC
+training_524.png	THE PRINCESS
+training_525.png	GO BACK
+training_526.png	ACT VIOLENTLY
+training_527.png	BE BRAVE
+training_528.png	OFFICIAL
+training_529.png	FEEL UNSTEADY
+training_530.png	THANK YOU
+training_531.png	RIGHT NOW
+training_532.png	GET ANGRY
+training_533.png	READ THIS
+training_534.png	ALMOST THERE
+training_535.png	I'M SORRY
+training_536.png	TO BE CONTINUED
+training_537.png	DRAW SOMETHING
+training_538.png	ACT CAREFULLY
+training_539.png	SEARCH HERE
+training_540.png	I'M HERE
+training_541.png	BE QUIET
+training_542.png	STAY SAFE
+training_543.png	CREATE ART
+training_544.png	YES
+training_545.png	THINK DEEPLY
+training_546.png	BE QUIET
+training_547.png	TALK NOW
+training_548.png	BE AIMLESS
+training_549.png	GO FASTER
+training_550.png	GO SLOWLY
+training_551.png	EXPLORE MORE
+training_552.png	WE WIN
+training_553.png	I'M READY
+training_554.png	BE SWEET
+training_555.png	GET ANGRY
+training_556.png	START NOW
+training_557.png	HAPPY ENDING
+training_558.png	THANK YOU
+training_559.png	JUST IN TIME
+training_560.png	WAIT
+training_561.png	I DID IT
+training_562.png	VILLANESS
+training_563.png	TAKE A REST
+training_564.png	GO ALONE
+training_565.png	THINK DEEPLY
+training_566.png	GO BACK
+training_567.png	ESCAPE NOW
+training_568.png	HIDE QUICKLY
+training_569.png	JUST IN TIME
+training_570.png	GO HOME
+training_571.png	STAY CALM
+training_572.png	ACT RANDOMLY
+training_573.png	MOVE ENERGETICALLY
+training_574.png	GO FASTER
+training_575.png	TO BE CONTINUED
+training_576.png	PLEASE
+training_577.png	SEARCH HERE
+training_578.png	BE SWEET
+training_579.png	JUST IN TIME
+training_580.png	THANK YOU
+training_581.png	MOVE GRACEFULLY
+training_582.png	JUST IN TIME
+training_583.png	BE SWEET
+training_584.png	LET'S PLAY
+training_585.png	PLAY AROUND
+training_586.png	BE QUIET
+training_587.png	IT FEELS WRONG
+training_588.png	MOVE UP
+training_589.png	AH
+training_590.png	BE QUIET
+training_591.png	WHY?
+training_592.png	MOVE FORWARD
+training_593.png	YES
+training_594.png	JUST IN TIME
+training_595.png	MOVE QUICKLY
+training_596.png	NOT AGAIN
+training_597.png	STUDY TIME
+training_598.png	NO PROBLEM
+training_599.png	OOPS
+training_600.png	BE CURIOUS
+training_601.png	ANGELIC
+training_602.png	FIGHT ON
+training_603.png	GO FAR
+training_604.png	ESCAPE NOW
+training_605.png	HOPE FOR BEST
+training_606.png	WAIT PATIENTLY
+training_607.png	MOVE GRACEFULLY
+training_608.png	WRITE IT DOWN
+training_609.png	BE LAZY
+training_610.png	KEEP SECRETS
+training_611.png	WATCH THIS
+training_612.png	MOVE FORWARD
+training_613.png	WHAT?!
+training_614.png	NO WAY
+training_615.png	ACT BITTERLY
+training_616.png	GET EXCITED
+training_617.png	FEMALE LEAD
+training_618.png	WATCH THIS
+training_619.png	KEEP SECRETS
+training_620.png	ACT CAREFULLY
+training_621.png	ROMANCE NOVEL
+training_622.png	DRAW SOMETHING
+training_623.png	ACT ROUGH
+training_624.png	OH MY GOD
+training_625.png	I'M HERE
+training_626.png	ROMANCE NOVEL
+training_627.png	GO TO SLEEP
+training_628.png	HELP
+training_629.png	STOP
+training_630.png	ACT PURPOSEFUL
+training_631.png	OOPS
+training_632.png	VILLANESS
+training_633.png	KINGDOM
+training_634.png	ACT RANDOMLY
+training_635.png	FEEL UNSTEADY
+training_636.png	DESTROY IT
+training_637.png	READERS
+training_638.png	HANDSOME
+training_639.png	FEEL NERVOUS
+training_640.png	WAIT PATIENTLY
+training_641.png	BEGIN NOW
+training_642.png	THINK METHODICALLY
+training_643.png	AH
+training_644.png	KEEP SECRETS
+training_645.png	ACT BITTERLY
+training_646.png	WRITE IT DOWN
+training_647.png	DEMONIC
+training_648.png	BE SWEET
+training_649.png	ALMOST THERE
+training_650.png	FEEL FREE
+training_651.png	WE WIN
+training_652.png	STAY ORDERLY
+training_653.png	THINK DEEPLY
+training_654.png	MOVE FORWARD
+training_655.png	OFFICIAL
+training_656.png	TURN RIGHT
+training_657.png	PLAY AROUND
+training_658.png	ACT RANDOMLY
+training_659.png	THE PRINCESS
+training_660.png	THINK DEEPLY
+training_661.png	SPEAK SOFTLY
+training_662.png	NO WAY
+training_663.png	SEE YOU
+training_664.png	MOVE FORWARD
+training_665.png	WELCOME
+training_666.png	TAKE A REST
+training_667.png	STAY SILENT
+training_668.png	NO WAY
+training_669.png	EXPLORE MORE
+training_670.png	CONGRATS
+training_671.png	GO SLOWLY
+training_672.png	NO
+training_673.png	TAKE A REST
+training_674.png	I'M HERE
+training_675.png	IT FEELS WRONG
+training_676.png	TIME TO EAT
+training_677.png	ACT CARELESS
+training_678.png	LET'S PLAY
+training_679.png	GO ALONE
+training_680.png	OOPS
+training_681.png	TRY LATER
+training_682.png	TURN RIGHT
+training_683.png	GOTCHA
+training_684.png	NEXT TIME
+training_685.png	DRAW SOMETHING
+training_686.png	TO BE CONTINUED...
+training_687.png	FEEL RELUCTANT
+training_688.png	GO OUTSIDE
+training_689.png	I DID IT
+training_690.png	Huh?
+training_691.png	NOT AGAIN
+training_692.png	PLAY AROUND
+training_693.png	MOVE FORWARD
+training_694.png	FIGHT ON
+training_695.png	WATCH OUT
+training_696.png	MOVE ENERGETICALLY
+training_697.png	I'M HERE
+training_698.png	WHAT'S UP
+training_699.png	COME ON
+training_700.png	READ THIS
+training_701.png	GO SLOWLY
+training_702.png	GO BACK
+training_703.png	SLOW DOWN
+training_704.png	WAIT
+training_705.png	TURN LEFT
+training_706.png	GO OUTSIDE
+training_707.png	VILLIAGERS
+training_708.png	THE PRINCESS
+training_709.png	ACT CONFIDENT
+training_710.png	I'M HERE
+training_711.png	BE SWEET
+training_712.png	ACT CARELESS
+training_713.png	SPEAK SOFTLY
+training_714.png	SPEAK SOFTLY
+training_715.png	HOPE FOR BEST
+training_716.png	SAVE US
+training_717.png	COME ON
+training_718.png	TAKE A REST
+training_719.png	IT FEELS WRONG
+training_720.png	EMPIRE
+training_721.png	PLAY AROUND
+training_722.png	KEEP STEADY
+training_723.png	WAIT HERE
+training_724.png	CONGRATS
+training_725.png	GO SOON
+training_726.png	FEEL SAD
+training_727.png	GOTCHA
+training_728.png	BE AIMLESS
+training_729.png	STAY PEACEFUL
+training_730.png	FEEL SAD
+training_731.png	TURN RIGHT
+training_732.png	LISTEN UP
+training_733.png	THINK DEEPLY
+training_734.png	BE SERIOUS
+training_735.png	WORK SYSTEMATICALLY
+training_736.png	THE END
+training_737.png	THINK DEEPLY
+training_738.png	RIGHT NOW
+training_739.png	BEGIN NOW
+training_740.png	GO SLOWLY
+training_741.png	HELP
+training_742.png	AH
+training_743.png	STOP
+training_744.png	TALK HARSHLY
+training_745.png	YES
+training_746.png	YES
+training_747.png	ACT CAREFULLY
+training_748.png	THINK METHODICALLY
+training_749.png	FEEL ANXIOUS
+training_750.png	BE SERIOUS
+training_751.png	GO SLOWLY
+training_752.png	PLEASE
+training_753.png	WATCH OUT
+training_754.png	GO FASTER
+training_755.png	WATCH OUT
+training_756.png	GO FAR
+training_757.png	MAKE NOISE
+training_758.png	YAY
+training_759.png	BE SWEET
+training_760.png	BE GENTLE
+training_761.png	HOPE FOR BEST
+training_762.png	SEE YOU
+training_763.png	NO WAY
+training_764.png	HAPPY ENDING
+training_765.png	FEEL FEAR
+training_766.png	IT'S OVER
+training_767.png	THE END
+training_768.png	BE DETERMINED
+training_769.png	BE SERIOUS
+training_770.png	OH MY GOD
+training_771.png	ACT PURPOSEFUL
+training_772.png	BE SWEET
+training_773.png	CONGRATS
+training_774.png	STUDY TIME
+training_775.png	GO FAR
+training_776.png	IT'S OVER
+training_777.png	STAY CALM
+training_778.png	AGAIN PLEASE
+training_779.png	TIME TO EAT
+training_780.png	NO PROBLEM
+training_781.png	FEEL RELUCTANT
+training_782.png	LOOK OUT!
+training_783.png	GO BACK
+training_784.png	WAIT PATIENTLY
+training_785.png	ANGELIC
+training_786.png	BE OPEN
+training_787.png	ACT PURPOSEFUL
+training_788.png	BE BRAVE
+training_789.png	STOP
+training_790.png	GO TO SLEEP
+training_791.png	ACT CONFIDENT
+training_792.png	THANK YOU
+training_793.png	TIME TO EAT
+training_794.png	THINK DEEPLY
+training_795.png	ACT CHAOTICALLY
+training_796.png	CREATE ART
+training_797.png	FEEL RELUCTANT
+training_798.png	I'M HERE
+training_799.png	ACT CAREFULLY
+training_800.png	HANDSOME
+training_801.png	GO FAR
+training_802.png	ACT CHAOTICALLY
+training_803.png	STAY SAFE
+training_804.png	WAIT
+training_805.png	GOOD LUCK
+training_806.png	PLAY AROUND
+training_807.png	SEE YOU
+training_808.png	HELP OUT
+training_809.png	KEEP STEADY
+training_810.png	TO BE CONTINUED...
+training_811.png	NO
+training_812.png	NEXT TIME
+training_813.png	HELP OUT
+training_814.png	I'M HERE
+training_815.png	TAKE A REST
+training_816.png	STAY INSIDE
+training_817.png	EMPIRE
+training_818.png	COME ON
+training_819.png	STAY SAFE
+training_820.png	YES
+training_821.png	BE QUIET
+training_822.png	EXPLORE MORE
+training_823.png	WHAT?!
+training_824.png	BE SWEET
+training_825.png	Huh?
+training_826.png	FEEL FEAR
+training_827.png	STAY CLOSE
+training_828.png	DEMONIC
+training_829.png	EXPLORE MORE
+training_830.png	COME ON
+training_831.png	ACT CHAOTICALLY
+training_832.png	WE WIN
+training_833.png	VILLIAGERS
+training_834.png	GO SOON
+training_835.png	POSION
+training_836.png	STUDY TIME
+training_837.png	ACT VIOLENTLY
+training_838.png	STAY INSIDE
+training_839.png	MOVE DOWN
+training_840.png	FEEL SAD
+training_841.png	MOVE DOWN
+training_842.png	THE PRINCESS
+training_843.png	YAY
+training_844.png	MOVE DOWN
+training_845.png	TRY AGAIN
+training_846.png	OH MY GOD
+training_847.png	GOOD LUCK
+training_848.png	Huh?
+training_849.png	POSION
+training_850.png	COME INSIDE
+training_851.png	HANDSOME
+training_852.png	MOVE ENERGETICALLY
+training_853.png	YAY
+training_854.png	TAKE A REST
+training_855.png	WATCH OUT
+training_856.png	BE OPEN
+training_857.png	STOP
+training_858.png	COME ON
+training_859.png	HELP OUT
+training_860.png	GO TO SLEEP
+training_861.png	NO WAY
+training_862.png	STAY PEACEFUL
+training_863.png	WATCH OUT
+training_864.png	VILLANESS
+training_865.png	FEEL SAD
+training_866.png	ACT SUSPICIOUS
+training_867.png	WORK HARD
+training_868.png	GET EXCITED
+training_869.png	WE WIN
+training_870.png	TURN RIGHT
+training_871.png	TRY LATER
+training_872.png	OOPS
+training_873.png	STAY INSIDE
+training_874.png	HURRY UP
+training_875.png	BE DISORDERLY
+training_876.png	MOVE GRACEFULLY
+training_877.png	SPEAK UP
+training_878.png	ALL DONE
+training_879.png	OFFICIAL
+training_880.png	ACT CONFIDENT
+training_881.png	MOVE FORWARD
+training_882.png	SPEAK SOFTLY
+training_883.png	MOVE QUICKLY
+training_884.png	STAY SILENT
+training_885.png	BE LAZY
+training_886.png	STUDY TIME
+training_887.png	READERS
+training_888.png	JUST A MINUTE
+training_889.png	HELP OUT
+training_890.png	MAGIC
+training_891.png	BE GENTLE
+training_892.png	EXPLORE MORE
+training_893.png	STAY INSIDE
+training_894.png	MOVE FORWARD
+training_895.png	GET EXCITED
+training_896.png	THE PRINCESS
+training_897.png	EMPIRE
+training_898.png	BE SWEET
+training_899.png	HAPPY ENDING
+training_900.png	JUST IN TIME
+training_901.png	COME INSIDE
+training_902.png	GOTCHA
+training_903.png	FEEL FEAR
+training_904.png	GO SLOWLY
+training_905.png	THANK YOU
+training_906.png	MALE LEAD
+training_907.png	NO WAY
+training_908.png	TOGETHER NOW
+training_909.png	ACT ROUGH
+training_910.png	GET ANGRY
+training_911.png	BE BRAVE
+training_912.png	NO PROBLEM
+training_913.png	TAKE A REST
+training_914.png	COME ON
+training_915.png	WHAT?!
+training_916.png	WHAT'S UP
+training_917.png	STAY ORDERLY
+training_918.png	SO COOL
+training_919.png	TURN LEFT
+training_920.png	I'M SORRY
+training_921.png	THE PRINCESS
+training_922.png	SHOW JOY
+training_923.png	MAGIC
+training_924.png	WATCH THIS
+training_925.png	AGAIN PLEASE
+training_926.png	GOTCHA
+training_927.png	BE OPEN
+training_928.png	MALE LEAD
+training_929.png	AH
+training_930.png	TIME TO EAT
+training_931.png	STAY BUSY
+training_932.png	THANK YOU
+training_933.png	GO OUTSIDE
+training_934.png	ROMANCE NOVEL
+training_935.png	MALE LEAD
+training_936.png	TOGETHER NOW
+training_937.png	IT'S OVER
+training_938.png	THINK DEEPLY
+training_939.png	Huh?
+training_940.png	START NOW
+training_941.png	KINGDOM
+training_942.png	KINGDOM
+training_943.png	LET'S PLAY
+training_944.png	WE WIN
+training_945.png	STAY PEACEFUL
+training_946.png	YES
+training_947.png	STAY PEACEFUL
+training_948.png	STAY INSIDE
+training_949.png	TO BE CONTINUED
+training_950.png	ROMANCE NOVEL
+training_951.png	GO HOME
+training_952.png	ACT VIOLENTLY
+training_953.png	TAKE A REST
+training_954.png	JUST IN TIME
+training_955.png	STAY PEACEFUL
+training_956.png	WAIT
+training_957.png	ACT CHAOTICALLY
+training_958.png	WATCH THIS
+training_959.png	BEAUTIFUL
+training_960.png	SEE YOU
+training_961.png	Huh?
+training_962.png	THE PRINCESS
+training_963.png	TIME TO EAT
+training_964.png	JUST A MINUTE
+training_965.png	FEEL SAD
+training_966.png	WHAT?!
+training_967.png	MOVE GRACEFULLY
+training_968.png	THANK YOU
+training_969.png	STAY INSIDE
+training_970.png	JUST IN TIME
+training_971.png	ALL DONE
+training_972.png	GET ANGRY
+training_973.png	FEEL UNSTEADY
+training_974.png	SO COOL
+training_975.png	MOVE GRACEFULLY
+training_976.png	ACT PURPOSEFUL
+training_977.png	I DID IT
+training_978.png	MOVE UP
+training_979.png	COME INSIDE
+training_980.png	OH MY GOD
+training_981.png	WORK SYSTEMATICALLY
+training_982.png	WATCH OUT
+training_983.png	GO SLOWLY
+training_984.png	BUILD IT
+training_985.png	TAKE A REST
+training_986.png	PLEASE
+training_987.png	TRY LATER
+training_988.png	I'M SORRY
+training_989.png	TIME TO EAT
+training_990.png	GET EXCITED
+training_991.png	THANK YOU
+training_992.png	STAY CALM
+training_993.png	ACT ROUGH
+training_994.png	NOT AGAIN
+training_995.png	START NOW
+training_996.png	SAVE US
+training_997.png	EXPLORE MORE
+training_998.png	SHOW JOY
+training_999.png	ROMANCE NOVEL
+training_1000.png	STAY CLOSE
+training_1001.png	MOVE QUICKLY
+training_1002.png	FEEL HAPPY
+training_1003.png	SAVE US
+training_1004.png	NO
+training_1005.png	ACT CHAOTICALLY
+training_1006.png	TALK NOW
+training_1007.png	BE SERIOUS
+training_1008.png	DESTROY IT
+training_1009.png	TALK NOW
+training_1010.png	GO TO SLEEP
+training_1011.png	COME ON
+training_1012.png	WHAT'S UP
+training_1013.png	WAIT PATIENTLY
+training_1014.png	GET ANGRY
+training_1015.png	STAY ORDERLY
+training_1016.png	THE PRINCESS
+training_1017.png	OH MY GOD
+training_1018.png	TOGETHER NOW
+training_1019.png	GO HOME
+training_1020.png	FEEL RELUCTANT
+training_1021.png	COME ON
+training_1022.png	TRY LATER
+training_1023.png	ALL DONE
+training_1024.png	LOOK OUT!
+training_1025.png	Huh?
+training_1026.png	IT'S OVER
+training_1027.png	ACT CAREFULLY
+training_1028.png	POSION
+training_1029.png	WORK HARD
+training_1030.png	WHAT?!
+training_1031.png	ROMANCE NOVEL
+training_1032.png	GO ALONE
+training_1033.png	BE DISORDERLY
+training_1034.png	WAIT HERE
+training_1035.png	FEMALE LEAD
+training_1036.png	JUST A MINUTE
+training_1037.png	FEEL TIRED
+training_1038.png	SO COOL
+training_1039.png	GET EXCITED
+training_1040.png	EMPIRE
+training_1041.png	WAIT HERE
+training_1042.png	WE WIN
+training_1043.png	WATCH THIS
+training_1044.png	MOVE DOWN
+training_1045.png	STAY PEACEFUL
+training_1046.png	NO PROBLEM
+training_1047.png	WHAT?!
+training_1048.png	STAY CALM
+training_1049.png	THANK YOU
+training_1050.png	MOVE FORWARD
+training_1051.png	MOVE FORWARD
+training_1052.png	DESTROY IT
+training_1053.png	DESTROY IT
+training_1054.png	MOVE QUICKLY
+training_1055.png	TURN LEFT
+training_1056.png	GOOD LUCK
+training_1057.png	GOOD LUCK
+training_1058.png	BE DETERMINED
+training_1059.png	WHAT?!
+training_1060.png	TAKE A REST
+training_1061.png	Huh?
+training_1062.png	TIME TO EAT
+training_1063.png	MAGIC
+training_1064.png	GO OUTSIDE
+training_1065.png	FEEL FEAR
+training_1066.png	FEEL ANXIOUS
+training_1067.png	NO WAY
+training_1068.png	EMPIRE
+training_1069.png	I'M HERE
+training_1070.png	FEEL TIRED
+training_1071.png	MOVE QUICKLY
+training_1072.png	ACT CHAOTICALLY
+training_1073.png	STUDY TIME
+training_1074.png	TAKE A REST
+training_1075.png	WRITE IT DOWN
+training_1076.png	OFFICIAL
+training_1077.png	ACT VIOLENTLY
+training_1078.png	BE OPEN
+training_1079.png	AGAIN PLEASE
+training_1080.png	JUST A MINUTE
+training_1081.png	STAY INSIDE
+training_1082.png	AGAIN PLEASE
+training_1083.png	SAVE US
+training_1084.png	I'M HERE
+training_1085.png	THE END
+training_1086.png	PLAY AROUND
+training_1087.png	GO HOME
+training_1088.png	GO FASTER
+training_1089.png	ALL DONE
+training_1090.png	YAY
+training_1091.png	MALE LEAD
+training_1092.png	SAVE US
+training_1093.png	ANGELIC
+training_1094.png	WORK HARD
+training_1095.png	BE LOUD
+training_1096.png	READERS
+training_1097.png	KEEP SECRETS
+training_1098.png	TRY LATER
+training_1099.png	BEAUTIFUL
+training_1100.png	BE QUIET
+training_1101.png	TRY LATER
+training_1102.png	ESCAPE NOW
+training_1103.png	TAKE A REST
+training_1104.png	WAIT PATIENTLY
+training_1105.png	STAY SILENT
+training_1106.png	WRITE IT DOWN
+training_1107.png	WAIT
+training_1108.png	GET ANGRY
+training_1109.png	BE DETERMINED
+training_1110.png	GO FASTER
+training_1111.png	LET'S PLAY
+training_1112.png	TALK NOW
+training_1113.png	BE QUIET
+training_1114.png	ACT VIOLENTLY
+training_1115.png	WHAT'S UP
+training_1116.png	MALE LEAD
+training_1117.png	COME INSIDE
+training_1118.png	SEARCH HERE
+training_1119.png	THINK METHODICALLY
+training_1120.png	FEMALE LEAD
+training_1121.png	WHAT?!
+training_1122.png	ACT PURPOSEFUL
+training_1123.png	THINK DEEPLY
+training_1124.png	DEMONIC
+training_1125.png	HIDE QUICKLY
+training_1126.png	GOTCHA
+training_1127.png	CONGRATS
+training_1128.png	BEGIN NOW
+training_1129.png	KEEP SECRETS
+training_1130.png	BUILD IT
+training_1131.png	ESCAPE NOW
+training_1132.png	RIGHT NOW
+training_1133.png	ACT RANDOMLY
+training_1134.png	Huh?
+training_1135.png	WHAT?!
+training_1136.png	GO SLOWLY
+training_1137.png	KEEP SECRETS
+training_1138.png	COME ON
+training_1139.png	LISTEN UP
+training_1140.png	STAY CALM
+training_1141.png	GO SOON
+training_1142.png	GO TO SLEEP
+training_1143.png	HIDE QUICKLY
+training_1144.png	BE DISORDERLY
+training_1145.png	SEE YOU
+training_1146.png	KEEP STEADY
+training_1147.png	STUDY TIME
+training_1148.png	STAY CALM
+training_1149.png	IT'S OVER
+training_1150.png	READ THIS
+training_1151.png	Huh?
+training_1152.png	STAY BUSY
+training_1153.png	CREATE ART
+training_1154.png	MOVE UP
+training_1155.png	ESCAPE NOW
+training_1156.png	IT'S OVER
+training_1157.png	GET EXCITED
+training_1158.png	BE SERIOUS
+training_1159.png	STAY BUSY
+training_1160.png	ACT SUSPICIOUS
+training_1161.png	JUST A MINUTE
+training_1162.png	BUILD IT
+training_1163.png	AGAIN PLEASE
+training_1164.png	SHOW JOY
+training_1165.png	BE OPEN
+training_1166.png	IT'S OVER
+training_1167.png	LISTEN UP
+training_1168.png	GO SOON
+training_1169.png	HANDSOME
+training_1170.png	WE WIN
+training_1171.png	SWORDSMANSHIP
+training_1172.png	YAY
+training_1173.png	WAIT
+training_1174.png	STAY CLOSE
+training_1175.png	GOTCHA
+training_1176.png	TRY AGAIN
+training_1177.png	TOGETHER NOW
+training_1178.png	KINGDOM
+training_1179.png	FIGHT ON
+training_1180.png	GO FAR
+training_1181.png	RUN AWAY
+training_1182.png	WHY?
+training_1183.png	ALL DONE
+training_1184.png	ALMOST THERE
+training_1185.png	AH
+training_1186.png	OFFICIAL
+training_1187.png	STAY PEACEFUL
+training_1188.png	TALK NOW
+training_1189.png	BE LAZY
+training_1190.png	GO FAR
+training_1191.png	GET EXCITED
+training_1192.png	WAIT
+training_1193.png	ANGELIC
+training_1194.png	GOTCHA
+training_1195.png	GO BACK
+training_1196.png	EXPLORE MORE
+training_1197.png	BE LAZY
+training_1198.png	ACT CONFIDENT
+training_1199.png	FEEL NERVOUS
+training_1200.png	VILLIAGERS
+training_1201.png	BE OPEN
+training_1202.png	NO PROBLEM
+training_1203.png	I'M READY
+training_1204.png	AGAIN PLEASE
+training_1205.png	BE GENTLE
+training_1206.png	SEE YOU
+training_1207.png	Huh?
+training_1208.png	GO HOME
+training_1209.png	I DID IT
+training_1210.png	BE AIMLESS
+training_1211.png	FEEL FREE
+training_1212.png	MOVE ENERGETICALLY
+training_1213.png	AGAIN PLEASE
+training_1214.png	MOVE DOWN
+training_1215.png	WAIT HERE
+training_1216.png	WATCH OUT
+training_1217.png	MALE LEAD
+training_1218.png	ACT RANDOMLY
+training_1219.png	SWORDSMANSHIP
+training_1220.png	IT'S OVER
+training_1221.png	STAY PEACEFUL
+training_1222.png	ACT ROUGH
+training_1223.png	FEMALE LEAD
+training_1224.png	LET'S PLAY
+training_1225.png	WAIT PATIENTLY
+training_1226.png	WAIT PATIENTLY
+training_1227.png	THE PRINCESS
+training_1228.png	SPEAK SOFTLY
+training_1229.png	WELCOME
+training_1230.png	I'M READY
+training_1231.png	TRY LATER
+training_1232.png	BE CURIOUS
+training_1233.png	FEEL FREE
+training_1234.png	GO BACK
+training_1235.png	ACT PURPOSEFUL
+training_1236.png	Huh?
+training_1237.png	EMPIRE
+training_1238.png	SWORDSMANSHIP
+training_1239.png	DEMONIC
+training_1240.png	THE END
+training_1241.png	CREATE ART
+training_1242.png	READ THIS
+training_1243.png	TALK HARSHLY
+training_1244.png	SO COOL
+training_1245.png	MOVE GRACEFULLY
+training_1246.png	STAY CLOSE
+training_1247.png	BEAUTIFUL
+training_1248.png	MOVE DOWN
+training_1249.png	STAY SILENT
+training_1250.png	STOP
+training_1251.png	ACT BITTERLY
+training_1252.png	FEEL UNSTEADY
+training_1253.png	TURN RIGHT
+training_1254.png	LOOK OUT!
+training_1255.png	SEE YOU
+training_1256.png	THANK YOU
+training_1257.png	GO OUTSIDE
+training_1258.png	PLAY AROUND
+training_1259.png	GO HOME
+training_1260.png	GO FASTER
+training_1261.png	KEEP SECRETS
+training_1262.png	DRAW SOMETHING
+training_1263.png	KEEP SECRETS
+training_1264.png	MOVE DOWN
+training_1265.png	KINGDOM
+training_1266.png	BE SWEET
+training_1267.png	ESCAPE NOW
+training_1268.png	IT'S OVER
+training_1269.png	I'M HERE
+training_1270.png	NO PROBLEM
+training_1271.png	HELP OUT
+training_1272.png	SPEAK UP
+training_1273.png	BE SWEET
+training_1274.png	STAY CLOSE
+training_1275.png	BEGIN NOW
+training_1276.png	JUST A MINUTE
+training_1277.png	WORK HARD
+training_1278.png	KEEP STEADY
+training_1279.png	WELCOME
+training_1280.png	DESTROY IT
+training_1281.png	WHY?
+training_1282.png	WE WIN
+training_1283.png	MOVE UP
+training_1284.png	ACT ROUGH
+training_1285.png	DESTROY IT
+training_1286.png	SLOW DOWN
+training_1287.png	LOOK OUT!
+training_1288.png	FEEL HAPPY
+training_1289.png	ESCAPE NOW
+training_1290.png	AH
+training_1291.png	SAVE US
+training_1292.png	RUN AWAY
+training_1293.png	THE PRINCESS
+training_1294.png	HELP OUT
+training_1295.png	MOVE GRACEFULLY
+training_1296.png	SO COOL
+training_1297.png	ACT CARELESS
+training_1298.png	NEXT TIME
+training_1299.png	SEARCH HERE
+training_1300.png	ACT VIOLENTLY
+training_1301.png	ROMANCE NOVEL
+training_1302.png	OH MY GOD
+training_1303.png	DEMONIC
+training_1304.png	LOOK OUT!
+training_1305.png	WAIT PATIENTLY
+training_1306.png	GO TO SLEEP
+training_1307.png	MAGIC
+training_1308.png	DESTROY IT
+training_1309.png	RUN AWAY
+training_1310.png	HELP
+training_1311.png	ACT RANDOMLY
+training_1312.png	ACT CHAOTICALLY
+training_1313.png	ACT RANDOMLY
+training_1314.png	MOVE DOWN
+training_1315.png	BE LAZY
+training_1316.png	POSION
+training_1317.png	FEEL SAD
+training_1318.png	DRAW SOMETHING
+training_1319.png	BE LOUD
+training_1320.png	ESCAPE NOW
+training_1321.png	BE AIMLESS
+training_1322.png	WRITE IT DOWN
+training_1323.png	FEEL FEAR
+training_1324.png	SO COOL
+training_1325.png	WAIT
+training_1326.png	MOVE GRACEFULLY
+training_1327.png	HURRY UP
+training_1328.png	TOGETHER NOW
+training_1329.png	BE QUIET
+training_1330.png	WHAT'S UP
+training_1331.png	THANK YOU
+training_1332.png	BE DISORDERLY
+training_1333.png	BEAUTIFUL
+training_1334.png	IT'S OVER
+training_1335.png	BE AIMLESS
+training_1336.png	CREATE ART
+training_1337.png	SEARCH HERE
+training_1338.png	SPEAK UP
+training_1339.png	GOOD LUCK
+training_1340.png	SEARCH HERE
+training_1341.png	GO OUTSIDE
+training_1342.png	AGAIN PLEASE
+training_1343.png	HIDE QUICKLY
+training_1344.png	HIDE QUICKLY
+training_1345.png	NO WAY
+training_1346.png	EXPLORE MORE
+training_1347.png	GO FAR
+training_1348.png	BE DETERMINED
+training_1349.png	GET EXCITED
+training_1350.png	WELCOME
+training_1351.png	RIGHT NOW
+training_1352.png	STAY ORDERLY
+training_1353.png	FEEL SAD
+training_1354.png	COME INSIDE
+training_1355.png	ACT SUSPICIOUS
+training_1356.png	SPEAK UP
+training_1357.png	CONGRATS
+training_1358.png	WRITE IT DOWN
+training_1359.png	TO BE CONTINUED
+training_1360.png	OFFICIAL
+training_1361.png	BEAUTIFUL
+training_1362.png	VILLIAGERS
+training_1363.png	ACT ROUGH
+training_1364.png	SLOW DOWN
+training_1365.png	RUN AWAY
+training_1366.png	BE AIMLESS
+training_1367.png	DEMONIC
+training_1368.png	TAKE A REST
+training_1369.png	HANDSOME
+training_1370.png	ACT PURPOSEFUL
+training_1371.png	MOVE GRACEFULLY
+training_1372.png	GET ANGRY
+training_1373.png	GO BACK
+training_1374.png	GO TO SLEEP
+training_1375.png	WHY?
+training_1376.png	WRITE IT DOWN
+training_1377.png	SWORDSMANSHIP
+training_1378.png	FEEL HAPPY
+training_1379.png	GO TO SLEEP
+training_1380.png	HURRY UP
+training_1381.png	ACT SUSPICIOUS
+training_1382.png	PLEASE
+training_1383.png	STAY INSIDE
+training_1384.png	RUN AWAY
+training_1385.png	TOGETHER NOW
+training_1386.png	ACT RANDOMLY
+training_1387.png	FEEL FEAR
+training_1388.png	FEEL SAD
+training_1389.png	HOPE FOR BEST
+training_1390.png	TRY AGAIN
+training_1391.png	POSION
+training_1392.png	BE DISORDERLY
+training_1393.png	GO OUTSIDE
+training_1394.png	READ THIS
+training_1395.png	I'M SORRY
+training_1396.png	ROMANCE NOVEL
+training_1397.png	COME INSIDE
+training_1398.png	MAKE NOISE
+training_1399.png	MOVE GRACEFULLY
+training_1400.png	GOTCHA
+training_1401.png	STAY BUSY
+training_1402.png	TAKE A REST
+training_1403.png	PLAY AROUND
+training_1404.png	BE LOUD
+training_1405.png	AGAIN PLEASE
+training_1406.png	GO SOON
+training_1407.png	GET EXCITED
+training_1408.png	OOPS
+training_1409.png	KINGDOM
+training_1410.png	START NOW
+training_1411.png	OH MY GOD
+training_1412.png	MOVE QUICKLY
+training_1413.png	FEEL SAD
+training_1414.png	GO SLOWLY
+training_1415.png	BE QUIET
+training_1416.png	OH MY GOD
+training_1417.png	OOPS
+training_1418.png	SO COOL
+training_1419.png	THINK METHODICALLY
+training_1420.png	THANK YOU
+training_1421.png	VILLIAGERS
+training_1422.png	ACT RANDOMLY
+training_1423.png	STAY SAFE
+training_1424.png	VILLANESS
+training_1425.png	GOOD LUCK
+training_1426.png	BE SERIOUS
+training_1427.png	MOVE QUICKLY
+training_1428.png	SEARCH HERE
+training_1429.png	THE DUKE OF
+training_1430.png	STAY PEACEFUL
+training_1431.png	SEE YOU
+training_1432.png	GO HOME
+training_1433.png	NO
+training_1434.png	IT'S OVER
+training_1435.png	KEEP STEADY
+training_1436.png	ACT BITTERLY
+training_1437.png	JUST A MINUTE
+training_1438.png	STAY PEACEFUL
+training_1439.png	LET'S PLAY
+training_1440.png	YAY
+training_1441.png	YAY
+training_1442.png	MOVE GRACEFULLY
+training_1443.png	BE EAGER
+training_1444.png	BE GENTLE
+training_1445.png	FEEL FREE
+training_1446.png	GO FASTER
+training_1447.png	GO SLOWLY
+training_1448.png	FEEL ANXIOUS
+training_1449.png	BE QUIET
+training_1450.png	STUDY TIME
+training_1451.png	OFFICIAL
+training_1452.png	BE DETERMINED
+training_1453.png	EMPIRE
+training_1454.png	OH MY GOD
+training_1455.png	KINGDOM
+training_1456.png	GO SLOWLY
+training_1457.png	WHAT?!
+training_1458.png	MAKE NOISE
+training_1459.png	SPEAK UP
+training_1460.png	TAKE A REST
+training_1461.png	WAIT PATIENTLY
+training_1462.png	LET'S PLAY
+training_1463.png	TIME TO EAT
+training_1464.png	ACT ROUGH
+training_1465.png	MOVE QUICKLY
+training_1466.png	GO FAR
+training_1467.png	VILLIAGERS
+training_1468.png	STAY PEACEFUL
+training_1469.png	NEXT TIME
+training_1470.png	RUN AWAY
+training_1471.png	WELCOME
+training_1472.png	STAY BUSY
+training_1473.png	STAY PEACEFUL
+training_1474.png	SLOW DOWN
+training_1475.png	SEARCH HERE
+training_1476.png	POSION
+training_1477.png	FEEL HAPPY
+training_1478.png	BE AIMLESS
+training_1479.png	GO SLOWLY
+training_1480.png	TO BE CONTINUED...
+training_1481.png	I'M HERE
+training_1482.png	BE DISORDERLY
+training_1483.png	GO OUTSIDE
+training_1484.png	Huh?
+training_1485.png	OOPS
+training_1486.png	TALK NOW
+training_1487.png	AH
+training_1488.png	TIME TO EAT
+training_1489.png	WAIT PATIENTLY
+training_1490.png	TURN LEFT
+training_1491.png	THINK METHODICALLY
+training_1492.png	TURN LEFT
+training_1493.png	BE SWEET
+training_1494.png	THINK METHODICALLY
+training_1495.png	ROMANCE NOVEL
+training_1496.png	BE LOUD
+training_1497.png	FIGHT ON
+training_1498.png	SLOW DOWN
+training_1499.png	ALMOST THERE
+training_1500.png	STAY SAFE
+training_1501.png	VILLIAGERS
+training_1502.png	STOP
+training_1503.png	BEAUTIFUL
+training_1504.png	DEMONIC
+training_1505.png	HANDSOME
+training_1506.png	HURRY UP
+training_1507.png	BE OPEN
+training_1508.png	GET EXCITED
+training_1509.png	FEEL ANXIOUS
+training_1510.png	BE QUIET
+training_1511.png	FEEL FEAR
+training_1512.png	HIDE QUICKLY
+training_1513.png	ACT VIOLENTLY
+training_1514.png	POSION
+training_1515.png	SEARCH HERE
+training_1516.png	TO BE CONTINUED...
+training_1517.png	WATCH THIS
+training_1518.png	WE WIN
+training_1519.png	TOGETHER NOW
+training_1520.png	WAIT HERE
+training_1521.png	STAY PEACEFUL
+training_1522.png	FEEL UNSTEADY
+training_1523.png	EXPLORE MORE
+training_1524.png	ACT CARELESS
+training_1525.png	HANDSOME
+training_1526.png	NO WAY
+training_1527.png	DESTROY IT
+training_1528.png	VILLIAGERS
+training_1529.png	WAIT HERE
+training_1530.png	BE QUIET
+training_1531.png	THE DUKE OF
+training_1532.png	I'M HERE
+training_1533.png	NO
+training_1534.png	FEEL FREE
+training_1535.png	MOVE DOWN
+training_1536.png	GO TO SLEEP
+training_1537.png	ALMOST THERE
+training_1538.png	FEEL RELUCTANT
+training_1539.png	WORK HARD
+training_1540.png	BE QUIET
+training_1541.png	READ THIS
+training_1542.png	WHY?
+training_1543.png	WHAT?!
+training_1544.png	JUST IN TIME
+training_1545.png	THANK YOU
+training_1546.png	FEEL RELUCTANT
+training_1547.png	BE QUIET
+training_1548.png	ACT CHAOTICALLY
+training_1549.png	PLAY AROUND
+training_1550.png	I'M SORRY
+training_1551.png	GOOD LUCK
+training_1552.png	COME INSIDE
+training_1553.png	HANDSOME
+training_1554.png	SLOW DOWN
+training_1555.png	SPEAK SOFTLY
+training_1556.png	OH MY GOD
+training_1557.png	ACT CAREFULLY
+training_1558.png	BE OPEN
+training_1559.png	SPEAK SOFTLY
+training_1560.png	NOT AGAIN
+training_1561.png	ACT PURPOSEFUL
+training_1562.png	ACT CARELESS
+training_1563.png	GOTCHA
+training_1564.png	TURN RIGHT
+training_1565.png	ACT VIOLENTLY
+training_1566.png	GO ALONE
+training_1567.png	THINK METHODICALLY
+training_1568.png	CONGRATS
+training_1569.png	STAY BUSY
+training_1570.png	THINK DEEPLY
+training_1571.png	BE SWEET
+training_1572.png	BE BRAVE
+training_1573.png	FIGHT ON
+training_1574.png	ACT ROUGH
+training_1575.png	MOVE GRACEFULLY
+training_1576.png	TURN LEFT
+training_1577.png	WELCOME
+training_1578.png	TO BE CONTINUED...
+training_1579.png	MOVE DOWN
+training_1580.png	BUILD IT
+training_1581.png	GO OUTSIDE
+training_1582.png	ACT SUSPICIOUS
+training_1583.png	COME INSIDE
+training_1584.png	HAPPY ENDING
+training_1585.png	BE QUIET
+training_1586.png	STAY PEACEFUL
+training_1587.png	ACT CARELESS
+training_1588.png	FEEL TIRED
+training_1589.png	ACT ROUGH
+training_1590.png	READ THIS
+training_1591.png	STAY CLOSE
+training_1592.png	FEEL TIRED
+training_1593.png	STAY INSIDE
+training_1594.png	KINGDOM
+training_1595.png	WATCH OUT
+training_1596.png	ACT RANDOMLY
+training_1597.png	NO PROBLEM
+training_1598.png	GO HOME
+training_1599.png	WHY?
+training_1600.png	START NOW
+training_1601.png	BEGIN NOW
+training_1602.png	ESCAPE NOW
+training_1603.png	JUST IN TIME
+training_1604.png	STAY INSIDE
+training_1605.png	I'M READY
+training_1606.png	THE DUKE OF
+training_1607.png	ACT CAREFULLY
+training_1608.png	IT'S OVER
+training_1609.png	WE WIN
+training_1610.png	STAY CLOSE
+training_1611.png	NO WAY
+training_1612.png	THINK METHODICALLY
+training_1613.png	FEEL SAD
+training_1614.png	THANK YOU
+training_1615.png	SHOW JOY
+training_1616.png	THINK DEEPLY
+training_1617.png	VILLANESS
+training_1618.png	HOPE FOR BEST
+training_1619.png	KEEP SECRETS
+training_1620.png	DEMONIC
+training_1621.png	TO BE CONTINUED
+training_1622.png	FEEL TIRED
+training_1623.png	STAY CALM
+training_1624.png	BE SERIOUS
+training_1625.png	STAY BUSY
+training_1626.png	WATCH THIS
+training_1627.png	ACT CONFIDENT
+training_1628.png	THINK METHODICALLY
+training_1629.png	I DID IT
+training_1630.png	MOVE ENERGETICALLY
+training_1631.png	BE GENTLE
+training_1632.png	MOVE ENERGETICALLY
+training_1633.png	TALK HARSHLY
+training_1634.png	ACT VIOLENTLY
+training_1635.png	LISTEN UP
+training_1636.png	THINK DEEPLY
+training_1637.png	THINK METHODICALLY
+training_1638.png	DESTROY IT
+training_1639.png	CONGRATS
+training_1640.png	THINK METHODICALLY
+training_1641.png	IT'S OVER
+training_1642.png	THINK DEEPLY
+training_1643.png	WHY?
+training_1644.png	COME ON
+training_1645.png	DEMONIC
+training_1646.png	WATCH OUT
+training_1647.png	GO TO SLEEP
+training_1648.png	LOOK OUT!
+training_1649.png	TRY AGAIN
+training_1650.png	BE LOUD
+training_1651.png	TALK HARSHLY
+training_1652.png	HAPPY ENDING
+training_1653.png	SPEAK SOFTLY
+training_1654.png	BE GENTLE
+training_1655.png	STOP
+training_1656.png	JUST IN TIME
+training_1657.png	MOVE ENERGETICALLY
+training_1658.png	FEEL ANXIOUS
+training_1659.png	WORK HARD
+training_1660.png	ACT CAREFULLY
+training_1661.png	PLEASE
+training_1662.png	ANGELIC
+training_1663.png	I DID IT
+training_1664.png	FIGHT ON
+training_1665.png	ACT BITTERLY
+training_1666.png	NO WAY
+training_1667.png	GO SLOWLY
+training_1668.png	BUILD IT
+training_1669.png	THE PRINCESS
+training_1670.png	SWORDSMANSHIP
+training_1671.png	FEEL NERVOUS
+training_1672.png	BE SWEET
+training_1673.png	JUST IN TIME
+training_1674.png	WHAT'S UP
+training_1675.png	THINK DEEPLY
+training_1676.png	NEXT TIME
+training_1677.png	AGAIN PLEASE
+training_1678.png	BUILD IT
+training_1679.png	STUDY TIME
+training_1680.png	SPEAK SOFTLY
+training_1681.png	NEXT TIME
+training_1682.png	BE QUIET
+training_1683.png	JUST IN TIME
+training_1684.png	STAY BUSY
+training_1685.png	BE AIMLESS
+training_1686.png	MOVE FORWARD
+training_1687.png	I'M HERE
+training_1688.png	WATCH THIS
+training_1689.png	WORK SYSTEMATICALLY
+training_1690.png	ACT CARELESS
+training_1691.png	MOVE DOWN
+training_1692.png	BE AIMLESS
+training_1693.png	BE DISORDERLY
+training_1694.png	TURN LEFT
+training_1695.png	MAGIC
+training_1696.png	MAKE NOISE
+training_1697.png	ACT CAREFULLY
+training_1698.png	THANK YOU
+training_1699.png	IT FEELS WRONG
+training_1700.png	DRAW SOMETHING
+training_1701.png	STAY CLOSE
+training_1702.png	TURN RIGHT
+training_1703.png	BE CURIOUS
+training_1704.png	SHOW JOY
+training_1705.png	FEEL TIRED
+training_1706.png	HELP OUT
+training_1707.png	FEEL NERVOUS
+training_1708.png	FEEL RELUCTANT
+training_1709.png	BE GENTLE
+training_1710.png	EXPLORE MORE
+training_1711.png	YAY
+training_1712.png	TO BE CONTINUED...
+training_1713.png	FEEL HAPPY
+training_1714.png	WAIT PATIENTLY
+training_1715.png	ACT PURPOSEFUL
+training_1716.png	STUDY TIME
+training_1717.png	RUN AWAY
+training_1718.png	ACT CAREFULLY
+training_1719.png	ACT CAREFULLY
+training_1720.png	PLEASE
+training_1721.png	WAIT
+training_1722.png	GO FASTER
+training_1723.png	EMPIRE
+training_1724.png	I'M SORRY
+training_1725.png	SPEAK UP
+training_1726.png	GO HOME
+training_1727.png	WHAT'S UP
+training_1728.png	SEE YOU
+training_1729.png	TOGETHER NOW
+training_1730.png	JUST IN TIME
+training_1731.png	SPEAK UP
+training_1732.png	READERS
+training_1733.png	WATCH THIS
+training_1734.png	STAY CLOSE
+training_1735.png	KINGDOM
+training_1736.png	TRY AGAIN
+training_1737.png	HIDE QUICKLY
+training_1738.png	ACT CHAOTICALLY
+training_1739.png	BEAUTIFUL
+training_1740.png	TOGETHER NOW
+training_1741.png	BEGIN NOW
+training_1742.png	STOP
+training_1743.png	ALL DONE
+training_1744.png	GO FAR
+training_1745.png	MAKE NOISE
+training_1746.png	ACT SUSPICIOUS
+training_1747.png	PLAY AROUND
+training_1748.png	WHY?
+training_1749.png	ACT ROUGH
+training_1750.png	DEMONIC
+training_1751.png	GET ANGRY
+training_1752.png	MAGIC
+training_1753.png	BE GENTLE
+training_1754.png	ACT CONFIDENT
+training_1755.png	NEXT TIME
+training_1756.png	TO BE CONTINUED...
+training_1757.png	NO PROBLEM
+training_1758.png	JUST IN TIME
+training_1759.png	I'M HERE
+training_1760.png	TURN RIGHT
+training_1761.png	SPEAK SOFTLY
+training_1762.png	THE DUKE OF
+training_1763.png	IT FEELS WRONG
+training_1764.png	BE SWEET
+training_1765.png	FIGHT ON
+training_1766.png	STAY SAFE
+training_1767.png	POSION
+training_1768.png	ACT CONFIDENT
+training_1769.png	AGAIN PLEASE
+training_1770.png	ROMANCE NOVEL
+training_1771.png	GO FASTER
+training_1772.png	TO BE CONTINUED
+training_1773.png	WHAT?!
+training_1774.png	DEMONIC
+training_1775.png	CREATE ART
+training_1776.png	THANK YOU
+training_1777.png	DEMONIC
+training_1778.png	ACT VIOLENTLY
+training_1779.png	HELP OUT
+training_1780.png	SPEAK SOFTLY
+training_1781.png	STUDY TIME
+training_1782.png	FEMALE LEAD
+training_1783.png	ACT VIOLENTLY
+training_1784.png	TO BE CONTINUED...
+training_1785.png	WRITE IT DOWN
+training_1786.png	BE OPEN
+training_1787.png	LET'S PLAY
+training_1788.png	LET'S PLAY
+training_1789.png	AH
+training_1790.png	DEMONIC
+training_1791.png	WATCH OUT
+training_1792.png	FIGHT ON
+training_1793.png	TURN LEFT
+training_1794.png	LISTEN UP
+training_1795.png	STAY ORDERLY
+training_1796.png	VILLANESS
+training_1797.png	WHAT?!
+training_1798.png	ACT ROUGH
+training_1799.png	I'M HERE
+training_1800.png	SEE YOU
+training_1801.png	I'M SORRY
+training_1802.png	RUN AWAY
+training_1803.png	STAY CALM
+training_1804.png	NO PROBLEM
+training_1805.png	SPEAK SOFTLY
+training_1806.png	MOVE QUICKLY
+training_1807.png	JUST IN TIME
+training_1808.png	SO COOL
+training_1809.png	WHAT?!
+training_1810.png	FEEL SAD
+training_1811.png	BE LOUD
+training_1812.png	KEEP STEADY
+training_1813.png	NO WAY
+training_1814.png	WAIT
+training_1815.png	FEEL SAD
+training_1816.png	SLOW DOWN
+training_1817.png	ACT CARELESS
+training_1818.png	TALK NOW
+training_1819.png	ACT CAREFULLY
+training_1820.png	MOVE GRACEFULLY
+training_1821.png	WHY?
+training_1822.png	BE BRAVE
+training_1823.png	HAPPY ENDING
+training_1824.png	STAY ORDERLY
+training_1825.png	WELCOME
+training_1826.png	AH
+training_1827.png	SEARCH HERE
+training_1828.png	TALK NOW
+training_1829.png	NOT AGAIN
+training_1830.png	MOVE DOWN
+training_1831.png	MAGIC
+training_1832.png	THINK METHODICALLY
+training_1833.png	WHAT?!
+training_1834.png	WHY?
+training_1835.png	SPEAK SOFTLY
+training_1836.png	VILLANESS
+training_1837.png	I'M SORRY
+training_1838.png	KEEP STEADY
+training_1839.png	AGAIN PLEASE
+training_1840.png	ACT CAREFULLY
+training_1841.png	TRY LATER
+training_1842.png	MAKE NOISE
+training_1843.png	BE SWEET
+training_1844.png	SEARCH HERE
+training_1845.png	STAY BUSY
+training_1846.png	I'M HERE
+training_1847.png	JUST IN TIME
+training_1848.png	ACT CHAOTICALLY
+training_1849.png	ANGELIC
+training_1850.png	SAVE US
+training_1851.png	OFFICIAL
+training_1852.png	ACT VIOLENTLY
+training_1853.png	BE QUIET
+training_1854.png	TURN RIGHT
+training_1855.png	NO
+training_1856.png	MOVE FORWARD
+training_1857.png	GO SOON
+training_1858.png	FEEL NERVOUS
+training_1859.png	KEEP SECRETS
+training_1860.png	EXPLORE MORE
+training_1861.png	WAIT
+training_1862.png	FEEL RELUCTANT
+training_1863.png	TRY AGAIN
+training_1864.png	EXPLORE MORE
+training_1865.png	YES
+training_1866.png	FEEL RELUCTANT
+training_1867.png	BE DISORDERLY
+training_1868.png	FIGHT ON
+training_1869.png	FEMALE LEAD
+training_1870.png	RIGHT NOW
+training_1871.png	HOPE FOR BEST
+training_1872.png	GO BACK
+training_1873.png	I'M READY
+training_1874.png	SPEAK SOFTLY
+training_1875.png	NOT AGAIN
+training_1876.png	KEEP SECRETS
+training_1877.png	LOOK OUT!
+training_1878.png	WE WIN
+training_1879.png	WORK HARD
+training_1880.png	ALMOST THERE
+training_1881.png	TRY AGAIN
+training_1882.png	THANK YOU
+training_1883.png	DEMONIC
+training_1884.png	BE BRAVE
+training_1885.png	RUN AWAY
+training_1886.png	EXPLORE MORE
+training_1887.png	HURRY UP
+training_1888.png	BE BRAVE
+training_1889.png	ACT SUSPICIOUS
+training_1890.png	WATCH OUT
+training_1891.png	TO BE CONTINUED
+training_1892.png	PLEASE
+training_1893.png	WHAT?!
+training_1894.png	NOT AGAIN
+training_1895.png	STAY CALM
+training_1896.png	TRY LATER
+training_1897.png	NO PROBLEM
+training_1898.png	SLOW DOWN
+training_1899.png	GO ALONE
+training_1900.png	FEEL HAPPY
+training_1901.png	POSION
+training_1902.png	I'M HERE
+training_1903.png	BE SWEET
+training_1904.png	LET'S PLAY
+training_1905.png	ACT RANDOMLY
+training_1906.png	STUDY TIME
+training_1907.png	MOVE QUICKLY
+training_1908.png	STOP
+training_1909.png	HELP OUT
+training_1910.png	CREATE ART
+training_1911.png	TRY LATER
+training_1912.png	POSION
+training_1913.png	VILLANESS
+training_1914.png	BE LAZY
+training_1915.png	MAGIC
+training_1916.png	BE DETERMINED
+training_1917.png	STAY CLOSE
+training_1918.png	STAY INSIDE
+training_1919.png	SO COOL
+training_1920.png	BE EAGER
+training_1921.png	FEEL UNSTEADY
+training_1922.png	TURN RIGHT
+training_1923.png	I'M SORRY
+training_1924.png	GO HOME
+training_1925.png	STUDY TIME
+training_1926.png	STAY ORDERLY
+training_1927.png	GO FASTER
+training_1928.png	I DID IT
+training_1929.png	FEEL FEAR
+training_1930.png	GOOD LUCK
+training_1931.png	TAKE A REST
+training_1932.png	NOT AGAIN
+training_1933.png	NO WAY
+training_1934.png	STAY PEACEFUL
+training_1935.png	GO ALONE
+training_1936.png	GET ANGRY
+training_1937.png	STAY PEACEFUL
+training_1938.png	HANDSOME
+training_1939.png	WAIT
+training_1940.png	MOVE DOWN
+training_1941.png	POSION
+training_1942.png	TALK NOW
+training_1943.png	THINK METHODICALLY
+training_1944.png	HURRY UP
+training_1945.png	MOVE FORWARD
+training_1946.png	STAY ORDERLY
+training_1947.png	SPEAK UP
+training_1948.png	PLAY AROUND
+training_1949.png	BE LAZY
+training_1950.png	BE SWEET
+training_1951.png	RIGHT NOW
+training_1952.png	BE EAGER
+training_1953.png	WATCH THIS
+training_1954.png	STUDY TIME
+training_1955.png	YES
+training_1956.png	DESTROY IT
+training_1957.png	GO TO SLEEP
+training_1958.png	FEEL SAD
+training_1959.png	TOGETHER NOW
+training_1960.png	BUILD IT
+training_1961.png	GO SOON
+training_1962.png	HAPPY ENDING
+training_1963.png	TALK NOW
+training_1964.png	TURN LEFT
+training_1965.png	BE LOUD
+training_1966.png	ESCAPE NOW
+training_1967.png	VILLANESS
+training_1968.png	TIME TO EAT
+training_1969.png	RUN AWAY
+training_1970.png	LET'S PLAY
+training_1971.png	I'M SORRY
+training_1972.png	BE DISORDERLY
+training_1973.png	KEEP SECRETS
+training_1974.png	WHAT?!
+training_1975.png	ALL DONE
+training_1976.png	TALK NOW
+training_1977.png	DRAW SOMETHING
+training_1978.png	VILLANESS
+training_1979.png	HAPPY ENDING
+training_1980.png	SWORDSMANSHIP
+training_1981.png	KEEP SECRETS
+training_1982.png	RUN AWAY
+training_1983.png	MAGIC
+training_1984.png	COME INSIDE
+training_1985.png	VILLIAGERS
+training_1986.png	HELP
+training_1987.png	COME INSIDE
+training_1988.png	TO BE CONTINUED...
+training_1989.png	GET ANGRY
+training_1990.png	BE LAZY
+training_1991.png	STAY ORDERLY
+training_1992.png	HURRY UP
+training_1993.png	BE AIMLESS
+training_1994.png	FEEL HAPPY
+training_1995.png	GET ANGRY
+training_1996.png	FEEL FEAR
+training_1997.png	FEEL ANXIOUS
+training_1998.png	STAY SILENT
+training_1999.png	LISTEN UP
+training_2000.png	MOVE GRACEFULLY
+training_2001.png	COME ON
+training_2002.png	I'M SORRY
+training_2003.png	THANK YOU
+training_2004.png	DEMONIC
+training_2005.png	OFFICIAL
+training_2006.png	BE SWEET
+training_2007.png	STAY BUSY
+training_2008.png	STAY BUSY
+training_2009.png	WHY?
+training_2010.png	FEEL SAD
+training_2011.png	GO TO SLEEP
+training_2012.png	TRY AGAIN
+training_2013.png	THANK YOU
+training_2014.png	MOVE GRACEFULLY
+training_2015.png	THANK YOU
+training_2016.png	WATCH THIS
+training_2017.png	FEEL UNSTEADY
+training_2018.png	BE OPEN
+training_2019.png	VILLIAGERS
+training_2020.png	JUST A MINUTE
+training_2021.png	KINGDOM
+training_2022.png	COME INSIDE
+training_2023.png	STAY INSIDE
+training_2024.png	NEXT TIME
+training_2025.png	HANDSOME
+training_2026.png	IT'S OVER
+training_2027.png	FEEL FEAR
+training_2028.png	TOGETHER NOW
+training_2029.png	STAY CALM
+training_2030.png	WELCOME
+training_2031.png	FEEL FREE
+training_2032.png	WAIT
+training_2033.png	WE WIN
+training_2034.png	STAY CALM
+training_2035.png	GO TO SLEEP
+training_2036.png	HIDE QUICKLY
+training_2037.png	HAPPY ENDING
+training_2038.png	WHAT?!
+training_2039.png	THE END
+training_2040.png	I DID IT
+training_2041.png	I'M READY
+training_2042.png	PLAY AROUND
+training_2043.png	NO PROBLEM
+training_2044.png	RIGHT NOW
+training_2045.png	YAY
+training_2046.png	JUST A MINUTE
+training_2047.png	FEEL FREE
+training_2048.png	TIME TO EAT
+training_2049.png	BE CURIOUS
+training_2050.png	I'M HERE
+training_2051.png	TALK NOW
+training_2052.png	GO FAR
+training_2053.png	STAY BUSY
+training_2054.png	ALL DONE
+training_2055.png	ACT BITTERLY
+training_2056.png	HELP
+training_2057.png	WHAT?!
+training_2058.png	BE GENTLE
+training_2059.png	VILLIAGERS
+training_2060.png	MAGIC
+training_2061.png	COME INSIDE
+training_2062.png	VILLIAGERS
+training_2063.png	TAKE A REST
+training_2064.png	TOGETHER NOW
+training_2065.png	RUN AWAY
+training_2066.png	HOPE FOR BEST
+training_2067.png	SO COOL
+training_2068.png	BE AIMLESS
+training_2069.png	ACT BITTERLY
+training_2070.png	GO TO SLEEP
+training_2071.png	WHAT?!
+training_2072.png	FIGHT ON
+training_2073.png	WAIT PATIENTLY
+training_2074.png	VILLIAGERS
+training_2075.png	MOVE QUICKLY
+training_2076.png	SAVE US
+training_2077.png	STAY SAFE
+training_2078.png	COME INSIDE
+training_2079.png	HELP
+training_2080.png	KEEP STEADY
+training_2081.png	RUN AWAY
+training_2082.png	HAPPY ENDING
+training_2083.png	STAY PEACEFUL
+training_2084.png	SEARCH HERE
+training_2085.png	THANK YOU
+training_2086.png	WATCH OUT
+training_2087.png	TO BE CONTINUED
+training_2088.png	TOGETHER NOW
+training_2089.png	ROMANCE NOVEL
+training_2090.png	WATCH OUT
+training_2091.png	GOTCHA
+training_2092.png	STAY PEACEFUL
+training_2093.png	IT'S OVER
+training_2094.png	AH
+training_2095.png	WORK SYSTEMATICALLY
+training_2096.png	STAY CALM
+training_2097.png	GO SOON
+training_2098.png	MOVE ENERGETICALLY
+training_2099.png	BE SERIOUS
+training_2100.png	VILLANESS
+training_2101.png	LISTEN UP
+training_2102.png	TURN LEFT
+training_2103.png	FEEL RELUCTANT
+training_2104.png	WRITE IT DOWN
+training_2105.png	BE EAGER
+training_2106.png	MOVE GRACEFULLY
+training_2107.png	SEARCH HERE
+training_2108.png	GO SLOWLY
+training_2109.png	ALMOST THERE
+training_2110.png	BE QUIET
+training_2111.png	POSION
+training_2112.png	MOVE ENERGETICALLY
+training_2113.png	NOT AGAIN
+training_2114.png	FEEL NERVOUS
+training_2115.png	RIGHT NOW
+training_2116.png	START NOW
+training_2117.png	BE SERIOUS
+training_2118.png	FEEL NERVOUS
+training_2119.png	WATCH THIS
+training_2120.png	COME INSIDE
+training_2121.png	MOVE FORWARD
+training_2122.png	FIGHT ON
+training_2123.png	SPEAK SOFTLY
+training_2124.png	GO TO SLEEP
+training_2125.png	DRAW SOMETHING
+training_2126.png	GOTCHA
+training_2127.png	GET EXCITED
+training_2128.png	ACT VIOLENTLY
+training_2129.png	LET'S PLAY
+training_2130.png	LISTEN UP
+training_2131.png	FEEL ANXIOUS
+training_2132.png	WHAT?!
+training_2133.png	GO TO SLEEP
+training_2134.png	DESTROY IT
+training_2135.png	MOVE QUICKLY
+training_2136.png	TURN LEFT
+training_2137.png	I DID IT
+training_2138.png	SO COOL
+training_2139.png	GO ALONE
+training_2140.png	BE DETERMINED
+training_2141.png	HURRY UP
+training_2142.png	MOVE FORWARD
+training_2143.png	CREATE ART
+training_2144.png	KEEP SECRETS
+training_2145.png	STAY PEACEFUL
+training_2146.png	WORK SYSTEMATICALLY
+training_2147.png	I'M HERE
+training_2148.png	THINK DEEPLY
+training_2149.png	TIME TO EAT
+training_2150.png	THANK YOU
+training_2151.png	WATCH THIS
+training_2152.png	TRY AGAIN
+training_2153.png	BE GENTLE
+training_2154.png	STAY SILENT
+training_2155.png	BE DISORDERLY
+training_2156.png	TALK HARSHLY
+training_2157.png	COME INSIDE
+training_2158.png	Huh?
+training_2159.png	IT'S OVER
+training_2160.png	ACT ROUGH
+training_2161.png	WORK SYSTEMATICALLY
+training_2162.png	ACT ROUGH
+training_2163.png	ACT PURPOSEFUL
+training_2164.png	BE SWEET
+training_2165.png	LET'S PLAY
+training_2166.png	STAY ORDERLY
+training_2167.png	FEEL UNSTEADY
+training_2168.png	STAY BUSY
+training_2169.png	PLAY AROUND
+training_2170.png	SO COOL
+training_2171.png	WE WIN
+training_2172.png	THE DUKE OF
+training_2173.png	BE EAGER
+training_2174.png	GO OUTSIDE
+training_2175.png	MAKE NOISE
+training_2176.png	GOTCHA
+training_2177.png	BE OPEN
+training_2178.png	KEEP SECRETS
+training_2179.png	THE DUKE OF
+training_2180.png	GOTCHA
+training_2181.png	COME INSIDE
+training_2182.png	FEEL UNSTEADY
+training_2183.png	SPEAK UP
+training_2184.png	YES
+training_2185.png	FIGHT ON
+training_2186.png	STOP
+training_2187.png	FEEL SAD
+training_2188.png	EXPLORE MORE
+training_2189.png	GO ALONE
+training_2190.png	MALE LEAD
+training_2191.png	WAIT HERE
+training_2192.png	FEEL TIRED
+training_2193.png	FEEL ANXIOUS
+training_2194.png	SPEAK SOFTLY
+training_2195.png	MOVE DOWN
+training_2196.png	NEXT TIME
+training_2197.png	HELP
+training_2198.png	BE LOUD
+training_2199.png	STAY CALM
+training_2200.png	DEMONIC
+training_2201.png	TO BE CONTINUED
+training_2202.png	SLOW DOWN
+training_2203.png	AGAIN PLEASE
+training_2204.png	ACT BITTERLY
+training_2205.png	STAY PEACEFUL
+training_2206.png	FEEL FREE
+training_2207.png	STAY CALM
+training_2208.png	GO HOME
+training_2209.png	AH
+training_2210.png	JUST IN TIME
+training_2211.png	BEGIN NOW
+training_2212.png	ACT VIOLENTLY
+training_2213.png	STAY INSIDE
+training_2214.png	HAPPY ENDING
+training_2215.png	NO
+training_2216.png	ACT ROUGH
+training_2217.png	JUST A MINUTE
+training_2218.png	STOP
+training_2219.png	BE LAZY
+training_2220.png	STAY SAFE
+training_2221.png	GO FAR
+training_2222.png	SAVE US
+training_2223.png	RUN AWAY
+training_2224.png	TURN RIGHT
+training_2225.png	GO OUTSIDE
+training_2226.png	TIME TO EAT
+training_2227.png	NEXT TIME
+training_2228.png	THE PRINCESS
+training_2229.png	MOVE GRACEFULLY
+training_2230.png	TO BE CONTINUED
+training_2231.png	CONGRATS
+training_2232.png	NO
+training_2233.png	WELCOME
+training_2234.png	STAY PEACEFUL
+training_2235.png	BE LOUD
+training_2236.png	THE END
+training_2237.png	TAKE A REST
+training_2238.png	SEARCH HERE
+training_2239.png	BE LOUD
+training_2240.png	SLOW DOWN
+training_2241.png	THE DUKE OF
+training_2242.png	BE SERIOUS
+training_2243.png	I'M HERE
+training_2244.png	EMPIRE
+training_2245.png	WE WIN
+training_2246.png	GET ANGRY
+training_2247.png	WORK HARD
+training_2248.png	TURN RIGHT
+training_2249.png	FEEL UNSTEADY
+training_2250.png	THINK METHODICALLY
+training_2251.png	BE LAZY
+training_2252.png	ACT CARELESS
+training_2253.png	ACT CARELESS
+training_2254.png	YES
+training_2255.png	SWORDSMANSHIP
+training_2256.png	BE GENTLE
+training_2257.png	THANK YOU
+training_2258.png	STAY ORDERLY
+training_2259.png	Huh?
+training_2260.png	MOVE ENERGETICALLY
+training_2261.png	WATCH THIS
+training_2262.png	KEEP SECRETS
+training_2263.png	WHAT?!
+training_2264.png	SEE YOU
+training_2265.png	FEEL UNSTEADY
+training_2266.png	ESCAPE NOW
+training_2267.png	SO COOL
+training_2268.png	MAKE NOISE
+training_2269.png	MOVE UP
+training_2270.png	COME ON
+training_2271.png	HAPPY ENDING
+training_2272.png	ACT BITTERLY
+training_2273.png	TALK NOW
+training_2274.png	BE LAZY
+training_2275.png	SPEAK UP
+training_2276.png	GO FASTER
+training_2277.png	TO BE CONTINUED
+training_2278.png	WHY?
+training_2279.png	YAY
+training_2280.png	Huh?
+training_2281.png	WRITE IT DOWN
+training_2282.png	FEEL SAD
+training_2283.png	BE GENTLE
+training_2284.png	GO TO SLEEP
+training_2285.png	READ THIS
+training_2286.png	BUILD IT
+training_2287.png	JUST A MINUTE
+training_2288.png	STAY SAFE
+training_2289.png	POSION
+training_2290.png	MOVE DOWN
+training_2291.png	BE QUIET
+training_2292.png	STAY BUSY
+training_2293.png	FEEL RELUCTANT
+training_2294.png	EMPIRE
+training_2295.png	SEARCH HERE
+training_2296.png	FEEL NERVOUS
+training_2297.png	ACT PURPOSEFUL
+training_2298.png	DEMONIC
+training_2299.png	FEEL FREE
+training_2300.png	ACT CARELESS
+training_2301.png	HURRY UP
+training_2302.png	KEEP STEADY
+training_2303.png	READERS
+training_2304.png	TAKE A REST
+training_2305.png	FIGHT ON
+training_2306.png	BE EAGER
+training_2307.png	GO ALONE
+training_2308.png	BE SERIOUS
+training_2309.png	GO TO SLEEP
+training_2310.png	SAVE US
+training_2311.png	STAY CALM
+training_2312.png	TALK HARSHLY
+training_2313.png	FEEL HAPPY
+training_2314.png	TOGETHER NOW
+training_2315.png	WATCH THIS
+training_2316.png	GO FASTER
+training_2317.png	BE QUIET
+training_2318.png	GOOD LUCK
+training_2319.png	FEEL TIRED
+training_2320.png	STAY INSIDE
+training_2321.png	BE SWEET
+training_2322.png	SEARCH HERE
+training_2323.png	STAY SAFE
+training_2324.png	HELP OUT
+training_2325.png	RIGHT NOW
+training_2326.png	TURN RIGHT
+training_2327.png	GET EXCITED
+training_2328.png	CREATE ART
+training_2329.png	OOPS
+training_2330.png	MOVE UP
+training_2331.png	HANDSOME
+training_2332.png	BE OPEN
+training_2333.png	SHOW JOY
+training_2334.png	TIME TO EAT
+training_2335.png	STAY INSIDE
+training_2336.png	WE WIN
+training_2337.png	MOVE DOWN
+training_2338.png	WHAT?!
+training_2339.png	TIME TO EAT
+training_2340.png	WORK SYSTEMATICALLY
+training_2341.png	START NOW
+training_2342.png	STAY INSIDE
+training_2343.png	HOPE FOR BEST
+training_2344.png	TO BE CONTINUED
+training_2345.png	MOVE FORWARD
+training_2346.png	DESTROY IT
+training_2347.png	ANGELIC
+training_2348.png	OFFICIAL
+training_2349.png	WORK HARD
+training_2350.png	MOVE UP
+training_2351.png	HELP OUT
+training_2352.png	FEEL SAD
+training_2353.png	HANDSOME
+training_2354.png	TRY LATER
+training_2355.png	CREATE ART
+training_2356.png	BE QUIET
+training_2357.png	SEARCH HERE
+training_2358.png	Huh?
+training_2359.png	WATCH OUT
+training_2360.png	WHAT?!
+training_2361.png	TRY AGAIN
+training_2362.png	FEEL FREE
+training_2363.png	OFFICIAL
+training_2364.png	HAPPY ENDING
+training_2365.png	STAY SAFE
+training_2366.png	SLOW DOWN
+training_2367.png	ACT CAREFULLY
+training_2368.png	FEEL NERVOUS
+training_2369.png	KINGDOM
+training_2370.png	STAY CLOSE
+training_2371.png	FEEL ANXIOUS
+training_2372.png	STAY ORDERLY
+training_2373.png	AGAIN PLEASE
+training_2374.png	WHAT?!
+training_2375.png	GET ANGRY
+training_2376.png	BE GENTLE
+training_2377.png	KEEP STEADY
+training_2378.png	DEMONIC
+training_2379.png	BE AIMLESS
+training_2380.png	I'M SORRY
+training_2381.png	JUST A MINUTE
+training_2382.png	TRY AGAIN
+training_2383.png	BE SWEET
+training_2384.png	IT FEELS WRONG
+training_2385.png	OH MY GOD
+training_2386.png	FEEL TIRED
+training_2387.png	GO SLOWLY
+training_2388.png	TALK NOW
+training_2389.png	MOVE QUICKLY
+training_2390.png	DESTROY IT
+training_2391.png	CONGRATS
+training_2392.png	GO HOME
+training_2393.png	VILLANESS
+training_2394.png	TOGETHER NOW
+training_2395.png	BE QUIET
+training_2396.png	COME INSIDE
+training_2397.png	WE WIN
+training_2398.png	NO PROBLEM
+training_2399.png	WHY?
+training_2400.png	RUN AWAY
+training_2401.png	GO OUTSIDE
+training_2402.png	WHAT?!
+training_2403.png	EXPLORE MORE
+training_2404.png	GET EXCITED
+training_2405.png	WAIT HERE
+training_2406.png	BE SWEET
+training_2407.png	WHAT'S UP
+training_2408.png	WATCH OUT
+training_2409.png	THE DUKE OF
+training_2410.png	KEEP STEADY
+training_2411.png	TRY LATER
+training_2412.png	WRITE IT DOWN
+training_2413.png	GO BACK
+training_2414.png	VILLANESS
+training_2415.png	MOVE FORWARD
+training_2416.png	EMPIRE
+training_2417.png	BE SERIOUS
+training_2418.png	BEAUTIFUL
+training_2419.png	MAGIC
+training_2420.png	READ THIS
+training_2421.png	TALK HARSHLY
+training_2422.png	THINK METHODICALLY
+training_2423.png	GO TO SLEEP
+training_2424.png	Huh?
+training_2425.png	SPEAK UP
+training_2426.png	ACT VIOLENTLY
+training_2427.png	FIGHT ON
+training_2428.png	IT FEELS WRONG
+training_2429.png	NOT AGAIN
+training_2430.png	COME ON
+training_2431.png	SHOW JOY
+training_2432.png	BUILD IT
+training_2433.png	GOOD LUCK
+training_2434.png	SAVE US
+training_2435.png	OH MY GOD
+training_2436.png	MAKE NOISE
+training_2437.png	WHY?
+training_2438.png	WHAT'S UP
+training_2439.png	FEEL NERVOUS
+training_2440.png	FEEL RELUCTANT
+training_2441.png	STUDY TIME
+training_2442.png	PLAY AROUND
+training_2443.png	LET'S PLAY
+training_2444.png	I DID IT
+training_2445.png	LISTEN UP
+training_2446.png	FEEL HAPPY
+training_2447.png	I DID IT
+training_2448.png	THINK METHODICALLY
+training_2449.png	LET'S PLAY
+training_2450.png	GOOD LUCK
+training_2451.png	BE LAZY
+training_2452.png	STAY ORDERLY
+training_2453.png	GO HOME
+training_2454.png	SLOW DOWN
+training_2455.png	COME INSIDE
+training_2456.png	Huh?
+training_2457.png	MAKE NOISE
+training_2458.png	RIGHT NOW
+training_2459.png	IT FEELS WRONG
+training_2460.png	GO FASTER
+training_2461.png	STAY SILENT
+training_2462.png	MOVE ENERGETICALLY
+training_2463.png	ACT CAREFULLY
+training_2464.png	GO FAR
+training_2465.png	FEEL TIRED
+training_2466.png	STAY PEACEFUL
+training_2467.png	I'M READY
+training_2468.png	KEEP SECRETS
+training_2469.png	MAGIC
+training_2470.png	OOPS
+training_2471.png	LISTEN UP
+training_2472.png	TURN LEFT
+training_2473.png	WAIT PATIENTLY
+training_2474.png	OH MY GOD
+training_2475.png	BE SERIOUS
+training_2476.png	ACT RANDOMLY
+training_2477.png	SEARCH HERE
+training_2478.png	TALK HARSHLY
+training_2479.png	WORK SYSTEMATICALLY
+training_2480.png	ACT ROUGH
+training_2481.png	ACT PURPOSEFUL
+training_2482.png	OH MY GOD
+training_2483.png	YAY
+training_2484.png	SWORDSMANSHIP
+training_2485.png	THE PRINCESS
+training_2486.png	SWORDSMANSHIP
+training_2487.png	BE LOUD
+training_2488.png	VILLANESS
+training_2489.png	FEEL ANXIOUS
+training_2490.png	YAY
+training_2491.png	FIGHT ON
+training_2492.png	GET ANGRY
+training_2493.png	STAY PEACEFUL
+training_2494.png	FEEL UNSTEADY
+training_2495.png	I'M SORRY
+training_2496.png	MOVE DOWN
+training_2497.png	SWORDSMANSHIP
+training_2498.png	SO COOL
+training_2499.png	FEEL UNSTEADY
+training_2500.png	THE PRINCESS
+training_2501.png	COME INSIDE
+training_2502.png	LOOK OUT!
+training_2503.png	ACT CHAOTICALLY
+training_2504.png	JUST IN TIME
+training_2505.png	GO HOME
+training_2506.png	THINK METHODICALLY
+training_2507.png	STAY ORDERLY
+training_2508.png	MAGIC
+training_2509.png	THINK DEEPLY
+training_2510.png	BE BRAVE
+training_2511.png	MOVE DOWN
+training_2512.png	STAY SILENT
+training_2513.png	ANGELIC
+training_2514.png	ROMANCE NOVEL
+training_2515.png	AGAIN PLEASE
+training_2516.png	TO BE CONTINUED
+training_2517.png	I'M SORRY
+training_2518.png	TRY LATER
+training_2519.png	BE LAZY
+training_2520.png	AGAIN PLEASE
+training_2521.png	GOOD LUCK
+training_2522.png	FEEL RELUCTANT
+training_2523.png	POSION
+training_2524.png	READERS
+training_2525.png	WAIT PATIENTLY
+training_2526.png	SWORDSMANSHIP
+training_2527.png	ALMOST THERE
+training_2528.png	STAY ORDERLY
+training_2529.png	WORK HARD
+training_2530.png	GOTCHA
+training_2531.png	OFFICIAL
+training_2532.png	ACT CHAOTICALLY
+training_2533.png	COME INSIDE
+training_2534.png	FEEL TIRED
+training_2535.png	IT FEELS WRONG
+training_2536.png	SLOW DOWN
+training_2537.png	BUILD IT
+training_2538.png	EMPIRE
+training_2539.png	WE WIN
+training_2540.png	WAIT HERE
+training_2541.png	FEEL FEAR
+training_2542.png	KEEP SECRETS
+training_2543.png	I DID IT
+training_2544.png	Huh?
+training_2545.png	GET ANGRY
+training_2546.png	TIME TO EAT
+training_2547.png	LET'S PLAY
+training_2548.png	AGAIN PLEASE
+training_2549.png	GOTCHA
+training_2550.png	ALMOST THERE
+training_2551.png	WHY?
+training_2552.png	MAGIC
+training_2553.png	JUST A MINUTE
+training_2554.png	SPEAK SOFTLY
+training_2555.png	SPEAK UP
+training_2556.png	GO TO SLEEP
+training_2557.png	SO COOL
+training_2558.png	WE WIN
+training_2559.png	JUST A MINUTE
+training_2560.png	BE BRAVE
+training_2561.png	MAGIC
+training_2562.png	LISTEN UP
+training_2563.png	DESTROY IT
+training_2564.png	ESCAPE NOW
+training_2565.png	RIGHT NOW
+training_2566.png	STAY ORDERLY
+training_2567.png	ESCAPE NOW
+training_2568.png	DEMONIC
+training_2569.png	POSION
+training_2570.png	BE BRAVE
+training_2571.png	FEMALE LEAD
+training_2572.png	OFFICIAL
+training_2573.png	BE AIMLESS
+training_2574.png	HIDE QUICKLY
+training_2575.png	IT FEELS WRONG
+training_2576.png	GET ANGRY
+training_2577.png	ROMANCE NOVEL
+training_2578.png	STUDY TIME
+training_2579.png	DESTROY IT
+training_2580.png	HIDE QUICKLY
+training_2581.png	STAY INSIDE
+training_2582.png	SO COOL
+training_2583.png	FEEL RELUCTANT
+training_2584.png	WAIT
+training_2585.png	START NOW
+training_2586.png	TIME TO EAT
+training_2587.png	ALL DONE
+training_2588.png	NO WAY
+training_2589.png	ANGELIC
+training_2590.png	LISTEN UP
+training_2591.png	I'M READY
+training_2592.png	FEEL NERVOUS
+training_2593.png	WORK HARD
+training_2594.png	BE DETERMINED
+training_2595.png	BE LOUD
+training_2596.png	MAGIC
+training_2597.png	MAKE NOISE
+training_2598.png	COME INSIDE
+training_2599.png	FEEL FREE
+training_2600.png	WHAT?!
+training_2601.png	DESTROY IT
+training_2602.png	ROMANCE NOVEL
+training_2603.png	WAIT PATIENTLY
+training_2604.png	VILLANESS
+training_2605.png	KEEP STEADY
+training_2606.png	WRITE IT DOWN
+training_2607.png	WHAT'S UP
+training_2608.png	VILLANESS
+training_2609.png	I'M HERE
+training_2610.png	SPEAK UP
+training_2611.png	THE END
+training_2612.png	TALK NOW
+training_2613.png	COME INSIDE
+training_2614.png	IT'S OVER
+training_2615.png	LOOK OUT!
+training_2616.png	WHY?
+training_2617.png	ALMOST THERE
+training_2618.png	COME INSIDE
+training_2619.png	WHAT?!
+training_2620.png	OOPS
+training_2621.png	GET EXCITED
+training_2622.png	RIGHT NOW
+training_2623.png	EXPLORE MORE
+training_2624.png	GO FASTER
+training_2625.png	YAY
+training_2626.png	HELP
+training_2627.png	TURN RIGHT
+training_2628.png	STAY CALM
+training_2629.png	WORK SYSTEMATICALLY
+training_2630.png	STAY PEACEFUL
+training_2631.png	BE SWEET
+training_2632.png	SAVE US
+training_2633.png	SO COOL
+training_2634.png	FEEL TIRED
+training_2635.png	TALK NOW
+training_2636.png	MAKE NOISE
+training_2637.png	KEEP STEADY
+training_2638.png	MOVE ENERGETICALLY
+training_2639.png	FEEL FEAR
+training_2640.png	WATCH THIS
+training_2641.png	ANGELIC
+training_2642.png	BEAUTIFUL
+training_2643.png	RUN AWAY
+training_2644.png	BE LOUD
+training_2645.png	READ THIS
+training_2646.png	ACT CARELESS
+training_2647.png	HURRY UP
+training_2648.png	DRAW SOMETHING
+training_2649.png	NO PROBLEM
+training_2650.png	BE LAZY
+training_2651.png	RIGHT NOW
+training_2652.png	EXPLORE MORE
+training_2653.png	FEEL FEAR
+training_2654.png	HELP OUT
+training_2655.png	GO SLOWLY
+training_2656.png	AGAIN PLEASE
+training_2657.png	STAY SILENT
+training_2658.png	IT'S OVER
+training_2659.png	JUST IN TIME
+training_2660.png	MOVE ENERGETICALLY
+training_2661.png	SHOW JOY
+training_2662.png	GO ALONE
+training_2663.png	HELP
+training_2664.png	SAVE US
+training_2665.png	GO SLOWLY
+training_2666.png	I'M READY
+training_2667.png	TALK NOW
+training_2668.png	FEEL UNSTEADY
+training_2669.png	ACT RANDOMLY
+training_2670.png	BE GENTLE
+training_2671.png	RIGHT NOW
+training_2672.png	BE SERIOUS
+training_2673.png	ALL DONE
+training_2674.png	STAY SAFE
+training_2675.png	VILLIAGERS
+training_2676.png	I DID IT
+training_2677.png	BE DETERMINED
+training_2678.png	SEE YOU
+training_2679.png	AH
+training_2680.png	WORK HARD
+training_2681.png	STUDY TIME
+training_2682.png	MOVE ENERGETICALLY
+training_2683.png	VILLANESS
+training_2684.png	WHAT'S UP
+training_2685.png	TOGETHER NOW
+training_2686.png	FEEL ANXIOUS
+training_2687.png	SO COOL
+training_2688.png	LET'S PLAY
+training_2689.png	FEEL SAD
+training_2690.png	BEAUTIFUL
+training_2691.png	WAIT HERE
+training_2692.png	TO BE CONTINUED...
+training_2693.png	VILLANESS
+training_2694.png	TAKE A REST
+training_2695.png	BE AIMLESS
+training_2696.png	FEEL FEAR
+training_2697.png	ALL DONE
+training_2698.png	READERS
+training_2699.png	TIME TO EAT
+training_2700.png	BE SERIOUS
+training_2701.png	I'M READY
+training_2702.png	BE LAZY
+training_2703.png	WHAT?!
+training_2704.png	ACT CAREFULLY
+training_2705.png	RIGHT NOW
+training_2706.png	HELP
+training_2707.png	STAY SILENT
+training_2708.png	FEEL TIRED
+training_2709.png	NEXT TIME
+training_2710.png	KINGDOM
+training_2711.png	BE BRAVE
+training_2712.png	CONGRATS
+training_2713.png	FEEL NERVOUS
+training_2714.png	SHOW JOY
+training_2715.png	NOT AGAIN
+training_2716.png	THE PRINCESS
+training_2717.png	DESTROY IT
+training_2718.png	FEEL FREE
+training_2719.png	COME INSIDE
+training_2720.png	TURN LEFT
+training_2721.png	FEEL ANXIOUS
+training_2722.png	ACT PURPOSEFUL
+training_2723.png	FEEL SAD
+training_2724.png	WAIT
+training_2725.png	CONGRATS
+training_2726.png	TOGETHER NOW
+training_2727.png	ACT PURPOSEFUL
+training_2728.png	GO SOON
+training_2729.png	BE EAGER
+training_2730.png	Huh?
+training_2731.png	MOVE GRACEFULLY
+training_2732.png	FEEL ANXIOUS
+training_2733.png	WE WIN
+training_2734.png	BUILD IT
+training_2735.png	JUST A MINUTE
+training_2736.png	FIGHT ON
+training_2737.png	GO OUTSIDE
+training_2738.png	AH
+training_2739.png	I DID IT
+training_2740.png	OFFICIAL
+training_2741.png	IT'S OVER
+training_2742.png	OOPS
+training_2743.png	SWORDSMANSHIP
+training_2744.png	MOVE DOWN
+training_2745.png	ACT CONFIDENT
+training_2746.png	TURN LEFT
+training_2747.png	PLAY AROUND
+training_2748.png	ACT SUSPICIOUS
+training_2749.png	OFFICIAL
+training_2750.png	BEAUTIFUL
+training_2751.png	TRY AGAIN
+training_2752.png	THANK YOU
+training_2753.png	MALE LEAD
+training_2754.png	NOT AGAIN
+training_2755.png	KEEP SECRETS
+training_2756.png	TRY LATER
+training_2757.png	BE LOUD
+training_2758.png	BE CURIOUS
+training_2759.png	THINK DEEPLY
+training_2760.png	DESTROY IT
+training_2761.png	MOVE QUICKLY
+training_2762.png	ACT BITTERLY
+training_2763.png	SAVE US
+training_2764.png	BE SWEET
+training_2765.png	MALE LEAD
+training_2766.png	THE END
+training_2767.png	MAKE NOISE
+training_2768.png	BEAUTIFUL
+training_2769.png	TO BE CONTINUED
+training_2770.png	YES
+training_2771.png	SPEAK UP
+training_2772.png	HELP OUT
+training_2773.png	THINK DEEPLY
+training_2774.png	GO FASTER
+training_2775.png	THE PRINCESS
+training_2776.png	TO BE CONTINUED...
+training_2777.png	STAY PEACEFUL
+training_2778.png	BE DETERMINED
+training_2779.png	HELP
+training_2780.png	BE CURIOUS
+training_2781.png	ACT PURPOSEFUL
+training_2782.png	NO WAY
+training_2783.png	STOP
+training_2784.png	BE OPEN
+training_2785.png	TALK NOW
+training_2786.png	SO COOL
+training_2787.png	ACT CHAOTICALLY
+training_2788.png	WE WIN
+training_2789.png	ACT BITTERLY
+training_2790.png	MOVE DOWN
+training_2791.png	TO BE CONTINUED
+training_2792.png	ACT BITTERLY
+training_2793.png	TURN LEFT
+training_2794.png	BEAUTIFUL
+training_2795.png	BE AIMLESS
+training_2796.png	Huh?
+training_2797.png	MOVE FORWARD
+training_2798.png	I'M SORRY
+training_2799.png	NOT AGAIN
+training_2800.png	TALK NOW
+training_2801.png	TALK HARSHLY
+training_2802.png	WAIT
+training_2803.png	GO SLOWLY
+training_2804.png	TRY LATER
+training_2805.png	FEEL UNSTEADY
+training_2806.png	WHAT?!
+training_2807.png	BE SWEET
+training_2808.png	OOPS
+training_2809.png	I'M SORRY
+training_2810.png	WORK HARD
+training_2811.png	TAKE A REST
+training_2812.png	SEARCH HERE
+training_2813.png	NO WAY
+training_2814.png	KEEP STEADY
+training_2815.png	IT FEELS WRONG
+training_2816.png	TURN RIGHT
+training_2817.png	IT FEELS WRONG
+training_2818.png	WAIT
+training_2819.png	GOTCHA
+training_2820.png	WHAT?!
+training_2821.png	ACT VIOLENTLY
+training_2822.png	Huh?
+training_2823.png	WHAT?!
+training_2824.png	TIME TO EAT
+training_2825.png	LISTEN UP
+training_2826.png	HURRY UP
+training_2827.png	MOVE QUICKLY
+training_2828.png	VILLIAGERS
+training_2829.png	FIGHT ON
+training_2830.png	SEARCH HERE
+training_2831.png	NOT AGAIN
+training_2832.png	BE BRAVE
+training_2833.png	WAIT HERE
+training_2834.png	EXPLORE MORE
+training_2835.png	DRAW SOMETHING
+training_2836.png	BE BRAVE
+training_2837.png	BE DETERMINED
+training_2838.png	STOP
+training_2839.png	STAY PEACEFUL
+training_2840.png	KINGDOM
+training_2841.png	STOP
+training_2842.png	JUST IN TIME
+training_2843.png	NO
+training_2844.png	GO HOME
+training_2845.png	FEEL FREE
+training_2846.png	WATCH OUT
+training_2847.png	COME ON
+training_2848.png	PLEASE
+training_2849.png	IT'S OVER
+training_2850.png	TIME TO EAT
+training_2851.png	MAGIC
+training_2852.png	FEEL RELUCTANT
+training_2853.png	START NOW
+training_2854.png	PLEASE
+training_2855.png	STAY CALM
+training_2856.png	BE SERIOUS
+training_2857.png	FEEL TIRED
+training_2858.png	TURN RIGHT
+training_2859.png	ACT PURPOSEFUL
+training_2860.png	WRITE IT DOWN
+training_2861.png	WHAT?!
+training_2862.png	I DID IT
+training_2863.png	THE PRINCESS
+training_2864.png	THE DUKE OF
+training_2865.png	HIDE QUICKLY
+training_2866.png	SAVE US
+training_2867.png	BEGIN NOW
+training_2868.png	STAY BUSY
+training_2869.png	IT'S OVER
+training_2870.png	EMPIRE
+training_2871.png	COME INSIDE
+training_2872.png	ACT CHAOTICALLY
+training_2873.png	MOVE QUICKLY
+training_2874.png	BE SWEET
+training_2875.png	MOVE FORWARD
+training_2876.png	NOT AGAIN
+training_2877.png	FEEL SAD
+training_2878.png	MOVE FORWARD
+training_2879.png	THINK METHODICALLY
+training_2880.png	BE GENTLE
+training_2881.png	HELP
+training_2882.png	OOPS
+training_2883.png	FEEL FEAR
+training_2884.png	SEARCH HERE
+training_2885.png	THINK METHODICALLY
+training_2886.png	FEEL FREE
+training_2887.png	KEEP STEADY
+training_2888.png	THANK YOU
+training_2889.png	SLOW DOWN
+training_2890.png	LOOK OUT!
+training_2891.png	MALE LEAD
+training_2892.png	TALK NOW
+training_2893.png	CONGRATS
+training_2894.png	MOVE GRACEFULLY
+training_2895.png	FEEL TIRED
+training_2896.png	ACT VIOLENTLY
+training_2897.png	WORK HARD
+training_2898.png	BE AIMLESS
+training_2899.png	SAVE US
+training_2900.png	NEXT TIME
+training_2901.png	BE DETERMINED
+training_2902.png	ACT BITTERLY
+training_2903.png	GO HOME
+training_2904.png	HELP
+training_2905.png	TALK NOW
+training_2906.png	SWORDSMANSHIP
+training_2907.png	THINK METHODICALLY
+training_2908.png	HELP
+training_2909.png	MOVE GRACEFULLY
+training_2910.png	I'M HERE
+training_2911.png	GO OUTSIDE
+training_2912.png	GOOD LUCK
+training_2913.png	BE BRAVE
+training_2914.png	ACT SUSPICIOUS
+training_2915.png	WAIT HERE
+training_2916.png	THINK METHODICALLY
+training_2917.png	YES
+training_2918.png	I DID IT
+training_2919.png	KINGDOM
+training_2920.png	BE CURIOUS
+training_2921.png	THANK YOU
+training_2922.png	READERS
+training_2923.png	SHOW JOY
+training_2924.png	FIGHT ON
+training_2925.png	BE DISORDERLY
+training_2926.png	SPEAK SOFTLY
+training_2927.png	SO COOL
+training_2928.png	FEEL TIRED
+training_2929.png	DESTROY IT
+training_2930.png	ACT SUSPICIOUS
+training_2931.png	STAY PEACEFUL
+training_2932.png	ACT CHAOTICALLY
+training_2933.png	ACT BITTERLY
+training_2934.png	HELP
+training_2935.png	GET ANGRY
+training_2936.png	GO OUTSIDE
+training_2937.png	WORK HARD
+training_2938.png	OOPS
+training_2939.png	STAY PEACEFUL
+training_2940.png	MALE LEAD
+training_2941.png	MOVE FORWARD
+training_2942.png	IT'S OVER
+training_2943.png	WHAT?!
+training_2944.png	WORK HARD
+training_2945.png	BEAUTIFUL
+training_2946.png	YAY
+training_2947.png	MOVE DOWN
+training_2948.png	HELP
+training_2949.png	ACT CONFIDENT
+training_2950.png	ACT CONFIDENT
+training_2951.png	FIGHT ON
+training_2952.png	MAGIC
+training_2953.png	BE QUIET
+training_2954.png	TO BE CONTINUED...
+training_2955.png	WATCH THIS
+training_2956.png	I'M HERE
+training_2957.png	SPEAK SOFTLY
+training_2958.png	WE WIN
+training_2959.png	GO BACK
+training_2960.png	MAKE NOISE
+training_2961.png	WAIT
+training_2962.png	SPEAK UP
+training_2963.png	FEEL SAD
+training_2964.png	YES
+training_2965.png	TO BE CONTINUED...
+training_2966.png	BEAUTIFUL
+training_2967.png	BE LOUD
+training_2968.png	FEEL NERVOUS
+training_2969.png	GO TO SLEEP
+training_2970.png	ESCAPE NOW
+training_2971.png	STUDY TIME
+training_2972.png	ACT CONFIDENT
+training_2973.png	STAY INSIDE
+training_2974.png	BEAUTIFUL
+training_2975.png	FEEL UNSTEADY
+training_2976.png	BE OPEN
+training_2977.png	THINK DEEPLY
+training_2978.png	ROMANCE NOVEL
+training_2979.png	BE DETERMINED
+training_2980.png	MAKE NOISE
+training_2981.png	NO
+training_2982.png	GOTCHA
+training_2983.png	ACT ROUGH
+training_2984.png	ACT CHAOTICALLY
+training_2985.png	GOOD LUCK
+training_2986.png	FEEL ANXIOUS
+training_2987.png	STAY PEACEFUL
+training_2988.png	WE WIN
+training_2989.png	ALMOST THERE
+training_2990.png	KEEP STEADY
+training_2991.png	I'M READY
+training_2992.png	HAPPY ENDING
+training_2993.png	BE GENTLE
+training_2994.png	FEEL ANXIOUS
+training_2995.png	WORK HARD
+training_2996.png	FEEL TIRED
+training_2997.png	ACT BITTERLY
+training_2998.png	SWORDSMANSHIP
+training_2999.png	TALK HARSHLY
+training_3000.png	MOVE FORWARD
+training_3001.png	GO TO SLEEP
+training_3002.png	GO OUTSIDE
+training_3003.png	WELCOME
+training_3004.png	BE BRAVE
+training_3005.png	LET'S PLAY
+training_3006.png	I'M HERE
+training_3007.png	MOVE DOWN
+training_3008.png	SO COOL
+training_3009.png	FEEL ANXIOUS
+training_3010.png	BE QUIET
+training_3011.png	FEEL FEAR
+training_3012.png	WHAT'S UP
+training_3013.png	BE EAGER
+training_3014.png	WAIT PATIENTLY
+training_3015.png	FEEL ANXIOUS
+training_3016.png	RUN AWAY
+training_3017.png	HIDE QUICKLY
+training_3018.png	STAY SILENT
+training_3019.png	GO SOON
+training_3020.png	FEEL NERVOUS
+training_3021.png	HURRY UP
+training_3022.png	CREATE ART
+training_3023.png	PLAY AROUND
+training_3024.png	FEEL NERVOUS
+training_3025.png	WAIT PATIENTLY
+training_3026.png	BEAUTIFUL
+training_3027.png	WE WIN
+training_3028.png	RUN AWAY
+training_3029.png	WORK SYSTEMATICALLY
+training_3030.png	STAY BUSY
+training_3031.png	KEEP SECRETS
+training_3032.png	NO WAY
+training_3033.png	I'M HERE
+training_3034.png	HIDE QUICKLY
+training_3035.png	NO
+training_3036.png	GET EXCITED
+training_3037.png	FEEL ANXIOUS
+training_3038.png	BE QUIET
+training_3039.png	LISTEN UP
+training_3040.png	ACT SUSPICIOUS
+training_3041.png	AH
+training_3042.png	MOVE DOWN
+training_3043.png	WRITE IT DOWN
+training_3044.png	ACT SUSPICIOUS
+training_3045.png	TO BE CONTINUED
+training_3046.png	FIGHT ON
+training_3047.png	Huh?
+training_3048.png	SPEAK UP
+training_3049.png	BE OPEN
+training_3050.png	SO COOL
+training_3051.png	HIDE QUICKLY
+training_3052.png	ESCAPE NOW
+training_3053.png	AH
+training_3054.png	AGAIN PLEASE
+training_3055.png	BE SERIOUS
+training_3056.png	POSION
+training_3057.png	NO
+training_3058.png	BE QUIET
+training_3059.png	I'M READY
+training_3060.png	LISTEN UP
+training_3061.png	JUST A MINUTE
+training_3062.png	SWORDSMANSHIP
+training_3063.png	I'M HERE
+training_3064.png	THINK DEEPLY
+training_3065.png	MOVE ENERGETICALLY
+training_3066.png	STOP
+training_3067.png	BE OPEN
+training_3068.png	TAKE A REST
+training_3069.png	ESCAPE NOW
+training_3070.png	ROMANCE NOVEL
+training_3071.png	STAY PEACEFUL
+training_3072.png	FEEL FEAR
+training_3073.png	NO WAY
+training_3074.png	HELP OUT
+training_3075.png	GO BACK
+training_3076.png	ACT RANDOMLY
+training_3077.png	BE SERIOUS
+training_3078.png	DEMONIC
+training_3079.png	FEEL NERVOUS
+training_3080.png	ACT CONFIDENT
+training_3081.png	WHAT'S UP
+training_3082.png	SEARCH HERE
+training_3083.png	FEEL RELUCTANT
+training_3084.png	TOGETHER NOW
+training_3085.png	GET ANGRY
+training_3086.png	GO SLOWLY
+training_3087.png	DEMONIC
+training_3088.png	ACT CHAOTICALLY
+training_3089.png	ANGELIC
+training_3090.png	BE SERIOUS
+training_3091.png	WRITE IT DOWN
+training_3092.png	READERS
+training_3093.png	THE END
+training_3094.png	BE AIMLESS
+training_3095.png	WE WIN
+training_3096.png	WATCH THIS
+training_3097.png	ACT CARELESS
+training_3098.png	MAGIC
+training_3099.png	ACT BITTERLY
+training_3100.png	I'M SORRY
+training_3101.png	RUN AWAY
+training_3102.png	WATCH OUT
+training_3103.png	BEAUTIFUL
+training_3104.png	KEEP SECRETS
+training_3105.png	WATCH OUT
+training_3106.png	HELP
+training_3107.png	LOOK OUT!
+training_3108.png	OFFICIAL
+training_3109.png	I'M SORRY
+training_3110.png	WHY?
+training_3111.png	DEMONIC
+training_3112.png	BE LAZY
+training_3113.png	VILLIAGERS
+training_3114.png	OH MY GOD
+training_3115.png	GO BACK
+training_3116.png	BE BRAVE
+training_3117.png	COME INSIDE
+training_3118.png	ALL DONE
+training_3119.png	ACT ROUGH
+training_3120.png	WHAT?!
+training_3121.png	HIDE QUICKLY
+training_3122.png	BE AIMLESS
+training_3123.png	STAY PEACEFUL
+training_3124.png	SLOW DOWN
+training_3125.png	FEEL SAD
+training_3126.png	THINK METHODICALLY
+training_3127.png	MOVE GRACEFULLY
+training_3128.png	BE CURIOUS
+training_3129.png	STAY SAFE
+training_3130.png	STAY BUSY
+training_3131.png	EXPLORE MORE
+training_3132.png	TALK HARSHLY
+training_3133.png	WRITE IT DOWN
+training_3134.png	GO SOON
+training_3135.png	ACT CHAOTICALLY
+training_3136.png	BE OPEN
+training_3137.png	TAKE A REST
+training_3138.png	TAKE A REST
+training_3139.png	KEEP STEADY
+training_3140.png	MALE LEAD
+training_3141.png	ACT VIOLENTLY
+training_3142.png	ACT CHAOTICALLY
+training_3143.png	MOVE UP
+training_3144.png	THANK YOU
+training_3145.png	LOOK OUT!
+training_3146.png	BE SERIOUS
+training_3147.png	EXPLORE MORE
+training_3148.png	VILLANESS
+training_3149.png	FIGHT ON
+training_3150.png	WHAT?!
+training_3151.png	I DID IT
+training_3152.png	DRAW SOMETHING
+training_3153.png	MALE LEAD
+training_3154.png	MALE LEAD
+training_3155.png	I DID IT
+training_3156.png	READERS
+training_3157.png	BE SWEET
+training_3158.png	IT FEELS WRONG
+training_3159.png	HIDE QUICKLY
+training_3160.png	HIDE QUICKLY
+training_3161.png	WAIT HERE
+training_3162.png	WAIT HERE
+training_3163.png	BE DISORDERLY
+training_3164.png	BE SERIOUS
+training_3165.png	GO TO SLEEP
+training_3166.png	YAY
+training_3167.png	ACT ROUGH
+training_3168.png	DRAW SOMETHING
+training_3169.png	WE WIN
+training_3170.png	NOT AGAIN
+training_3171.png	COME ON
+training_3172.png	BE BRAVE
+training_3173.png	DESTROY IT
+training_3174.png	WAIT
+training_3175.png	WAIT
+training_3176.png	STAY SAFE
+training_3177.png	GO HOME
+training_3178.png	I'M SORRY
+training_3179.png	FEEL TIRED
+training_3180.png	SO COOL
+training_3181.png	THE END
+training_3182.png	WATCH OUT
+training_3183.png	FEEL RELUCTANT
+training_3184.png	WELCOME
+training_3185.png	IT'S OVER
+training_3186.png	TO BE CONTINUED...
+training_3187.png	WAIT PATIENTLY
+training_3188.png	EMPIRE
+training_3189.png	BE LAZY
+training_3190.png	BEAUTIFUL
+training_3191.png	STAY BUSY
+training_3192.png	BE LAZY
+training_3193.png	WATCH OUT
+training_3194.png	AGAIN PLEASE
+training_3195.png	NEXT TIME
+training_3196.png	TALK NOW
+training_3197.png	FEEL SAD
+training_3198.png	BE LAZY
+training_3199.png	I'M READY
+training_3200.png	JUST IN TIME
+training_3201.png	CONGRATS
+training_3202.png	GET EXCITED
+training_3203.png	VILLANESS
+training_3204.png	JUST IN TIME
+training_3205.png	STAY ORDERLY
+training_3206.png	ACT RANDOMLY
+training_3207.png	BE DETERMINED
+training_3208.png	SLOW DOWN
+training_3209.png	BE SERIOUS
+training_3210.png	READERS
+training_3211.png	CONGRATS
+training_3212.png	HOPE FOR BEST
+training_3213.png	WORK HARD
+training_3214.png	WHY?
+training_3215.png	IT FEELS WRONG
+training_3216.png	EMPIRE
+training_3217.png	RIGHT NOW
+training_3218.png	GOOD LUCK
+training_3219.png	BE DISORDERLY
+training_3220.png	FEEL ANXIOUS
+training_3221.png	THANK YOU
+training_3222.png	MOVE DOWN
+training_3223.png	BE EAGER
+training_3224.png	BE LAZY
+training_3225.png	STAY CLOSE
+training_3226.png	GO SOON
+training_3227.png	FEEL UNSTEADY
+training_3228.png	FEEL RELUCTANT
+training_3229.png	TRY AGAIN
+training_3230.png	STAY SAFE
+training_3231.png	STAY BUSY
+training_3232.png	NOT AGAIN
+training_3233.png	VILLIAGERS
+training_3234.png	GO OUTSIDE
+training_3235.png	WATCH OUT
+training_3236.png	NO
+training_3237.png	BE GENTLE
+training_3238.png	MOVE QUICKLY
+training_3239.png	BEGIN NOW
+training_3240.png	PLEASE
+training_3241.png	TRY LATER
+training_3242.png	GO HOME
+training_3243.png	SO COOL
+training_3244.png	DESTROY IT
+training_3245.png	BEGIN NOW
+training_3246.png	STAY INSIDE
+training_3247.png	JUST IN TIME
+training_3248.png	KINGDOM
+training_3249.png	SPEAK UP
+training_3250.png	SO COOL
+training_3251.png	MOVE UP
+training_3252.png	OOPS
+training_3253.png	FEEL UNSTEADY
+training_3254.png	MALE LEAD
+training_3255.png	FEEL UNSTEADY
+training_3256.png	BEGIN NOW
+training_3257.png	TO BE CONTINUED...
+training_3258.png	CREATE ART
+training_3259.png	KEEP SECRETS
+training_3260.png	NOT AGAIN
+training_3261.png	SLOW DOWN
+training_3262.png	READ THIS
+training_3263.png	WHY?
+training_3264.png	BEAUTIFUL
+training_3265.png	ACT BITTERLY
+training_3266.png	Huh?
+training_3267.png	KINGDOM
+training_3268.png	KEEP STEADY
+training_3269.png	VILLIAGERS
+training_3270.png	HOPE FOR BEST
+training_3271.png	READERS
+training_3272.png	BEGIN NOW
+training_3273.png	DRAW SOMETHING
+training_3274.png	GOTCHA
+training_3275.png	NEXT TIME
+training_3276.png	TO BE CONTINUED...
+training_3277.png	FIGHT ON
+training_3278.png	ALMOST THERE
+training_3279.png	TO BE CONTINUED...
+training_3280.png	THE PRINCESS
+training_3281.png	NEXT TIME
+training_3282.png	MOVE ENERGETICALLY
+training_3283.png	ACT BITTERLY
+training_3284.png	NO PROBLEM
+training_3285.png	MOVE QUICKLY
+training_3286.png	STAY PEACEFUL
+training_3287.png	NOT AGAIN
+training_3288.png	KINGDOM
+training_3289.png	NO
+training_3290.png	ALMOST THERE
+training_3291.png	ACT SUSPICIOUS
+training_3292.png	BE AIMLESS
+training_3293.png	DESTROY IT
+training_3294.png	SPEAK SOFTLY
+training_3295.png	ACT VIOLENTLY
+training_3296.png	SEE YOU
+training_3297.png	TRY LATER
+training_3298.png	ALMOST THERE
+training_3299.png	TALK HARSHLY
+training_3300.png	BEGIN NOW
+training_3301.png	BE CURIOUS
+training_3302.png	THANK YOU
+training_3303.png	GO HOME
+training_3304.png	WATCH THIS
+training_3305.png	GO FAR
+training_3306.png	WHAT?!
+training_3307.png	NEXT TIME
+training_3308.png	HAPPY ENDING
+training_3309.png	JUST IN TIME
+training_3310.png	WATCH THIS
+training_3311.png	SPEAK SOFTLY
+training_3312.png	BE QUIET
+training_3313.png	DRAW SOMETHING
+training_3314.png	SPEAK SOFTLY
+training_3315.png	TOGETHER NOW
+training_3316.png	IT FEELS WRONG
+training_3317.png	FEEL FEAR
+training_3318.png	WHAT'S UP
+training_3319.png	OH MY GOD
+training_3320.png	READ THIS
+training_3321.png	GO OUTSIDE
+training_3322.png	TURN RIGHT
+training_3323.png	OFFICIAL
+training_3324.png	TALK NOW
+training_3325.png	NOT AGAIN
+training_3326.png	AH
+training_3327.png	TAKE A REST
+training_3328.png	HURRY UP
+training_3329.png	STAY CALM
+training_3330.png	ACT BITTERLY
+training_3331.png	SEE YOU
+training_3332.png	WATCH OUT
+training_3333.png	MOVE DOWN
+training_3334.png	HELP
+training_3335.png	GO BACK
+training_3336.png	ACT ROUGH
+training_3337.png	ACT BITTERLY
+training_3338.png	ACT PURPOSEFUL
+training_3339.png	FEEL RELUCTANT
+training_3340.png	TOGETHER NOW
+training_3341.png	WATCH OUT
+training_3342.png	HANDSOME
+training_3343.png	GO SLOWLY
+training_3344.png	PLAY AROUND
+training_3345.png	MOVE DOWN
+training_3346.png	FEEL SAD
+training_3347.png	WORK HARD
+training_3348.png	ACT ROUGH
+training_3349.png	DEMONIC
+training_3350.png	WE WIN
+training_3351.png	ACT RANDOMLY
+training_3352.png	WAIT PATIENTLY
+training_3353.png	TURN LEFT
+training_3354.png	IT'S OVER
+training_3355.png	WAIT HERE
+training_3356.png	SLOW DOWN
+training_3357.png	SLOW DOWN
+training_3358.png	POSION
+training_3359.png	SEARCH HERE
+training_3360.png	FEEL FEAR
+training_3361.png	PLEASE
+training_3362.png	DESTROY IT
+training_3363.png	WHY?
+training_3364.png	DRAW SOMETHING
+training_3365.png	BE QUIET
+training_3366.png	OH MY GOD
+training_3367.png	READERS
+training_3368.png	FEEL HAPPY
+training_3369.png	GO FASTER
+training_3370.png	I DID IT
+training_3371.png	WHY?
+training_3372.png	EXPLORE MORE
+training_3373.png	HOPE FOR BEST
+training_3374.png	GET ANGRY
+training_3375.png	STUDY TIME
+training_3376.png	BE QUIET
+training_3377.png	THINK METHODICALLY
+training_3378.png	THINK METHODICALLY
+training_3379.png	FEEL RELUCTANT
+training_3380.png	GO FAR
+training_3381.png	THINK DEEPLY
+training_3382.png	LET'S PLAY
+training_3383.png	FEEL SAD
+training_3384.png	NO
+training_3385.png	CONGRATS
+training_3386.png	READERS
+training_3387.png	AH
+training_3388.png	OOPS
+training_3389.png	ACT PURPOSEFUL
+training_3390.png	HURRY UP
+training_3391.png	SWORDSMANSHIP
+training_3392.png	MOVE QUICKLY
+training_3393.png	NEXT TIME
+training_3394.png	STAY SAFE
+training_3395.png	STAY CLOSE
+training_3396.png	WAIT PATIENTLY
+training_3397.png	FEEL SAD
+training_3398.png	NO WAY
+training_3399.png	BE CURIOUS
+training_3400.png	HURRY UP
+training_3401.png	POSION
+training_3402.png	FEMALE LEAD
+training_3403.png	VILLANESS
+training_3404.png	ACT PURPOSEFUL
+training_3405.png	OFFICIAL
+training_3406.png	STAY BUSY
+training_3407.png	SO COOL
+training_3408.png	FEEL NERVOUS
+training_3409.png	STAY PEACEFUL
+training_3410.png	NOT AGAIN
+training_3411.png	SLOW DOWN
+training_3412.png	WAIT PATIENTLY
+training_3413.png	YES
+training_3414.png	TO BE CONTINUED...
+training_3415.png	MAKE NOISE
+training_3416.png	FEEL SAD
+training_3417.png	BE AIMLESS
+training_3418.png	SEARCH HERE
+training_3419.png	BE EAGER
+training_3420.png	HAPPY ENDING
+training_3421.png	WORK SYSTEMATICALLY
+training_3422.png	WRITE IT DOWN
+training_3423.png	ALMOST THERE
+training_3424.png	GO FAR
+training_3425.png	HAPPY ENDING
+training_3426.png	GO SOON
+training_3427.png	YES
+training_3428.png	KINGDOM
+training_3429.png	THINK METHODICALLY
+training_3430.png	TOGETHER NOW
+training_3431.png	GO ALONE
+training_3432.png	ACT CAREFULLY
+training_3433.png	GOTCHA
+training_3434.png	BE DISORDERLY
+training_3435.png	START NOW
+training_3436.png	BE SWEET
+training_3437.png	FEEL NERVOUS
+training_3438.png	JUST A MINUTE
+training_3439.png	MOVE GRACEFULLY
+training_3440.png	READERS
+training_3441.png	MOVE UP
+training_3442.png	IT FEELS WRONG
+training_3443.png	GO ALONE
+training_3444.png	THE PRINCESS
+training_3445.png	BE OPEN
+training_3446.png	BEAUTIFUL
+training_3447.png	LET'S PLAY
+training_3448.png	GET EXCITED
+training_3449.png	ALMOST THERE
+training_3450.png	HIDE QUICKLY
+training_3451.png	BE SWEET
+training_3452.png	STAY BUSY
+training_3453.png	GO SLOWLY
+training_3454.png	BEAUTIFUL
+training_3455.png	WHAT'S UP
+training_3456.png	BE EAGER
+training_3457.png	FEEL TIRED
+training_3458.png	GOOD LUCK
+training_3459.png	FEEL FREE
+training_3460.png	NO WAY
+training_3461.png	PLEASE
+training_3462.png	ACT BITTERLY
+training_3463.png	TOGETHER NOW
+training_3464.png	GO SLOWLY
+training_3465.png	ACT PURPOSEFUL
+training_3466.png	BE DISORDERLY
+training_3467.png	GO FASTER
+training_3468.png	VILLANESS
+training_3469.png	ACT SUSPICIOUS
+training_3470.png	PLEASE
+training_3471.png	BE CURIOUS
+training_3472.png	MOVE ENERGETICALLY
+training_3473.png	YES
+training_3474.png	LET'S PLAY
+training_3475.png	TAKE A REST
+training_3476.png	STAY BUSY
+training_3477.png	BUILD IT
+training_3478.png	CONGRATS
+training_3479.png	JUST A MINUTE
+training_3480.png	SEARCH HERE
+training_3481.png	BEGIN NOW
+training_3482.png	CREATE ART
+training_3483.png	ACT CONFIDENT
+training_3484.png	TALK NOW
+training_3485.png	SPEAK UP
+training_3486.png	SPEAK UP
+training_3487.png	STAY PEACEFUL
+training_3488.png	TRY AGAIN
+training_3489.png	BUILD IT
+training_3490.png	WAIT
+training_3491.png	GO ALONE
+training_3492.png	CREATE ART
+training_3493.png	BE AIMLESS
+training_3494.png	WORK SYSTEMATICALLY
+training_3495.png	NEXT TIME
+training_3496.png	AH
+training_3497.png	ESCAPE NOW
+training_3498.png	STOP
+training_3499.png	BE GENTLE
+training_3500.png	ACT CARELESS
+training_3501.png	BE EAGER
+training_3502.png	FEEL FEAR
+training_3503.png	HANDSOME
+training_3504.png	ACT ROUGH
+training_3505.png	TRY AGAIN
+training_3506.png	ACT VIOLENTLY
+training_3507.png	I'M HERE
+training_3508.png	TAKE A REST
+training_3509.png	ACT CARELESS
+training_3510.png	MAKE NOISE
+training_3511.png	JUST IN TIME
+training_3512.png	EXPLORE MORE
+training_3513.png	HOPE FOR BEST
+training_3514.png	PLAY AROUND
+training_3515.png	HAPPY ENDING
+training_3516.png	PLAY AROUND
+training_3517.png	STAY CLOSE
+training_3518.png	CREATE ART
+training_3519.png	THINK DEEPLY
+training_3520.png	STAY SAFE
+training_3521.png	STAY INSIDE
+training_3522.png	TOGETHER NOW
+training_3523.png	CREATE ART
+training_3524.png	FEEL ANXIOUS
+training_3525.png	ACT ROUGH
+training_3526.png	EMPIRE
+training_3527.png	BE DISORDERLY
+training_3528.png	THE END
+training_3529.png	ROMANCE NOVEL
+training_3530.png	THE DUKE OF
+training_3531.png	TALK NOW
+training_3532.png	PLEASE
+training_3533.png	KEEP SECRETS
+training_3534.png	READ THIS
+training_3535.png	ACT VIOLENTLY
+training_3536.png	MOVE ENERGETICALLY
+training_3537.png	BE CURIOUS
+training_3538.png	BEAUTIFUL
+training_3539.png	SO COOL
+training_3540.png	WHAT?!
+training_3541.png	RUN AWAY
+training_3542.png	OH MY GOD
+training_3543.png	EMPIRE
+training_3544.png	WELCOME
+training_3545.png	BE QUIET
+training_3546.png	KEEP SECRETS
+training_3547.png	FEEL FEAR
+training_3548.png	FEEL ANXIOUS
+training_3549.png	STAY PEACEFUL
+training_3550.png	SEE YOU
+training_3551.png	FEEL HAPPY
+training_3552.png	EMPIRE
+training_3553.png	GO SLOWLY
+training_3554.png	THE PRINCESS
+training_3555.png	TO BE CONTINUED
+training_3556.png	GET ANGRY
+training_3557.png	BE QUIET
+training_3558.png	WAIT HERE
+training_3559.png	TALK NOW
+training_3560.png	BE QUIET
+training_3561.png	ACT RANDOMLY
+training_3562.png	FEMALE LEAD
+training_3563.png	NO
+training_3564.png	MOVE QUICKLY
+training_3565.png	TO BE CONTINUED...
+training_3566.png	VILLANESS
+training_3567.png	GO ALONE
+training_3568.png	STAY ORDERLY
+training_3569.png	FEEL TIRED
+training_3570.png	FEMALE LEAD
+training_3571.png	EXPLORE MORE
+training_3572.png	RUN AWAY
+training_3573.png	TO BE CONTINUED...
+training_3574.png	BE SERIOUS
+training_3575.png	STAY INSIDE
+training_3576.png	THE END
+training_3577.png	JUST IN TIME
+training_3578.png	FEEL TIRED
+training_3579.png	BE QUIET
+training_3580.png	EMPIRE
+training_3581.png	SPEAK SOFTLY
+training_3582.png	NOT AGAIN
+training_3583.png	MOVE FORWARD
+training_3584.png	RUN AWAY
+training_3585.png	RUN AWAY
+training_3586.png	I'M READY
+training_3587.png	ACT CAREFULLY
+training_3588.png	BE LAZY
+training_3589.png	AGAIN PLEASE
+training_3590.png	SEARCH HERE
+training_3591.png	TIME TO EAT
+training_3592.png	BE AIMLESS
+training_3593.png	LISTEN UP
+training_3594.png	BE LOUD
+training_3595.png	VILLANESS
+training_3596.png	WHAT?!
+training_3597.png	PLEASE
+training_3598.png	CONGRATS
+training_3599.png	OFFICIAL
+training_3600.png	READERS
+training_3601.png	I DID IT
+training_3602.png	STAY PEACEFUL
+training_3603.png	SEE YOU
+training_3604.png	GO OUTSIDE
+training_3605.png	JUST IN TIME
+training_3606.png	BE DISORDERLY
+training_3607.png	I'M SORRY
+training_3608.png	MAKE NOISE
+training_3609.png	FEEL UNSTEADY
+training_3610.png	STOP
+training_3611.png	THE PRINCESS
+training_3612.png	SWORDSMANSHIP
+training_3613.png	SHOW JOY
+training_3614.png	LOOK OUT!
+training_3615.png	GO ALONE
+training_3616.png	COME INSIDE
+training_3617.png	VILLANESS
+training_3618.png	YAY
+training_3619.png	THANK YOU
+training_3620.png	COME INSIDE
+training_3621.png	MOVE UP
+training_3622.png	BE AIMLESS
+training_3623.png	MOVE ENERGETICALLY
+training_3624.png	NOT AGAIN
+training_3625.png	ESCAPE NOW
+training_3626.png	SAVE US
+training_3627.png	TURN RIGHT
+training_3628.png	HOPE FOR BEST
+training_3629.png	HURRY UP
+training_3630.png	SPEAK UP
+training_3631.png	SAVE US
+training_3632.png	FEMALE LEAD
+training_3633.png	STAY SAFE
+training_3634.png	HURRY UP
+training_3635.png	ANGELIC
+training_3636.png	LET'S PLAY
+training_3637.png	ACT CONFIDENT
+training_3638.png	PLEASE
+training_3639.png	HURRY UP
+training_3640.png	GO SLOWLY
+training_3641.png	TIME TO EAT
+training_3642.png	HOPE FOR BEST
+training_3643.png	START NOW
+training_3644.png	OH MY GOD
+training_3645.png	LISTEN UP
+training_3646.png	STAY PEACEFUL
+training_3647.png	THE END
+training_3648.png	BE OPEN
+training_3649.png	BUILD IT
+training_3650.png	ALL DONE
+training_3651.png	ACT CONFIDENT
+training_3652.png	WATCH OUT
+training_3653.png	ACT CONFIDENT
+training_3654.png	BUILD IT
+training_3655.png	ALMOST THERE
+training_3656.png	ACT PURPOSEFUL
+training_3657.png	THANK YOU
+training_3658.png	WAIT PATIENTLY
+training_3659.png	AGAIN PLEASE
+training_3660.png	GO SLOWLY
+training_3661.png	ACT PURPOSEFUL
+training_3662.png	BE CURIOUS
+training_3663.png	STAY PEACEFUL
+training_3664.png	Huh?
+training_3665.png	ACT VIOLENTLY
+training_3666.png	YAY
+training_3667.png	BE SERIOUS
+training_3668.png	BE QUIET
+training_3669.png	BE SERIOUS
+training_3670.png	WRITE IT DOWN
+training_3671.png	FEEL UNSTEADY
+training_3672.png	NEXT TIME
+training_3673.png	MOVE GRACEFULLY
+training_3674.png	KEEP SECRETS
+training_3675.png	TIME TO EAT
+training_3676.png	YES
+training_3677.png	BE CURIOUS
+training_3678.png	NEXT TIME
+training_3679.png	STAY PEACEFUL
+training_3680.png	POSION
+training_3681.png	BE QUIET
+training_3682.png	STAY CLOSE
+training_3683.png	FIGHT ON
+training_3684.png	WRITE IT DOWN
+training_3685.png	MOVE QUICKLY
+training_3686.png	JUST IN TIME
+training_3687.png	STAY SILENT
+training_3688.png	AGAIN PLEASE
+training_3689.png	BE CURIOUS
+training_3690.png	HURRY UP
+training_3691.png	START NOW
+training_3692.png	WORK HARD
+training_3693.png	BE QUIET
+training_3694.png	STAY PEACEFUL
+training_3695.png	HAPPY ENDING
+training_3696.png	MALE LEAD
+training_3697.png	YES
+training_3698.png	ALMOST THERE
+training_3699.png	GO HOME
+training_3700.png	THINK METHODICALLY
+training_3701.png	BE DISORDERLY
+training_3702.png	YES
+training_3703.png	BUILD IT
+training_3704.png	GO HOME
+training_3705.png	GET ANGRY
+training_3706.png	LISTEN UP
+training_3707.png	MAKE NOISE
+training_3708.png	FEEL HAPPY
+training_3709.png	WHAT?!
+training_3710.png	READ THIS
+training_3711.png	HELP OUT
+training_3712.png	AH
+training_3713.png	NOT AGAIN
+training_3714.png	WORK HARD
+training_3715.png	I DID IT
+training_3716.png	FEEL SAD
+training_3717.png	MOVE DOWN
+training_3718.png	LISTEN UP
+training_3719.png	STOP
+training_3720.png	CREATE ART
+training_3721.png	TO BE CONTINUED...
+training_3722.png	HANDSOME
+training_3723.png	Huh?
+training_3724.png	WHY?
+training_3725.png	READ THIS
+training_3726.png	I'M SORRY
+training_3727.png	FEEL SAD
+training_3728.png	ANGELIC
+training_3729.png	STAY BUSY
+training_3730.png	LOOK OUT!
+training_3731.png	THE END
+training_3732.png	I'M READY
+training_3733.png	HAPPY ENDING
+training_3734.png	NO PROBLEM
+training_3735.png	GO FASTER
+training_3736.png	THINK DEEPLY
+training_3737.png	TURN LEFT
+training_3738.png	GET ANGRY
+training_3739.png	SLOW DOWN
+training_3740.png	WAIT PATIENTLY
+training_3741.png	WORK HARD
+training_3742.png	ACT BITTERLY
+training_3743.png	WATCH OUT
+training_3744.png	GOOD LUCK
+training_3745.png	NO
+training_3746.png	FEEL FREE
+training_3747.png	BE SERIOUS
+training_3748.png	TOGETHER NOW
+training_3749.png	ACT PURPOSEFUL
+training_3750.png	I DID IT
+training_3751.png	MOVE DOWN
+training_3752.png	FEEL TIRED
+training_3753.png	BE GENTLE
+training_3754.png	ACT PURPOSEFUL
+training_3755.png	STAY BUSY
+training_3756.png	TO BE CONTINUED...
+training_3757.png	WORK HARD
+training_3758.png	BE SERIOUS
+training_3759.png	ACT CONFIDENT
+training_3760.png	MAGIC
+training_3761.png	BEAUTIFUL
+training_3762.png	NO
+training_3763.png	GO TO SLEEP
+training_3764.png	HAPPY ENDING
+training_3765.png	WAIT HERE
+training_3766.png	LET'S PLAY
+training_3767.png	FEEL ANXIOUS
+training_3768.png	BEAUTIFUL
+training_3769.png	STAY ORDERLY
+training_3770.png	TOGETHER NOW
+training_3771.png	GOTCHA
+training_3772.png	STAY ORDERLY
+training_3773.png	OH MY GOD
+training_3774.png	TALK HARSHLY
+training_3775.png	RUN AWAY
+training_3776.png	START NOW
+training_3777.png	GO HOME
+training_3778.png	HANDSOME
+training_3779.png	STAY CALM
+training_3780.png	TRY AGAIN
+training_3781.png	WORK HARD
+training_3782.png	MAGIC
+training_3783.png	GO FASTER
+training_3784.png	FIGHT ON
+training_3785.png	WELCOME
+training_3786.png	BE AIMLESS
+training_3787.png	READ THIS
+training_3788.png	STAY BUSY
+training_3789.png	STAY SAFE
+training_3790.png	YES
+training_3791.png	ALL DONE
+training_3792.png	SLOW DOWN
+training_3793.png	BE QUIET
+training_3794.png	ANGELIC
+training_3795.png	FEEL RELUCTANT
+training_3796.png	GO FAR
+training_3797.png	DESTROY IT
+training_3798.png	PLAY AROUND
+training_3799.png	STAY PEACEFUL
+training_3800.png	STAY PEACEFUL
+training_3801.png	IT FEELS WRONG
+training_3802.png	IT FEELS WRONG
+training_3803.png	STAY BUSY
+training_3804.png	HIDE QUICKLY
+training_3805.png	KEEP SECRETS
+training_3806.png	GO SLOWLY
+training_3807.png	TURN LEFT
+training_3808.png	STAY SAFE
+training_3809.png	STAY CALM
+training_3810.png	BE LAZY
+training_3811.png	COME ON
+training_3812.png	ANGELIC
+training_3813.png	PLEASE
+training_3814.png	SO COOL
+training_3815.png	BE LOUD
+training_3816.png	THE END
+training_3817.png	BE SWEET
+training_3818.png	MAKE NOISE
+training_3819.png	HOPE FOR BEST
+training_3820.png	BE CURIOUS
+training_3821.png	TAKE A REST
+training_3822.png	I'M SORRY
+training_3823.png	STAY CALM
+training_3824.png	MOVE FORWARD
+training_3825.png	BE EAGER
+training_3826.png	MAGIC
+training_3827.png	MOVE FORWARD
+training_3828.png	HURRY UP
+training_3829.png	STOP
+training_3830.png	NEXT TIME
+training_3831.png	FEEL FEAR
+training_3832.png	JUST IN TIME
+training_3833.png	WATCH OUT
+training_3834.png	FEEL ANXIOUS
+training_3835.png	NEXT TIME
+training_3836.png	WRITE IT DOWN
+training_3837.png	FEEL FREE
+training_3838.png	CREATE ART
+training_3839.png	HAPPY ENDING
+training_3840.png	WHAT?!
+training_3841.png	HELP
+training_3842.png	JUST IN TIME
+training_3843.png	HELP
+training_3844.png	MOVE QUICKLY
+training_3845.png	ACT CARELESS
+training_3846.png	SHOW JOY
+training_3847.png	BEAUTIFUL
+training_3848.png	JUST A MINUTE
+training_3849.png	ACT RANDOMLY
+training_3850.png	GO OUTSIDE
+training_3851.png	WAIT
+training_3852.png	NOT AGAIN
+training_3853.png	THE DUKE OF
+training_3854.png	WORK HARD
+training_3855.png	FEEL NERVOUS
+training_3856.png	SO COOL
+training_3857.png	POSION
+training_3858.png	DEMONIC
+training_3859.png	NEXT TIME
+training_3860.png	WHAT?!
+training_3861.png	BE QUIET
+training_3862.png	BEAUTIFUL
+training_3863.png	BEAUTIFUL
+training_3864.png	WAIT HERE
+training_3865.png	NEXT TIME
+training_3866.png	EXPLORE MORE
+training_3867.png	BE QUIET
+training_3868.png	HANDSOME
+training_3869.png	ALL DONE
+training_3870.png	NOT AGAIN
+training_3871.png	BE SERIOUS
+training_3872.png	WATCH THIS
+training_3873.png	THE END
+training_3874.png	OFFICIAL
+training_3875.png	ROMANCE NOVEL
+training_3876.png	COME INSIDE
+training_3877.png	EMPIRE
+training_3878.png	GET ANGRY
+training_3879.png	JUST IN TIME
+training_3880.png	MOVE GRACEFULLY
+training_3881.png	BE DISORDERLY
+training_3882.png	STAY INSIDE
+training_3883.png	TOGETHER NOW
+training_3884.png	YES
+training_3885.png	ALMOST THERE
+training_3886.png	FEEL UNSTEADY
+training_3887.png	IT FEELS WRONG
+training_3888.png	ALL DONE
+training_3889.png	TO BE CONTINUED
+training_3890.png	LOOK OUT!
+training_3891.png	I DID IT
+training_3892.png	FEEL ANXIOUS
+training_3893.png	LISTEN UP
+training_3894.png	STAY SAFE
+training_3895.png	FEMALE LEAD
+training_3896.png	PLEASE
+training_3897.png	ACT PURPOSEFUL
+training_3898.png	OH MY GOD
+training_3899.png	STAY CALM
+training_3900.png	CREATE ART
+training_3901.png	IT FEELS WRONG
+training_3902.png	WATCH OUT
+training_3903.png	HAPPY ENDING
+training_3904.png	KINGDOM
+training_3905.png	GO FAR
+training_3906.png	WORK HARD
+training_3907.png	WE WIN
+training_3908.png	I'M HERE
+training_3909.png	TOGETHER NOW
+training_3910.png	IT'S OVER
+training_3911.png	FEEL ANXIOUS
+training_3912.png	ACT PURPOSEFUL
+training_3913.png	TO BE CONTINUED
+training_3914.png	GOOD LUCK
+training_3915.png	BEAUTIFUL
+training_3916.png	GO BACK
+training_3917.png	ACT CAREFULLY
+training_3918.png	SPEAK UP
+training_3919.png	COME ON
+training_3920.png	MOVE GRACEFULLY
+training_3921.png	ANGELIC
+training_3922.png	NEXT TIME
+training_3923.png	LOOK OUT!
+training_3924.png	ALMOST THERE
+training_3925.png	MOVE DOWN
+training_3926.png	ACT PURPOSEFUL
+training_3927.png	GO SLOWLY
+training_3928.png	ACT PURPOSEFUL
+training_3929.png	OH MY GOD
+training_3930.png	LOOK OUT!
+training_3931.png	EMPIRE
+training_3932.png	MOVE QUICKLY
+training_3933.png	TRY AGAIN
+training_3934.png	READ THIS
+training_3935.png	FEEL UNSTEADY
+training_3936.png	HELP OUT
+training_3937.png	BE BRAVE
+training_3938.png	GO SLOWLY
+training_3939.png	PLEASE
+training_3940.png	BUILD IT
+training_3941.png	BE DETERMINED
+training_3942.png	GO OUTSIDE
+training_3943.png	RUN AWAY
+training_3944.png	STAY SILENT
+training_3945.png	FEEL RELUCTANT
+training_3946.png	SEE YOU
+training_3947.png	STAY CALM
+training_3948.png	WE WIN
+training_3949.png	GO FASTER
+training_3950.png	HAPPY ENDING
+training_3951.png	FEEL UNSTEADY
+training_3952.png	STOP
+training_3953.png	HELP OUT
+training_3954.png	I'M SORRY
+training_3955.png	STAY SILENT
+training_3956.png	SO COOL
+training_3957.png	WE WIN
+training_3958.png	FEEL TIRED
+training_3959.png	FEEL RELUCTANT
+training_3960.png	HELP OUT
+training_3961.png	ACT PURPOSEFUL
+training_3962.png	MOVE QUICKLY
+training_3963.png	STAY CLOSE
+training_3964.png	ACT BITTERLY
+training_3965.png	RIGHT NOW
+training_3966.png	LISTEN UP
+training_3967.png	Huh?
+training_3968.png	TIME TO EAT
+training_3969.png	GO FAR
+training_3970.png	STOP
+training_3971.png	READ THIS
+training_3972.png	TOGETHER NOW
+training_3973.png	BEGIN NOW
+training_3974.png	LISTEN UP
+training_3975.png	SO COOL
+training_3976.png	WAIT
+training_3977.png	FEEL FREE
+training_3978.png	THINK METHODICALLY
+training_3979.png	SPEAK SOFTLY
+training_3980.png	STAY INSIDE
+training_3981.png	MAKE NOISE
+training_3982.png	NO WAY
+training_3983.png	MOVE UP
+training_3984.png	TRY AGAIN
+training_3985.png	TIME TO EAT
+training_3986.png	ACT VIOLENTLY
+training_3987.png	BE AIMLESS
+training_3988.png	BE CURIOUS
+training_3989.png	JUST IN TIME
+training_3990.png	HELP OUT
+training_3991.png	STAY BUSY
+training_3992.png	BE LOUD
+training_3993.png	FIGHT ON
+training_3994.png	HELP
+training_3995.png	START NOW
+training_3996.png	OH MY GOD
+training_3997.png	ACT CHAOTICALLY
+training_3998.png	TO BE CONTINUED
+training_3999.png	SEARCH HERE
