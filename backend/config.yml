@@ -1,27 +1,40 @@
 Global:
   use_gpu: false
   # epoch_num: 50
-  epoch_num: 20
+  epoch_num: 200
   log_smooth_window: 20
   save_model_dir: ./output/custom_model
   # save_epoch_step: 10
-  save_epoch_step: 5
+  save_epoch_step: 1
   # eval_batch_step: [0, 100]
-  eval_batch_step: [0, 50]
-  # print_batch_step: 10
-  print_batch_step: 5
+  eval_batch_step: [0, 2000]
+  print_batch_step: 10
   character_dict_path: PaddleOCR/ppocr/utils/en_dict.txt
   # character_type: en
-  max_text_length: 35
-  use_space_char: true
+  max_text_length: 25
+  use_space_char: False
+  cal_metric_during_train: True
+  pretained_model:
+  checkpoints:
+  save_inference_dir:
+  use_visualdl: False   
+  infer_img: 
+  infer_mode: False
+  save_res_path: ./output/rec/predicts_svtr.txt
+
 
 Optimizer:
-  name: Adam
+  name: AdamW
   beta1: 0.9
-  beta2: 0.999
+  beta2: 0.99
+  epsilon: 0.00000008
+  weight_decay: 0.05
+  no_weight_decay_name: norm pos_embed
+  one_dim_param_no_weight_decay: true
   lr:
     name: Cosine
-    learning_rate: 0.001
+    learning_rate: 0.00025
+    warmup_epoch: 10
 
 Train:
   dataset:
@@ -31,8 +44,8 @@ Train:
       - ./training_data/train/labels.txt
     transforms:
       - DecodeImage:
-          img_mode: RGB
-          channel_first: false
+          img_mode: BGR
+          channel_first: False
       - RecAug: 
           rotate: [-5, 5]        # rotate slightly
           random_crop: true       # crop a bit to simulate zoom
@@ -48,15 +61,16 @@ Train:
       - CTCLabelEncode: {}
       - RecResizeImg:
           image_shape: [3, 48, 400]
+          padding: False
       - KeepKeys:
           keep_keys: ["image", "label", "length"]
 
   loader:
     shuffle: true
     # batch_size_per_card: 32
-    batch_size_per_card: 4
-    drop_last: false
-    num_workers: 2
+    batch_size_per_card: 512
+    drop_last: True
+    num_workers: 4
 
 Eval:
   dataset:
@@ -64,35 +78,53 @@ Eval:
     data_dir: ./training_data/val
     label_file_list:
       - ./training_data/val/labels.txt
+    ratio_list:
+    - 0.1
     transforms:
       - DecodeImage:
-          img_mode: RGB
-          channel_first: false
+          img_mode: BGR
+          channel_first: False
       - CTCLabelEncode: {}
       - RecResizeImg:
           image_shape: [3, 48, 400]
+          padding: False
       - KeepKeys:
           keep_keys: ["image", "label", "length"]
 
   loader:
-    shuffle: false
+    shuffle: False
     # batch_size_per_card: 32
-    batch_size_per_card: 4
+    batch_size_per_card: 256
 
-    drop_last: false
+    drop_last: False
     num_workers: 2
 
 Architecture:
   model_type: rec
-  algorithm: CRNN
+  algorithm: SVTR
   Transform:
+    name: STN_ON
+    tps_inputsize: [32, 64]
+    tps_outputsize: [32, 100]
+    num_control_points: 20
+    tps_margins: [0.05,0.05]
+    stn_activation: none
   Backbone:
-    name: MobileNetV3
-    scale: 0.5
-    model_name: small
+    name: SVTRNet
+    img_size: [32, 100]
+    out_char_num: 25
+    out_channels: 192
+    patch_merging: 'Conv'
+    embed_dim: [64, 128, 256]
+    depth: [3, 6, 3]
+    num_heads: [2, 4, 8]
+    mixer: ['Local','Local','Local','Local','Local','Local','Global','Global','Global','Global','Global','Global']
+    local_mixer: [[7, 11], [7, 11], [7, 11]]
+    last_stage: True
+    prenorm: false
   Neck:
     name: SequenceEncoder
-    encoder_type: rnn
+    encoder_type: reshape
     hidden_size: 48
   Head:
     name: CTCHead
