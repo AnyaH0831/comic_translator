@@ -12,16 +12,7 @@ from paddleocr import PaddleOCR
 import numpy as np
 
 app = FastAPI()
-# custom_model_path = os.path.abspath('output/custom_model/best_accuracy')
 
-# ocr = PaddleOCR(use_angle_cls=True, lang='en', drop_score=0.1)
-# ocr = PaddleOCR(
-#     use_angle_cls=True,
-#     rec_model_dir='./inference_model',
-#     # use_gpu=False
-#     lang='en',
-#     drop_score=0.1
-# )
 
 from paddleocr import PaddleOCR
 from paddleocr.tools.infer.predict_rec import TextRecognizer
@@ -30,48 +21,20 @@ base_path = os.path.dirname(os.path.abspath(__file__))
 
 
 from paddleocr.tools.infer import utility
-# from paddleocr.tools.infer.predict_rec import TextRecognizer
 from paddleocr.tools.infer.predict_det import TextDetector
 
+from googletrans import Translator
+translator = Translator()
 
-# def init_ocr_engine():
-#     return PaddleOCR(
-#         rec_model_dir=os.path.join(base_path, "inference_model"),
-#         rec_char_dict_path=os.path.join(base_path, "PaddleOCR/ppocr/utils/en_dict.txt"),
-#         rec_algorithm='SVTR_LCNet', 
-#         rec_image_shape="3, 48, 320",
-#         use_angle_cls=True,
-#         det_limit_side_len=15000, 
+ocr = PaddleOCR(
+    use_angle_cls=True,
+    lang='en',
+    rec_model_dir='./crnn_inference',
+    rec_algorithm='CRNN',
+    use_gpu=False,
+    show_log=False
+)
 
-#         det_db_thresh=0.3,
-#         det_db_box_thresh=0.5,
-#         det_vertical_text=True, 
-#         use_gpu=False,
-#         show_log=True,
-#         rec_batch_num=1,          
-#         limited_max_width=320,
-#         limited_type='max'
-#     )
-
-# # Initialize the engine
-# ocr = init_ocr_engine()
-
-# def init_ocr_system():
-#     det_engine = PaddleOCR(use_angle_cls=True, lang='en', use_gpu=False, det_limit_side_len=15000, show_log=False)
-    
-#     parser = utility.init_args()
-#     args = parser.parse_args(args=[])
-#     args.rec_model_dir = "./inference_model"
-#     args.rec_char_dict_path = "PaddleOCR/ppocr/utils/en_dict.txt"
-#     args.rec_algorithm = "SVTR"
-#     args.rec_image_shape = "3, 48, 320"
-#     args.rec_batch_num = 1
-#     args.use_gpu = False
-    
-#     rec_engine = TextRecognizer(args)
-#     return det_engine, rec_engine
-
-# det_engine, rec_engine = init_ocr_system()
 
 default_det_path = os.path.join(os.path.expanduser("~"), ".paddleocr", "whl", "det", "en", "en_PP-OCRv3_det_infer")
 
@@ -92,21 +55,18 @@ def init_ocr_system():
    
     det_engine = TextDetector(args)
     
-    args.rec_model_dir = os.path.join(base_path, "inference_model")
-    # args.rec_char_dict_path = "PaddleOCR/ppocr/utils/en_dict.txt
+    args.rec_model_dir = os.path.join(base_path, "crnn_inference")
     args.rec_char_dict_path = os.path.join(base_path, "en_dict.txt")
-    args.rec_algorithm = "SVTR"
-    args.rec_image_shape = "3, 48, 320"
+    args.rec_algorithm = "CRNN"
+    args.rec_image_shape = "3, 32, 320"
     args.limited_max_width = 320
     args.rec_batch_num = 1
     args.limited_type = "max"
-    args.use_space_char = False 
+    args.use_space_char = True
     rec_engine = TextRecognizer(args)
     return det_engine, rec_engine
 
 det_engine, rec_engine = init_ocr_system()
-
-
 
 
 app.add_middleware(
@@ -118,9 +78,6 @@ app.add_middleware(
 
 class TranslateRequest(BaseModel):
     image: str 
-
-
-
 
 @app.post("/translate")
 async def translate(request: TranslateRequest):
@@ -152,7 +109,10 @@ async def translate(request: TranslateRequest):
                 if rec_res and len(rec_res) > 0:
                     text, score = rec_res[0]
                     print(f"Prediction: {text} | Score: {score:.4f}")
-                    final_results.append([box.tolist(), (text, float(score))])
+                    translated = translator.translate(text, src='en', dest='zh-cn')
+                    translated_text = translated.text if translated else text
+                    print(f"Translated: {translated_text}")
+                    final_results.append([box.tolist(), (text, float(score), translated_text)])
 
         return {"results": final_results}
         
