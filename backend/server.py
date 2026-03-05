@@ -7,24 +7,27 @@ import io
 import os
 from PIL import Image
 import cv2
-
-from paddleocr import PaddleOCR
+  
 import numpy as np
-
-app = FastAPI()
-
-
 from paddleocr import PaddleOCR
 from paddleocr.tools.infer.predict_rec import TextRecognizer
 
-base_path = os.path.dirname(os.path.abspath(__file__))
+app = FastAPI()
 
+base_path = os.path.dirname(os.path.abspath(__file__))
 
 from paddleocr.tools.infer import utility
 from paddleocr.tools.infer.predict_det import TextDetector
 
-from googletrans import Translator
-translator = Translator()
+from deep_translator import GoogleTranslator
+_google_translator = GoogleTranslator(source='en', target='zh-CN')
+
+from dotenv import load_dotenv
+load_dotenv()
+
+from groq import Groq
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+client = Groq(api_key=GROQ_API_KEY)
 
 ocr = PaddleOCR(
     use_angle_cls=True,
@@ -76,8 +79,55 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
+
+def group_nearby_boxes(results, distance_threshold=50, translator='llm'):
+    """Group text boxes that are close together vertically"""
+    if not results:
+        return []
+    
+    sorted_results = sorted(results, key=lambda r:min(point[1] for point in r['bbox']))
+
+    grouped = []
+    current_group = [sorted_results[0]]
+
+    for i in range(1, len(sorted_results)):
+        prev_box = current_group[-1]['bbox']
+        curr_box = sorted_results[i]['bbox']
+
+        prev_y = sum(point[1] for point in prev_box) / 4
+        curr_y = sum(point[1] for point in curr_box)/4
+
+        if abs(curr_y - prev_y) < distance_threshold:
+            current_group.append(sorted_results[i])
+        else:
+            grouped.append(current_group)
+            current_group = [sorted_results[i]]
+
+    grouped.append(current_group)
+
+
+    combined = []
+
+    for group in grouped:
+        combined_text = ' '.join(item['original'] for item in group)
+        combined_bbox = group[0]['bbox']
+        if translator == 'google':
+            translated_text = _google_translator.translate(combined_text)
+        else:
+            translated_text = translate_with_llm(combined_text)
+        combined.append({
+            'bbox': combined_bbox,
+            'original': combined_text, 
+            'translated': translated_text,
+            'confidence': max(item['confidence'] for item in group)
+        })
+    
+    return combined
+
+
 class TranslateRequest(BaseModel):
-    image: str 
+    image: str
+    translator: str = 'llm'
 
 @app.post("/translate")
 async def translate(request: TranslateRequest):
@@ -103,20 +153,35 @@ async def translate(request: TranslateRequest):
                 
                 crop = img[y1:y2, x1:x2]
                 if crop.size == 0: continue
-
+  
                 rec_res, _ = rec_engine([crop])
 
                 if rec_res and len(rec_res) > 0:
                     text, score = rec_res[0]
                     print(f"Prediction: {text} | Score: {score:.4f}")
-                    translated = translator.translate(text, src='en', dest='zh-cn')
-                    translated_text = translated.text if translated else text
-                    print(f"Translated: {translated_text}")
-                    final_results.append([box.tolist(), (text, float(score), translated_text)])
-
+                    final_results.append({
+                        'bbox': box.tolist(),
+                        'original': text,
+                        'confidence': float(score)
+                    })
+        
+        final_results = group_nearby_boxes(final_results, translator=request.translator)
         return {"results": final_results}
         
     except Exception as e:
         import traceback
         traceback.print_exc()
         return {"error": str(e)}, 500
+
+
+def translate_with_llm(text, target_lang='Chinese'):
+    response = client.chat.completions.create(
+        model="llama-3.3-70b-versatile",
+        temperature=0.3,
+        stream=False,
+        messages=[
+            {"role": "system", "content": "You are a translator. Only output the translation, nothing else. If no text is provided please output nothing."},
+            {"role": "user", "content": f"Translate this comic dialogue to {target_lang}: {text}\n\nTranslation:"}
+        ]
+    )
+    return response.choices[0].message.content 

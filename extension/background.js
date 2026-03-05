@@ -12,14 +12,14 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
                         headers: {
                             'Content-Type': 'application/json'
                         },
-                        body: JSON.stringify({image: base64})
+                        body: JSON.stringify({image: base64, translator: message.translator || 'llm'})
                     })
 
                     .then(res => res.json())
                     .then(data => {
                         sendResponse(data);
                     }); 
-              
+               
                 };
 
                 reader.readAsDataURL(blob);
