@@ -1,16 +1,26 @@
+let topBar = null;
+let overlays = [];
+
+function createTopBar
+
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     const images = document.querySelectorAll('img');
     const filteredImg = Array.from(images).filter(image => image.offsetWidth >= 300);
     const translator = message.translator || 'llm';
+    const targetLang = message.targetLang || 'English';
+    const sourceLang = message.sourceLang || 'Korean';
 
     filteredImg.forEach(img => {
         chrome.runtime.sendMessage(
             {
                 action: 'fetchImage',
                 url: img.src,
-                translator
-            },
+                translator,
+                targetLang,
+                sourceLang
+            },  
+            
             (response) => {
                 if (!response || !response.results) return;
 

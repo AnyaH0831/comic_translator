@@ -12,7 +12,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
                         headers: {
                             'Content-Type': 'application/json'
                         },
-                        body: JSON.stringify({image: base64, translator: message.translator || 'llm'})
+                        body: JSON.stringify({image: base64, translator: message.translator || 'llm', target_lang: message.targetLang || 'English', source_lang: message.sourceLang || 'Korean'})
                     })
 
                     .then(res => res.json())
