@@ -32,27 +32,55 @@ from groq import Groq
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 client = Groq(api_key=GROQ_API_KEY)
 
-ocr = PaddleOCR(
-    use_angle_cls=True,
-    lang='korean',
-    # rec_model_dir='./crnn_inference',
-    rec_model_dir='./crnn_korean_h_inference',
+# ocr = PaddleOCR(
+#     use_angle_cls=True,
+#     lang='korean',
+#     # rec_model_dir='./crnn_inference',
+#     rec_model_dir='./crnn_korean_h_inference',
 
-    rec_algorithm='CRNN',
-    use_gpu=False,
-    show_log=False
-)
+#     rec_algorithm='CRNN',
+#     use_gpu=False,
+#     show_log=False
+# )
 
 
 default_det_path = os.path.join(os.path.expanduser("~"), ".paddleocr", "whl", "det", "en", "en_PP-OCRv3_det_infer")
 
 def init_ocr_system():
    
+    # ocr_korean = PaddleOCR(
+    #     use_angle_cls = True,
+    #     lang = 'korean',
+    #     rec_model_dir = './crnn_korean_h_inference',
+    #     rec_algorithm = 'CRNN',
+    #     use_gpu=False,
+    #     show_log=False,
+    #     det_db_thresh=0.3,
+    #     det_db_box_thresh=0.5
+    # )
+
+    # ocr_english = PaddleOCR(
+    #     use_angle_cls = True,
+    #     lang='en',
+    #     rec_model_dir='./crnn_inference',
+    #     rec_algorithm = 'CRNN',
+    #     use_gpu=False,
+    #     show_log=False,
+    #     det_db_thresh=0.2,
+    #     det_db_box_thresh=0.3
+    # )
+
     parser = utility.init_args()
     args = parser.parse_args(args=[])
     
+    default_det_path = os.path.join(os.path.expanduser("~"), ".paddleocr", "whl", "det", "en", "en_PP-OCRv3_det_infer")
     args.det_model_dir = default_det_path 
     args.det_algorithm = 'DB'
+
+    
+    
+    
+    
 
     # Global Settings
     args.use_gpu = False
@@ -60,8 +88,13 @@ def init_ocr_system():
     args.det_db_thresh = 0.3
     args.det_db_box_thresh = 0.5
    
-    det_engine = TextDetector(args)
+    det_engine_korean = TextDetector(args)
         
+    # English
+    args.det_db_thresh = 0.2
+    args.det_db_box_thresh = 0.3
+    det_engine_english = TextDetector(args)
+
     # args.rec_model_dir = os.path.join(base_path, "crnn_inference")
     args.rec_model_dir = os.path.join(base_path, "crnn_korean_h_inference")
     args.rec_char_dict_path = os.path.join(base_path, "korean_dict.txt")
@@ -79,9 +112,9 @@ def init_ocr_system():
     args.rec_image_shape = "3, 32, 320"
     rec_engine_english = TextRecognizer(args)
 
-    return det_engine, rec_engine_korean, rec_engine_english
+    return ocr_korean, ocr_english, det_engine_korean, det_engine_english, rec_engine_korean, rec_engine_english
 
-det_engine, rec_engine_korean, rec_engine_english = init_ocr_system()
+ocr_korean, ocr_english, det_engine_korean, det_engine_english, rec_engine_korean, rec_engine_english = init_ocr_system()
 
 
 app.add_middleware(
@@ -91,9 +124,28 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
+_translators = {
+    ('ko', 'en'): GoogleTranslator(source='ko', target='en'),
+    ('ko', 'zh-CN'): GoogleTranslator(source='ko', target='zh-CN'),
+    ('en', 'zh-CN'): GoogleTranslator(source='en', target='zh-CN'),
+    ('en', 'ko'): GoogleTranslator(source='en', target='ko')
+}
+
+def get_translator(source_lang, target_lang):
+    lang_codes = {
+        'Korean': 'ko',
+        'English': 'en',
+        'Chinese': 'zh-CN'
+    }
+
+    source_code = lang_codes.get(source_lang, 'en')
+    target_code = lang_codes.get(target_lang, 'en')
+
+    return _translators.get((source_code, target_code))
 
 def group_nearby_boxes(results, distance_threshold=100, translator='llm', target_lang='English', source_lang='Korean'):
     """Group text boxes that are close together vertically"""
+   
     if not results:
         return []
     
@@ -124,12 +176,19 @@ def group_nearby_boxes(results, distance_threshold=100, translator='llm', target
         combined_text = ' '.join(item['original'] for item in group)
         combined_bbox = group[0]['bbox']
         if translator == 'google':
-            if source_lang == 'English':
-                translated_text = _google_translator_en_from_en.translate(combined_text)
-            elif target_lang == 'Chinese':
-                translated_text = _google_translator_zh.translate(combined_text)
+            gt = get_translator(source_lang, target_lang)
+
+            if gt: 
+                translated_text = gt.translate(combined_text)
             else:
-                translated_text = _google_translator_en.translate(combined_text)
+                translated_text = combined_text
+
+            # if source_lang == 'English':
+            #     translated_text = _google_translator_en_from_en.translate(combined_text)
+            # elif target_lang == 'Chinese':
+            #     translated_text = _google_translator_zh.translate(combined_text)
+            # else:
+            #     translated_text = _google_translator_en.translate(combined_text)
         else:
             translated_text = translate_with_llm(combined_text, source_lang=source_lang, target_lang=target_lang)
         combined.append({
@@ -150,41 +209,70 @@ class TranslateRequest(BaseModel):
 @app.post("/translate")
 async def translate(request: TranslateRequest):
     try:
+        print("===================DEBUGING=================")
+        print(f"Source: {request.source_lang} to Target: {request.target_lang}")
+        print(f"Translator: {request.translator}")
+
         decoded_bytes = base64.b64decode(request.image)
         imagePIL = Image.open(io.BytesIO(decoded_bytes)).convert('RGB')
         
         img = cv2.cvtColor(np.array(imagePIL), cv2.COLOR_RGB2BGR)
 
+        ocr = ocr_korean if request.source_lang == 'Korean' else ocr_english
+        result = ocr.ocr(img, cls=False)
         # Detect boxes
-        dt_boxes, _ = det_engine(img) 
-        
-        final_results = []
-        if dt_boxes is not None and len(dt_boxes) > 0:
-            for box in dt_boxes:
-                pts = np.array(box, dtype=np.float32)
-                x1, y1 = pts.min(axis=0).astype(int)
-                x2, y2 = pts.max(axis=0).astype(int)
-                
-                p = 3
-                x1, y1 = max(0, x1-p), max(0, y1-p)
-                x2, y2 = min(img.shape[1], x2+p), min(img.shape[0], y2+p)
-                
-                crop = img[y1:y2, x1:x2]
-                if crop.size == 0: continue
-  
-                rec_engine = rec_engine_korean if request.source_lang == 'Korean' else rec_engine_english
-                rec_res, _ = rec_engine([crop])
+        # det_engine = det_engine_korean if request.source_lang == 'Korean' else det_engine_english
+        # rec_engine = rec_engine_korean if request.source_lang == 'Korean' else rec_engine_english
 
-                if rec_res and len(rec_res) > 0:
-                    text, score = rec_res[0]
-                    print(f"Prediction: {text} | Score: {score:.4f}")
-                    final_results.append({
-                        'bbox': box.tolist(),
-                        'original': text,
-                        'confidence': float(score)
-                    })
+        # dt_boxes, _ = det_engine(img) 
+        # print(f"Detected {len(dt_boxes) if dt_boxes is not None else 0} text boxes")
+        final_results = []
+
+        if result and result[0]:
+            for line in result[0]:
+                box = line[0]
+                text, score = line[1]
+                print(f"Prediction: {text} | Score: {score:.4f}")
+                final_results.append({
+                    'bbox': box,
+                    'original': text,
+                    'confidence': float(score)
+                })
+        print(f"\n=== Grouping {len(final_results)} boxes ===")
+        final_results = group_nearby_boxes(
+            final_results, 
+            translator=request.translator, 
+            target_lang=request.target_lang, 
+            source_lang=request.source_lang
+        )
+        print(f"Grouped into {len(final_results)} blocks\n")
+
+        # if dt_boxes is not None and len(dt_boxes) > 0:
+        #     for box in dt_boxes:
+        #         pts = np.array(box, dtype=np.float32)
+        #         x1, y1 = pts.min(axis=0).astype(int)
+        #         x2, y2 = pts.max(axis=0).astype(int)
+                
+        #         p = 3
+        #         x1, y1 = max(0, x1-p), max(0, y1-p)
+        #         x2, y2 = min(img.shape[1], x2+p), min(img.shape[0], y2+p)
+                
+        #         crop = img[y1:y2, x1:x2]
+        #         if crop.size == 0: continue
+  
+        #         # rec_engine = rec_engine_korean if request.source_lang == 'Korean' else rec_engine_english
+        #         rec_res, _ = rec_engine([crop])
+
+        #         if rec_res and len(rec_res) > 0:
+        #             text, score = rec_res[0]
+        #             print(f"Prediction: {text} | Score: {score:.4f}")
+        #             final_results.append({
+        #                 'bbox': box.tolist(),
+        #                 'original': text,
+        #                 'confidence': float(score)
+        #             })
         
-        final_results = group_nearby_boxes(final_results, translator=request.translator, target_lang=request.target_lang, source_lang=request.source_lang)
+        # final_results = group_nearby_boxes(final_results, translator=request.translator, target_lang=request.target_lang, source_lang=request.source_lang)
         return {"results": final_results}
         
     except Exception as e:

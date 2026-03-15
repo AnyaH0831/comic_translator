@@ -121,6 +121,10 @@ async function scanPage() {
     for (let i = 0; i < images.length; i++) {
         const img = images[i];
 
+        console.log(`\nImage ${i + 1}/${images.length}:`);
+        console.log(`  URL: ${img.src.substring(0, 80)}...`);
+        console.log(`  Position: (${img.getBoundingClientRect().top}, ${img.getBoundingClientRect().left})`);
+
         progressText.textContent = `${i + 1} / ${images.length}`;
         progressBar.style.width = `${((i + 1) / images.length) * 100}%`;
 
@@ -140,8 +144,13 @@ async function scanPage() {
                 );
             });
 
+            console.log(`Got Response:`, response);
+
             if (response && response.results) {
+                console.log(`${response.results.length} text blocks found`);
                 renderOverlays(img, response.results);
+            }else{
+                console.log('No results');
             }
         } catch (error) {
             console.error('Error processing image:', img.src, error);
@@ -171,27 +180,37 @@ function renderOverlays(imgElement, results) {
         const scaleX = imgRect.width / imgNaturalWidth;
         const scaleY = imgRect.height / imgNaturalHeight;
 
+        const padding = 10;
+        const boxWidth = (maxX - minX) * scaleX;
+        const boxHeight = (maxY - minY) * scaleY;
+
         const overlay = document.createElement('div');
         overlay.className = 'comic-translator-overlay';
+
+        overlay.dataset.imageId = imgElement.src;
+
         overlay.style.cssText = `
             position: absolute;
-            left: ${imgRect.left + window.scrollX + minX * scaleX}px;
-            top: ${imgRect.top + window.scrollY + minY * scaleY}px;
-            width: ${(maxX - minX) * scaleX}px;
-            height: ${(maxY - minY) * scaleY}px;
+            left: ${imgRect.left + window.scrollX + minX * scaleX - padding}px;
+            top: ${imgRect.top + window.scrollY + minY * scaleY - padding}px;
+            width: ${boxWidth + padding * 2}px;
+            min-height: ${boxHeight + padding*2}px;
             background: rgba(255, 255, 255, 0.95);
             color: black;
-            padding: 5px;
+            padding: 8px;
             font-size: 14px;
             font-weight: bold;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
             z-index: 999998;
             pointer-events: none;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            box-sizing: border-box;
         `;
         overlay.textContent = result.translated;
         document.body.appendChild(overlay);

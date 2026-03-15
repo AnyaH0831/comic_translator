@@ -2,14 +2,14 @@ chrome.action.onClicked.addListener((tab) => {
     chrome.scripting.executeScript({
         target: { tabId: tab.id },
         files: ['content.js']
-    });
+    }); 
 });
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'fetchImage') {
         // Fetch the image URL here (service worker bypasses CORS with host_permissions)
         fetch(message.url)
-            .then(res => {
+            .then(res => { 
                 if (!res.ok) throw new Error(`Image fetch failed: ${res.status}`);
                 return res.arrayBuffer();
             })
