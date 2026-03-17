@@ -109,6 +109,30 @@ def group_nearby_boxes(results, distance_threshold=100, translator='llm', target
     
     return combined
 
+def detect_colors(crop):
+    """Detect dominant background and text colors from crop"""
+    pixels = crop.reshape(-1, 3)
+    unique, counts = np.unique(pixels, axis=0, return_counts=True)
+
+    sorted_indices = counts.argsort()[::-1]
+
+    bg_color = unique[sorted_indices[0]]
+
+    bg_brightness = (0.299*bg_color[2] + 0.587 * bg_color[1] + 0.114*bg_color[0])
+
+    if bg_brightness < 128:
+        text_color = np.array([255,255,255])
+    else:
+        text_color = np.array([0,0,0])
+
+    # text_color = 255 - bg_color
+
+    return{
+        'bg': f'rgb({bg_color[2]}, {bg_color[1]}, {bg_color[0]})',
+        'text': f'rgb({text_color[2]}, {text_color[1]}, {text_color[0]})'
+    }
+
+
 class TranslateRequest(BaseModel):
     image: str
     translator: str = 'llm'
@@ -117,7 +141,7 @@ class TranslateRequest(BaseModel):
 
 @app.post("/translate")
 async def translate(request: TranslateRequest):
-    try:
+    try: 
         print(f"\n=== {request.source_lang} → {request.target_lang} ({request.translator}) ===")
 
         decoded_bytes = base64.b64decode(request.image)
@@ -143,16 +167,23 @@ async def translate(request: TranslateRequest):
                 crop = img[y1:y2, x1:x2]
                 if crop.size == 0:
                     continue
-                
+                 
                 rec_res, _ = rec_engine([crop])
                 if rec_res and len(rec_res) > 0:
                     text, score = rec_res[0]
-                    print(f"  {text} ({score:.2f})")
-                    final_results.append({
-                        'bbox': box.tolist(),
-                        'original': text,
-                        'confidence': float(score)
-                    })
+                    
+                    if score >= 0.70:
+                        colors = detect_colors(crop)
+                        print(f"  {text} ({score:.2f})")
+
+                        final_results.append({
+                            'bbox': box.tolist(),
+                            'original': text,
+                            'confidence': float(score),
+                            'colors': colors
+                        })
+ 
+
         
         final_results = group_nearby_boxes(final_results, translator=request.translator, 
                                           target_lang=request.target_lang, source_lang=request.source_lang)

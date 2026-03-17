@@ -168,6 +168,8 @@ function renderOverlays(imgElement, results) {
     const imgNaturalWidth = imgElement.naturalWidth;
     const imgNaturalHeight = imgElement.naturalHeight;
 
+    const targetLang = document.getElementById('ct-target-lang').value;
+
     results.forEach(result => {
         const bbox = result.bbox;
         const xs = bbox.map(point => point[0]);
@@ -180,28 +182,90 @@ function renderOverlays(imgElement, results) {
         const scaleX = imgRect.width / imgNaturalWidth;
         const scaleY = imgRect.height / imgNaturalHeight;
 
-        const padding = 10;
+        // const padding = 5;
         const boxWidth = (maxX - minX) * scaleX;
         const boxHeight = (maxY - minY) * scaleY;
 
+        
+
+        let displayText = result.translated;
+        let fontFamily = 'Arial, sans-serif';
+
+        if (targetLang === 'English'){
+            displayText = displayText.toUpperCase();
+            fontFamily = '"Comic Sans MS", "Bangers", "Imapct", cursive, sans-serif';
+        }
+
+        const baseFontSize = Math.sqrt(boxWidth*boxHeight)/5;
+        const fontSize = Math.max(14, Math.min(baseFontSize, 22));
+
+        const charCount = displayText.length;
+        const avgCharWidth = 0.6;
+        const lines = Math.ceil((charCount * avgCharWidth * boxHeight * 0.2)/boxWidth) || 1;
+
+
         const overlay = document.createElement('div');
         overlay.className = 'comic-translator-overlay';
+        // let fontSize = Math.min(
+        //     boxHeight/(lines*1.3),
+        //     boxWidth/(charCount/lines*avgCharWidth),
+        //     28
+        // )
 
+        // fontSize = Math.max(fontSize, 14);
+
+
+
+        // const estimatedFontSize = Math.max(12, Math.min(boxHeight*0.15, 24));
+
+        // const textLength = displayText.length;
+        // const availableWidth = boxWidth - padding * 2;
+        // const availableHeight = boxHeight - padding *2;
+
+
+        // let fontSize = Math.min(
+        //     availableHeight/3,
+        //     availableWidth/(textLength*0.6),
+        //     20
+        // );
+
+        // fontSize = Math.max(fontSize, 10);
+
+        let bgColor;
+        let textColor;
+
+        if (result.colors && result.colors.bg){
+            bgColor = result.colors.bg;
+        }else{
+            bgColor = 'white';
+        }
+
+        if (result.colors && result.colors.text){
+            textColor = result.colors.text;
+        }else{
+            textColor = 'black';
+        }
+            
+        // const overlay = document.createElement('div');
+        // overlay.className = 'comic-translator-overlay';
         overlay.dataset.imageId = imgElement.src;
 
         overlay.style.cssText = `
             position: absolute;
-            left: ${imgRect.left + window.scrollX + minX * scaleX - padding}px;
-            top: ${imgRect.top + window.scrollY + minY * scaleY - padding}px;
-            width: ${boxWidth + padding * 2}px;
-            min-height: ${boxHeight + padding*2}px;
-            background: rgba(255, 255, 255, 0.95);
-            color: black;
+            left: ${imgRect.left + window.scrollX + minX * scaleX}px;
+            top: ${imgRect.top + window.scrollY + minY * scaleY}px;
+            width: ${boxWidth}px;
+            height: ${boxHeight}px;
+            background: ${bgColor};
+            color: ${textColor};
             padding: 8px;
-            font-size: 14px;
+            font-size: ${fontSize}px;
             font-weight: bold;
+            font-family: ${fontFamily};
+            letter-spacing: ${targetLang === 'English' ? '0.5px':'normal'};
+            line-height: 1.2;
             border: 2px solid #ccc;
-            border-radius: 6px;
+          
             z-index: 999998;
             pointer-events: none;
             display: flex;
@@ -210,9 +274,10 @@ function renderOverlays(imgElement, results) {
             text-align: center;
             word-wrap: break-word;
             overflow-wrap: break-word;
+            overflow: hidden;
             box-sizing: border-box;
         `;
-        overlay.textContent = result.translated;
+        overlay.textContent = displayText;
         document.body.appendChild(overlay);
         overlays.push(overlay);
     });
@@ -223,5 +288,6 @@ function clearOverlays() {
     overlays = [];
 }
 
-} 
+}  
 
+  
