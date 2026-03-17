@@ -1,10 +1,22 @@
+const fontURL = chrome.runtime.getURL('fonts/Bangers-Regular.ttf');
+const fontFace = new FontFace('Bangers', `url(${fontURL})`);
+fontFace.load().then((loadedFont) => {
+    document.fonts.add(loadedFont);
+    console.log("Bangers font loaded");
+}).catch((error) => {
+    console.error('Font loading failed:', error);
+});
+
+
 //Bar toggle
 const _existingBar = document.getElementById('comic-translator-bar');
+
 if (_existingBar) {
     const isHidden = _existingBar.style.display === 'none' || _existingBar.style.display === '';
     _existingBar.style.display = isHidden ? 'flex' : 'none';
     document.body.style.marginTop = isHidden ? '60px' : '';
 } else {
+    
 
 let topBar = null;
 let overlays = [];
@@ -29,7 +41,7 @@ function createTopBar() {
         padding: 0 20px;
         box-sizing: border-box;
         box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-family: 'Bangers', cursive, -apple-system, sans-serif;
     `;
 
     topBar.innerHTML = `
@@ -182,30 +194,77 @@ function renderOverlays(imgElement, results) {
         const scaleX = imgRect.width / imgNaturalWidth;
         const scaleY = imgRect.height / imgNaturalHeight;
 
-        // const padding = 5;
         const boxWidth = (maxX - minX) * scaleX;
         const boxHeight = (maxY - minY) * scaleY;
 
-        
 
         let displayText = result.translated;
         let fontFamily = 'Arial, sans-serif';
 
         if (targetLang === 'English'){
             displayText = displayText.toUpperCase();
-            fontFamily = '"Comic Sans MS", "Bangers", "Imapct", cursive, sans-serif';
+            // fontFamily = '"Comic Sans MS", "Bangers", "Imapct", cursive, sans-serif';
+            fontFamily = '"Bangers", "Comic Sans MS", cursive';
         }
 
-        const baseFontSize = Math.sqrt(boxWidth*boxHeight)/5;
-        const fontSize = Math.max(14, Math.min(baseFontSize, 22));
 
-        const charCount = displayText.length;
-        const avgCharWidth = 0.6;
-        const lines = Math.ceil((charCount * avgCharWidth * boxHeight * 0.2)/boxWidth) || 1;
+        const tempDiv = document.createElement('div');
+        tempDiv.style.cssText = `
+            position: absolute;
+            visibility: hidden;
+            width: ${boxWidth - 12}px;
+            font-family: ${fontFamily};
+            font-weight: bold;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            line-height: 1.1;
+            padding: 6px;
+            box-sizing: border-box;
+        `;
+
+        tempDiv.textContent = displayText;
+        document.body.appendChild(tempDiv);
+
+        let minSize = 10;
+        let maxSize = 40;
+        let optimalSize = minSize;
+
+        while (minSize <= maxSize){
+            const testSize = Math.floor((minSize+maxSize)/2);
+            tempDiv.style.fontSize = testSize + 'px';
+
+            if (tempDiv.scrollHeight <= boxHeight-12){
+                optimalSize = testSize;
+                minSize=testSize+1;
+
+            }else{
+                maxSize = testSize-1;
+            }
+        }
 
 
-        const overlay = document.createElement('div');
-        overlay.className = 'comic-translator-overlay';
+        document.body.removeChild(tempDiv);
+
+        const fontSize = Math.max(12, Math.min(optimalSize, 48));
+
+        // const textLength = displayText.length;
+
+        // const estimatedCharsPerLine = Math.floor(boxWidth/12)
+        // const estimatedLines = Math.max(1, Math.ceil(textLength/estimatedCharsPerLine));
+
+        // const fontSizeByHeight = boxHeight/(estimatedLines*1.3);
+        // const fontSizeByWidth = boxWidth/(estimatedCharsPerLine * 0.65);
+
+        // const fontSize = Math.max(12, Math.min(fontSizeByHeight, fontSizeByWidth, 24));
+
+        // const baseFontSize = Math.sqrt(boxWidth*boxHeight)/5;
+        // const fontSize = Math.max(14, Math.min(baseFontSize, 22));
+
+        // const charCount = displayText.length;
+        // const avgCharWidth = 0.6;
+        // const lines = Math.ceil((charCount * avgCharWidth * boxHeight * 0.2)/boxWidth) || 1;
+
+
         // let fontSize = Math.min(
         //     boxHeight/(lines*1.3),
         //     boxWidth/(charCount/lines*avgCharWidth),
@@ -245,9 +304,9 @@ function renderOverlays(imgElement, results) {
         }else{
             textColor = 'black';
         }
-            
-        // const overlay = document.createElement('div');
-        // overlay.className = 'comic-translator-overlay';
+
+        const overlay = document.createElement('div');
+        overlay.className = 'comic-translator-overlay';
         overlay.dataset.imageId = imgElement.src;
 
         overlay.style.cssText = `
@@ -264,8 +323,6 @@ function renderOverlays(imgElement, results) {
             font-family: ${fontFamily};
             letter-spacing: ${targetLang === 'English' ? '0.5px':'normal'};
             line-height: 1.2;
-            border: 2px solid #ccc;
-          
             z-index: 999998;
             pointer-events: none;
             display: flex;
@@ -280,14 +337,12 @@ function renderOverlays(imgElement, results) {
         overlay.textContent = displayText;
         document.body.appendChild(overlay);
         overlays.push(overlay);
-    });
-}
+    }); 
+}   
 
 function clearOverlays() {
     overlays.forEach(o => o.remove());
     overlays = [];
 }
 
-}  
-
-  
+} 

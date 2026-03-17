@@ -100,30 +100,56 @@ def group_nearby_boxes(results, distance_threshold=100, translator='llm', target
         else:
             translated_text = translate_with_llm(combined_text, source_lang, target_lang)
         
+        all_points = []
+        for item in group:
+            all_points.extend(item['bbox'])
+
+        xs = [point[0] for point in all_points]
+        ys = [point[1] for point in all_points]
+
+        combined_bbox = [
+            [min(xs), min(ys)],
+            [max(xs), min(ys)],
+            [max(xs), max(ys)],
+            [min(xs), max(ys)]
+        ]
+
         combined.append({
-            'bbox': group[0]['bbox'],
+            'bbox': combined_bbox,
             'original': combined_text,
             'translated': translated_text,
-            'confidence': max(item['confidence'] for item in group)
+            'confidence': max(item['confidence'] for item in group),
+            'colors': group[0].get('colors', {'bg': 'rgb(255,255,255)', 'text': 'rgb(0,0,0)'})
         })
     
     return combined
 
 def detect_colors(crop):
     """Detect dominant background and text colors from crop"""
-    pixels = crop.reshape(-1, 3)
-    unique, counts = np.unique(pixels, axis=0, return_counts=True)
+    h, w = crop.shape[:2]
 
-    sorted_indices = counts.argsort()[::-1]
+    edge_pixels = np.vstack([
+        crop[0:5, :].reshape(-1,3),
+        crop[-5:, :].reshape(-1,3),
+        crop[:, 0:5].reshape(-1,3),
+        crop[:, -5:].reshape(-1,3)
+    ])
 
-    bg_color = unique[sorted_indices[0]]
+    # pixels = crop.reshape(-1, 3)
+    unique, counts = np.unique(edge_pixels, axis=0, return_counts=True)
 
+    # sorted_indices = counts.argsort()[::-1]
+
+    # bg_color = unique[sorted_indices[0]]
+    bg_color = unique[counts.argmax()]
     bg_brightness = (0.299*bg_color[2] + 0.587 * bg_color[1] + 0.114*bg_color[0])
 
     if bg_brightness < 128:
         text_color = np.array([255,255,255])
     else:
         text_color = np.array([0,0,0])
+
+    print(f"    Colors: BG brightness={bg_brightness:.0f}, bg=rgb({bg_color[2]},{bg_color[1]},{bg_color[0]}), text=rgb({text_color[2]},{text_color[1]},{text_color[0]})")
 
     # text_color = 255 - bg_color
 
