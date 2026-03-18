@@ -1,8 +1,10 @@
+// Load custom font from extension
 const fontURL = chrome.runtime.getURL('fonts/Bangers-Regular.ttf');
+
 const fontFace = new FontFace('Bangers', `url(${fontURL})`);
 fontFace.load().then((loadedFont) => {
     document.fonts.add(loadedFont);
-    console.log("Bangers font loaded");
+    console.log('Bangers font loaded!');
 }).catch((error) => {
     console.error('Font loading failed:', error);
 });
@@ -21,6 +23,8 @@ if (_existingBar) {
 let topBar = null;
 let overlays = [];
 let barVisible = false;
+let isScanning = false;
+let abortController = null;
 
 function createTopBar() {
     if (topBar) return;
@@ -107,71 +111,213 @@ if (document.readyState === 'loading') {
     toggleBar();
 }
 
+// Use this to load images so the overlay actually shows on the page
+// async function loadAllImages() {
+//     const originalScroll = window.scrollY;
+
+//     document.body.style.overflow = 'hidden';
+//     const scrollContainer = document.scrollingElement || document.documentElement;
+
+//     return new Promise((resolve) => {
+//         // let lastHeight = document.body.scrollHeight;
+//         let scrollAttempts = 0;
+//         const maxAttempts = 50;
+
+//         const scrollInternal = setInterval(() => {
+//             scrollContainer.scrollTop += window.innerHeight;
+//             scrollAttempts++;
+
+//             const newHeight = scrollContainer.scrollHeight;
+
+//             if (scrollContainer.scrollTop + window.innerHeight >= newHeight || scrollAttempts >= maxAttempts) {
+//                 clearInterval(scrollInterval);
+                
+//                 // Restore viewport
+//                 scrollContainer.scrollTop = originalScroll;
+//                 document.body.style.overflow = '';
+                
+//                 setTimeout(() => resolve(), 500);
+//             }
+//         }, 50);
+//     })
+// }
+
+async function loadAllImages() {
+    const originalScroll = window.scrollY;
+    
+    // Create loading overlay with spinner
+    const loadingOverlay = document.createElement('div');
+    loadingOverlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        z-index: 9999999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+    `;
+    loadingOverlay.innerHTML = `
+        <div style="text-align: center;">
+            <div class="spinner" style="
+                border: 4px solid #f3f3f3;
+                border-top: 4px solid #173E99;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                animation: spin 1s linear infinite;
+                margin: 0 auto 20px;
+            "></div>
+            <div style="font-size: 18px; color: #173E99;">Loading comic images...</div>
+            <div style="font-size: 14px; margin-top: 5px; opacity: 0.7; color: #173E99;">Please wait</div>
+        </div>
+    `;    
+    
+    // Add spinner animation
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    `;
+    document.head.appendChild(style);
+    
+    document.body.appendChild(loadingOverlay);
+
+    return new Promise((resolve) => {
+        let scrollAttempts = 0;
+        const maxAttempts = 50;
+        
+        const scrollInterval = setInterval(() => {
+            window.scrollBy(0, window.innerHeight);
+            scrollAttempts++;
+            
+            const newHeight = document.body.scrollHeight;
+            
+            if (window.scrollY + window.innerHeight >= newHeight || scrollAttempts >= maxAttempts) {
+                clearInterval(scrollInterval);
+                window.scrollTo(0, originalScroll);
+                
+                // Remove overlay and style
+                loadingOverlay.remove();
+                style.remove();
+                
+                setTimeout(() => resolve(), 300);
+            }
+        }, 50);
+    });
+}
+
 async function scanPage() {
+
+    if (isScanning){
+        console.log('Scan already in progress, canceling previous scan...');
+        if (abortController){
+            abortController.abort();
+        }
+        clearOverlays();
+        isScanning = false;
+    }
+
+    isScanning = true;
+    abortController = new AbortController();
+    const signal = abortController.signal;
+
     const sourceLang = document.getElementById('ct-source-lang').value;
     const targetLang = document.getElementById('ct-target-lang').value;
     const translator = document.getElementById('ct-translator').value;
-
-    const images = Array.from(document.querySelectorAll('img'))
-        .filter(img => img.offsetWidth >= 300);
-
-    if (images.length === 0) {
-        alert('No comic images found! Try scrolling down to load images.');
-        return;
-    }
-
-    clearOverlays();
 
     const progressDiv = document.getElementById('ct-progress');
     const progressBar = document.getElementById('ct-progress-bar');
     const progressText = document.getElementById('ct-progress-text');
 
     progressDiv.style.display = 'flex';
-    progressText.textContent = `0 / ${images.length}`;
+    progressText.textContent = 'Loading images...';
     progressBar.style.width = '0%';
 
-    for (let i = 0; i < images.length; i++) {
-        const img = images[i];
+    try{
+        await loadAllImages();
 
-        console.log(`\nImage ${i + 1}/${images.length}:`);
-        console.log(`  URL: ${img.src.substring(0, 80)}...`);
-        console.log(`  Position: (${img.getBoundingClientRect().top}, ${img.getBoundingClientRect().left})`);
+        const images = Array.from(document.querySelectorAll('img'))
+            .filter(img => img.offsetWidth >= 300);
 
-        progressText.textContent = `${i + 1} / ${images.length}`;
-        progressBar.style.width = `${((i + 1) / images.length) * 100}%`;
+        if (images.length === 0) {
+            alert('No comic images found! Try scrolling down to load images.');
+            progressDiv.style.display = 'none';
+            return;
+        } 
 
-        try {
-            // Send URL to background.js, worker fetches bypass CORS via host_permissions
-            const response = await new Promise((resolve, reject) => {
-                if (!chrome?.runtime?.id) {
-                    reject(new Error('Extension context invalidated. Please reload the page (F5) and try again.'));
-                    return;
-                }
-                chrome.runtime.sendMessage(
-                    { action: 'fetchImage', url: img.src, translator, targetLang, sourceLang },
-                    (res) => {
-                        if (chrome.runtime.lastError) reject(new Error(chrome.runtime.lastError.message));
-                        else resolve(res);
+        clearOverlays();
+
+        progressText.textContent = `0 / ${images.length}`;
+        progressBar.style.width = '0%';
+
+        // const progressDiv = document.getElementById('ct-progress');
+        // const progressBar = document.getElementById('ct-progress-bar');
+        // const progressText = document.getElementById('ct-progress-text');
+
+        progressDiv.style.display = 'flex';
+        progressText.textContent = `0 / ${images.length}`;
+        progressBar.style.width = '0%';
+ 
+        for (let i = 0; i < images.length; i++) {
+            const img = images[i];
+
+            console.log(`\nImage ${i + 1}/${images.length}:`);
+            console.log(`  URL: ${img.src.substring(0, 80)}...`);
+            console.log(`  Position: (${img.getBoundingClientRect().top}, ${img.getBoundingClientRect().left})`);
+
+            progressText.textContent = `${i + 1} / ${images.length}`;
+            progressBar.style.width = `${((i + 1) / images.length) * 100}%`;
+
+            try {
+                // Send URL to background.js, worker fetches bypass CORS via host_permissions
+                const response = await new Promise((resolve, reject) => {
+                    if (!chrome?.runtime?.id) {
+                        reject(new Error('Extension context invalidated. Please reload the page (F5) and try again.'));
+                        return;
                     }
-                );
-            });
+                    chrome.runtime.sendMessage(
+                        { action: 'fetchImage', url: img.src, translator, targetLang, sourceLang },
+                        (res) => {
+                            if (chrome.runtime.lastError) reject(new Error(chrome.runtime.lastError.message));
+                            else resolve(res);
+                        }
+                    );
+                });
 
-            console.log(`Got Response:`, response);
+                console.log(`Got Response:`, response);
 
-            if (response && response.results) {
-                console.log(`${response.results.length} text blocks found`);
-                renderOverlays(img, response.results);
-            }else{
-                console.log('No results');
+                if (response && response.results) {
+                    console.log(`${response.results.length} text blocks found`);
+                    renderOverlays(img, response.results);
+                }else{
+                    console.log('No results');
+                }
+            } catch (error) {
+                console.error('Error processing image:', img.src, error);
             }
-        } catch (error) {
-            console.error('Error processing image:', img.src, error);
         }
-    }
 
-    setTimeout(() => {
+        setTimeout(() => {
+            progressDiv.style.display = 'none';
+        }, 2000);
+    } catch(error){
+        if (error.message === 'Scan cancelled'){
+            console.log('Scan cancelled by user');
+        }else{
+            console.error('Scan error:', error);
+        }
         progressDiv.style.display = 'none';
-    }, 2000);
+    }finally{
+        isScanning = false;
+        abortController = null;
+    }
+    
 }
 
 
@@ -205,6 +351,8 @@ function renderOverlays(imgElement, results) {
             displayText = displayText.toUpperCase();
             // fontFamily = '"Comic Sans MS", "Bangers", "Imapct", cursive, sans-serif';
             fontFamily = '"Bangers", "Comic Sans MS", cursive';
+            // fontFamily = '"BangersCustom", "Comic Sans MS", "Arial Black", sans-serif';
+            // fontFamily = '"Bradley Hand", "Comic Sans MS", "Marker Felt", cursive';
         }
 
 
@@ -214,7 +362,7 @@ function renderOverlays(imgElement, results) {
             visibility: hidden;
             width: ${boxWidth - 12}px;
             font-family: ${fontFamily};
-            font-weight: bold;
+            font-weight: normal;
             word-wrap: break-word;
             overflow-wrap: break-word;
             line-height: 1.1;
@@ -245,7 +393,7 @@ function renderOverlays(imgElement, results) {
 
         document.body.removeChild(tempDiv);
 
-        const fontSize = Math.max(12, Math.min(optimalSize, 48));
+        const fontSize = Math.max(12, Math.min(optimalSize, 52));
 
         // const textLength = displayText.length;
 
@@ -334,9 +482,15 @@ function renderOverlays(imgElement, results) {
             overflow: hidden;
             box-sizing: border-box;
         `;
+
+        overlay.style.setProperty('font-family', fontFamily, 'important');
+
         overlay.textContent = displayText;
         document.body.appendChild(overlay);
         overlays.push(overlay);
+
+        console.log('Applied font-family:', overlay.style.fontFamily);
+        console.log('Computed font:', window.getComputedStyle(overlay).fontFamily);
     }); 
 }   
 
