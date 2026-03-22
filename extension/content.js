@@ -140,7 +140,7 @@ if (document.readyState === 'loading') {
 //             }
 //         }, 50);
 //     })
-// }
+// } 
 
 async function loadAllImages() {
     const originalScroll = window.scrollY;

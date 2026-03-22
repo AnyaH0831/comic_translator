@@ -8,11 +8,88 @@ import numpy as np
 from deep_translator import GoogleTranslator
 from dotenv import load_dotenv
 from groq import Groq
+
+import json
  
 # PaddleOCR low-level imports
 from paddleocr.tools.infer import utility
 from paddleocr.tools.infer.predict_det import TextDetector
 from paddleocr.tools.infer.predict_rec import TextRecognizer
+
+from datetime import datetime
+from azure.ai.translation.text import TextTranslationClient
+from azure.core.credentials import AzureKeyCredential
+                                
+AZURE_KEY = os.getenv("AZURE_TRANSLATOR_KEY")
+AZURE_REGION = os.getenv("AZURE_TRANSLATOR_REGION")  # e.g., "eastus"
+AZURE_ENDPOINT = "https://api.cognitive.microsofttranslator.com"
+
+azure_client = TextTranslationClient(
+    credential=AzureKeyCredential(AZURE_KEY),
+    region=AZURE_REGION
+)
+
+USAGE_FILE = "azure_usage.json"
+MONTHLY_LIMIT = 2_000_000 
+
+def get_current_month():
+    return datetime.now().strftime("%Y-%m")
+
+def load_usage():
+    if not os.path.exists(USAGE_FILE):
+        return {"month": get_current_month(), "characters_used": 0}
+    with open(USAGE_FILE, 'r') as f:
+        data = json.load(f)
+    
+    if data.get("month") != get_current_month():
+        data = {"month": get_current_month(), "characters_used": 0 }
+
+    return data
+
+def save_usage(usage):
+    with open(USAGE_FILE, 'w') as f:
+        json.dump(usage, f)
+
+def translate_with_azure(text, source_lang='ko', target_lang='en'):
+    usage = load_usage()
+
+    char_count = len(text)
+    if usage["characters_used"] + char_count >  MONTHLY_LIMIT:
+        print(f"AZURE QUOTA EXCEEDED ({usage['characters_used']}/{MONTHLY_LIMIT})")
+        return None
+    
+    try:
+        response = azure_client.translate(
+            body=[text],
+            from_language=source_lang,
+            to_language=[target_lang]
+        )
+
+        translated = response[0].translations[0].text
+
+        usage["characters_used"] += char_count
+        save_usage(usage)
+
+        print(f"AZURE USAGE: {usage['characters_used']:,}/{MONTHLY_LIMIT:,} chars this month")
+
+        return translated
+    
+    except Exception as e:
+        print(f"Azure translation error: {e}")
+        return None     
+
+def translation_text(text, source_lang='korean', target_lang='English', translator='auto'):
+    lang_codes = {'Korean': 'ko', 'English': 'en', 'Chinese': 'zh'}
+    source_code = lang_codes.get(source_lang, 'ko')
+    target_code = lang_codes.get(target_lang, 'en')
+
+    if translator in ['auto', 'azure']:
+        azure_result = translate_with_azure(text, source_code, target_code)
+        if azure_result:
+            return azure_result
+        else:
+            print("Azure unavailable, falling back to Groq")   
+    return translate_with_llm(text, source_lang, target_lang)    
 
 load_dotenv()
 
@@ -41,7 +118,7 @@ def init_ocr_system():
     args.rec_image_shape = "3, 48, 320"
     args.use_space_char = True 
     rec_engine_korean = TextRecognizer(args)
-
+   
     # ENGLISH RECOGNIZER
     args.rec_model_dir = os.path.join(base_path, "crnn_inference")
     args.rec_char_dict_path = os.path.join(base_path, "en_dict.txt")
@@ -208,7 +285,6 @@ async def translate(request: TranslateRequest):
                             'confidence': float(score),
                             'colors': colors
                         })
- 
 
         
         final_results = group_nearby_boxes(final_results, translator=request.translator, 
