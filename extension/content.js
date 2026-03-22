@@ -21,10 +21,11 @@ if (_existingBar) {
     
 
 let topBar = null;
-let overlays = [];
+let overlays = []; 
 let barVisible = false;
 let isScanning = false;
-let abortController = null;
+let abortController = null;   
+let overlayVisible = true;
 
 function createTopBar() {
     if (topBar) return;
@@ -50,7 +51,6 @@ function createTopBar() {
 
     topBar.innerHTML = `
         <h3 style="margin: 0; flex-shrink: 0;"> Comic Translator</h3>
-
         <select id="ct-source-lang" style="margin-left: 20px; padding: 8px; border-radius: 5px; border: none;">
             <option value="English">English</option>
             <option value="Korean" selected>Korean</option>
@@ -63,13 +63,12 @@ function createTopBar() {
             <option value="Chinese">Chinese</option>
         </select>
 
-        <select id="ct-translator" style="margin-left: 20px; padding: 8px; border-radius: 5px; border: none;">
-            <option value="google" selected>Google Translate</option>
-            <option value="llm">LLM (Groq)</option>
-        </select>
-
         <button id="ct-scan" style="margin-left: 10px; padding: 8px 20px; background: #B6CCFE; color: #173E99; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
              ▶ Scan
+        </button>
+
+        <button id="ct-toggle" style="margin-left: 10px; padding: 8px 20px; background:  #FFA500; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
+             Hide
         </button>
 
         <button id="ct-clear" style="margin-left: 10px; padding: 8px 20px; background: rgb(100, 6, 6); color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
@@ -91,6 +90,7 @@ function createTopBar() {
     document.body.prepend(topBar);
 
     document.getElementById('ct-scan').addEventListener('click', scanPage);
+    document.getElementById('ct-toggle').addEventListener('click', toggleOverlays);
     document.getElementById('ct-clear').addEventListener('click', clearOverlays);
 }
 
@@ -111,36 +111,7 @@ if (document.readyState === 'loading') {
     toggleBar();
 }
 
-// Use this to load images so the overlay actually shows on the page
-// async function loadAllImages() {
-//     const originalScroll = window.scrollY;
 
-//     document.body.style.overflow = 'hidden';
-//     const scrollContainer = document.scrollingElement || document.documentElement;
-
-//     return new Promise((resolve) => {
-//         // let lastHeight = document.body.scrollHeight;
-//         let scrollAttempts = 0;
-//         const maxAttempts = 50;
-
-//         const scrollInternal = setInterval(() => {
-//             scrollContainer.scrollTop += window.innerHeight;
-//             scrollAttempts++;
-
-//             const newHeight = scrollContainer.scrollHeight;
-
-//             if (scrollContainer.scrollTop + window.innerHeight >= newHeight || scrollAttempts >= maxAttempts) {
-//                 clearInterval(scrollInterval);
-                
-//                 // Restore viewport
-//                 scrollContainer.scrollTop = originalScroll;
-//                 document.body.style.overflow = '';
-                
-//                 setTimeout(() => resolve(), 500);
-//             }
-//         }, 50);
-//     })
-// } 
 
 async function loadAllImages() {
     const originalScroll = window.scrollY;
@@ -229,7 +200,7 @@ async function scanPage() {
 
     const sourceLang = document.getElementById('ct-source-lang').value;
     const targetLang = document.getElementById('ct-target-lang').value;
-    const translator = document.getElementById('ct-translator').value;
+    // const translator = document.getElementById('ct-translator').value;
 
     const progressDiv = document.getElementById('ct-progress');
     const progressBar = document.getElementById('ct-progress-bar');
@@ -282,7 +253,7 @@ async function scanPage() {
                         return;
                     }
                     chrome.runtime.sendMessage(
-                        { action: 'fetchImage', url: img.src, translator, targetLang, sourceLang },
+                        { action: 'fetchImage', url: img.src, targetLang, sourceLang },
                         (res) => {
                             if (chrome.runtime.lastError) reject(new Error(chrome.runtime.lastError.message));
                             else resolve(res);
@@ -395,49 +366,6 @@ function renderOverlays(imgElement, results) {
 
         const fontSize = Math.max(12, Math.min(optimalSize, 52));
 
-        // const textLength = displayText.length;
-
-        // const estimatedCharsPerLine = Math.floor(boxWidth/12)
-        // const estimatedLines = Math.max(1, Math.ceil(textLength/estimatedCharsPerLine));
-
-        // const fontSizeByHeight = boxHeight/(estimatedLines*1.3);
-        // const fontSizeByWidth = boxWidth/(estimatedCharsPerLine * 0.65);
-
-        // const fontSize = Math.max(12, Math.min(fontSizeByHeight, fontSizeByWidth, 24));
-
-        // const baseFontSize = Math.sqrt(boxWidth*boxHeight)/5;
-        // const fontSize = Math.max(14, Math.min(baseFontSize, 22));
-
-        // const charCount = displayText.length;
-        // const avgCharWidth = 0.6;
-        // const lines = Math.ceil((charCount * avgCharWidth * boxHeight * 0.2)/boxWidth) || 1;
-
-
-        // let fontSize = Math.min(
-        //     boxHeight/(lines*1.3),
-        //     boxWidth/(charCount/lines*avgCharWidth),
-        //     28
-        // )
-
-        // fontSize = Math.max(fontSize, 14);
-
-
-
-        // const estimatedFontSize = Math.max(12, Math.min(boxHeight*0.15, 24));
-
-        // const textLength = displayText.length;
-        // const availableWidth = boxWidth - padding * 2;
-        // const availableHeight = boxHeight - padding *2;
-
-
-        // let fontSize = Math.min(
-        //     availableHeight/3,
-        //     availableWidth/(textLength*0.6),
-        //     20
-        // );
-
-        // fontSize = Math.max(fontSize, 10);
-
         let bgColor;
         let textColor;
 
@@ -467,7 +395,7 @@ function renderOverlays(imgElement, results) {
             color: ${textColor};
             padding: 8px;
             font-size: ${fontSize}px;
-            font-weight: bold;
+            font-weight: normal;
             font-family: ${fontFamily};
             letter-spacing: ${targetLang === 'English' ? '0.5px':'normal'};
             line-height: 1.2;
@@ -497,6 +425,23 @@ function renderOverlays(imgElement, results) {
 function clearOverlays() {
     overlays.forEach(o => o.remove());
     overlays = [];
+    overlayVisible = true;
+
+    const toggleBtn = document.getElementById('ct-toggle');
+    if (toggleBtn) {
+        toggleBtn.textContent = 'Hide';
+    }
+}
+
+function toggleOverlays() {
+    overlayVisible = !overlayVisible;
+    const toggleBtn = document.getElementById('ct-toggle');
+
+    overlays.forEach(overlay => {
+        overlay.style.display = overlayVisible ? 'flex':'none';
+    });
+
+    toggleBtn.textContent = overlayVisible ? 'Hide': 'Show';
 }
 
 } 

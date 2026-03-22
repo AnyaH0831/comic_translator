@@ -9,8 +9,8 @@ from deep_translator import GoogleTranslator
 from dotenv import load_dotenv
 from groq import Groq
 
-import json
- 
+import json 
+  
 # PaddleOCR low-level imports
 from paddleocr.tools.infer import utility
 from paddleocr.tools.infer.predict_det import TextDetector
@@ -19,17 +19,37 @@ from paddleocr.tools.infer.predict_rec import TextRecognizer
 from datetime import datetime
 from azure.ai.translation.text import TextTranslationClient
 from azure.core.credentials import AzureKeyCredential
-                                
+
+load_dotenv()         
 AZURE_KEY = os.getenv("AZURE_TRANSLATOR_KEY")
-AZURE_REGION = os.getenv("AZURE_TRANSLATOR_REGION")  # e.g., "eastus"
+AZURE_REGION = os.getenv("AZURE_TRANSLATOR_REGION") 
 AZURE_ENDPOINT = "https://api.cognitive.microsofttranslator.com"
 
-azure_client = TextTranslationClient(
-    credential=AzureKeyCredential(AZURE_KEY),
-    region=AZURE_REGION
+
+
+
+base_path = os.path.dirname(os.path.abspath(__file__))
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+
+if AZURE_KEY and AZURE_REGION:
+    azure_client = TextTranslationClient(
+        credential=AzureKeyCredential(AZURE_KEY),
+        region=AZURE_REGION
+    )
+else:
+    azure_client = None
+    print("Azure credentials not found")
+app = FastAPI()    
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"]
 )
 
-USAGE_FILE = "azure_usage.json"
+base_path = os.path.dirname(os.path.abspath(__file__))
+USAGE_FILE = os.path.join(base_path, "azure_usage.json")
 MONTHLY_LIMIT = 2_000_000 
 
 def get_current_month():
@@ -43,6 +63,7 @@ def load_usage():
     
     if data.get("month") != get_current_month():
         data = {"month": get_current_month(), "characters_used": 0 }
+        save_usage(data)
 
     return data
 
@@ -51,18 +72,29 @@ def save_usage(usage):
         json.dump(usage, f)
 
 def translate_with_azure(text, source_lang='ko', target_lang='en'):
+    if not azure_client:
+        return None
+    
     usage = load_usage()
 
     char_count = len(text)
+
     if usage["characters_used"] + char_count >  MONTHLY_LIMIT:
         print(f"AZURE QUOTA EXCEEDED ({usage['characters_used']}/{MONTHLY_LIMIT})")
         return None
     
     try:
+
+        azure_lang_map = {
+            'ko': 'ko',
+            'en': 'en',
+            'zh-CN': 'zh-Hans'
+        }
+
         response = azure_client.translate(
             body=[text],
-            from_language=source_lang,
-            to_language=[target_lang]
+            from_language=azure_lang_map.get(source_lang, source_lang),
+            to_language=[azure_lang_map.get(target_lang, target_lang)]
         )
 
         translated = response[0].translations[0].text
@@ -78,24 +110,65 @@ def translate_with_azure(text, source_lang='ko', target_lang='en'):
         print(f"Azure translation error: {e}")
         return None     
 
-def translation_text(text, source_lang='korean', target_lang='English', translator='auto'):
-    lang_codes = {'Korean': 'ko', 'English': 'en', 'Chinese': 'zh'}
+def translate_with_deep_translator(text, source_lang='ko', target_lang='en'):
+    try:
+        translator = _translators.get((source_lang, target_lang))
+        if not translator:
+            return None
+        
+        result = translator.translate(text)
+        print(f"Deep Translator (Google)")
+        return result
+    except Exception as e:
+        print(f"Deep Translator error: {e}")
+        return None
+
+# Currently with Groq
+def translate_with_llm(text, source_lang='Korean', target_lang='English'):
+    try:
+        response = client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            temperature=0.3,
+            messages=[
+                {"role": "system", "content": "You are a translator. Only output the translation."},
+                {"role": "user", "content": f"Translate this {source_lang} comic dialogue to {target_lang}: {text}\n\nTranslation:"}
+            ]
+        )
+        return response.choices[0].message.content 
+    except Exception as e:
+        print(f"Groq error: {e}")
+        return text
+
+def translate_text(text, source_lang='korean', target_lang='English', translator='auto'):
+    """Automatic fall back
+        1. Deep Translator
+        2. Azure Translator
+        3. Groq LLM
+    """
+    lang_codes = {'Korean': 'ko', 'English': 'en', 'Chinese': 'zh-CN'}
     source_code = lang_codes.get(source_lang, 'ko')
     target_code = lang_codes.get(target_lang, 'en')
 
-    if translator in ['auto', 'azure']:
-        azure_result = translate_with_azure(text, source_code, target_code)
-        if azure_result:
-            return azure_result
-        else:
-            print("Azure unavailable, falling back to Groq")   
+    
+    result = translate_with_deep_translator(text, source_code, target_code)
+    if result:
+        return result
+    
+    result = translate_with_azure(text, source_code, target_code)
+    if result: 
+        return result
+     
+    
+
+    # if translator in ['auto', 'azure']:
+    #     azure_result = translate_with_azure(text, source_code, target_code)
+    #     if azure_result:
+    #         return azure_result
+    #     else:
+    #         print("Azure unavailable, falling back to Groq")   
     return translate_with_llm(text, source_lang, target_lang)    
 
-load_dotenv()
 
-app = FastAPI()
-base_path = os.path.dirname(os.path.abspath(__file__))
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 def init_ocr_system():
     parser = utility.init_args()
@@ -131,12 +204,7 @@ def init_ocr_system():
 
 det_engine, rec_engine_korean, rec_engine_english = init_ocr_system()
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
-    allow_headers=["*"]
-)
+
 
 _translators = {
     ('ko', 'en'): GoogleTranslator(source='ko', target='en'),
@@ -145,13 +213,13 @@ _translators = {
     ('en', 'ko'): GoogleTranslator(source='en', target='ko')
 }
 
-def get_translator(source_lang, target_lang):
-    lang_codes = {'Korean': 'ko', 'English': 'en', 'Chinese': 'zh-CN'}
-    source_code = lang_codes.get(source_lang, 'en')
-    target_code = lang_codes.get(target_lang, 'en')
-    return _translators.get((source_code, target_code))
+# def get_translator(source_lang, target_lang):
+#     lang_codes = {'Korean': 'ko', 'English': 'en', 'Chinese': 'zh-CN'}
+#     source_code = lang_codes.get(source_lang, 'en')
+#     target_code = lang_codes.get(target_lang, 'en')
+#     return _translators.get((source_code, target_code))
 
-def group_nearby_boxes(results, distance_threshold=100, translator='llm', target_lang='English', source_lang='Korean'):
+def group_nearby_boxes(results, distance_threshold=100, target_lang='English', source_lang='Korean'):
     if not results:
         return []
     
@@ -171,11 +239,13 @@ def group_nearby_boxes(results, distance_threshold=100, translator='llm', target
     for group in grouped:
         combined_text = ' '.join(item['original'] for item in group)
         
-        if translator == 'google':
-            gt = get_translator(source_lang, target_lang)
-            translated_text = gt.translate(combined_text) if gt else combined_text
-        else:
-            translated_text = translate_with_llm(combined_text, source_lang, target_lang)
+        translated_text = translate_text(combined_text, source_lang, target_lang)
+
+        # if translator == 'google':
+        #     gt = get_translator(source_lang, target_lang)
+        #     translated_text = gt.translate(combined_text) if gt else combined_text
+        # else:
+        #     translated_text = translate_with_llm(combined_text, source_lang, target_lang)
         
         all_points = []
         for item in group:
@@ -238,7 +308,7 @@ def detect_colors(crop):
 
 class TranslateRequest(BaseModel):
     image: str
-    translator: str = 'llm'
+    translator: str = 'auto'
     target_lang: str = 'English'
     source_lang: str = 'Korean'
 
@@ -287,7 +357,7 @@ async def translate(request: TranslateRequest):
                         })
 
         
-        final_results = group_nearby_boxes(final_results, translator=request.translator, 
+        final_results = group_nearby_boxes(final_results, 
                                           target_lang=request.target_lang, source_lang=request.source_lang)
         
         return {"results": final_results}
@@ -297,13 +367,3 @@ async def translate(request: TranslateRequest):
         traceback.print_exc()
         return {"error": str(e)}, 500
 
-def translate_with_llm(text, source_lang='Korean', target_lang='English'):
-    response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
-        temperature=0.3,
-        messages=[
-            {"role": "system", "content": "You are a translator. Only output the translation."},
-            {"role": "user", "content": f"Translate this {source_lang} comic dialogue to {target_lang}: {text}\n\nTranslation:"}
-        ]
-    )
-    return response.choices[0].message.content 
