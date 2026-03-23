@@ -161,7 +161,7 @@ async function loadAllImages() {
 
     return new Promise((resolve) => {
         let scrollAttempts = 0;
-        const maxAttempts = 50;
+        const maxAttempts = 200;
         
         const scrollInterval = setInterval(() => {
             window.scrollBy(0, window.innerHeight);
@@ -171,15 +171,22 @@ async function loadAllImages() {
             
             if (window.scrollY + window.innerHeight >= newHeight || scrollAttempts >= maxAttempts) {
                 clearInterval(scrollInterval);
-                window.scrollTo(0, originalScroll);
+
+                setTimeout(() => {
+                    window.scrollTo(0, originalScroll);
+                    loadingOverlay.remove();
+                    style.remove();
+                    resolve();
+                }, 3000);  
+
+                // window.scrollTo(0, originalScroll);
                 
-                // Remove overlay and style
-                loadingOverlay.remove();
-                style.remove();
+                // loadingOverlay.remove();
+                // style.remove();
                 
-                setTimeout(() => resolve(), 300);
+                // setTimeout(() => resolve(), 300);
             }
-        }, 50);
+        }, 100);
     });
 }
 
@@ -214,8 +221,26 @@ async function scanPage() {
         await loadAllImages();
 
         const images = Array.from(document.querySelectorAll('img'))
-            .filter(img => img.offsetWidth >= 300);
+            .filter(img => {
 
+                if (img.offsetWidth < 300 || img.offsetHeight < 100){
+                    return false;
+                }
+
+                if (img.src.includes('bg_transparency.png')){
+                    return false;
+                }
+
+                if (img.naturalWidth<= 1|| img.naturalHeight <= 1){
+                    console.log(`Skipping placeholder image: ${img.src.substring(0,50)}...`);
+                    return false
+                }
+
+                return true;
+
+                // img.offsetWidth >= 300);
+                // }
+            }); 
         if (images.length === 0) {
             alert('No comic images found! Try scrolling down to load images.');
             progressDiv.style.display = 'none';
@@ -246,22 +271,47 @@ async function scanPage() {
             progressBar.style.width = `${((i + 1) / images.length) * 100}%`;
 
             try {
-                // Send URL to background.js, worker fetches bypass CORS via host_permissions
-                const response = await new Promise((resolve, reject) => {
-                    if (!chrome?.runtime?.id) {
-                        reject(new Error('Extension context invalidated. Please reload the page (F5) and try again.'));
-                        return;
-                    }
-                    chrome.runtime.sendMessage(
-                        { action: 'fetchImage', url: img.src, targetLang, sourceLang },
-                        (res) => {
-                            if (chrome.runtime.lastError) reject(new Error(chrome.runtime.lastError.message));
-                            else resolve(res);
-                        }
-                    );
+
+                const imgBlob = await fetch(img.src).then(r=> r.blob());
+                const reader = new FileReader();
+
+                const base64Image = await new Promise((resolve, reject) => {
+                    reader.onloadend = () => {
+                        const base64 = reader.result.split(',')[1];
+                        resolve(base64);
+                    };
+                    reader.onerror = reject;
+                    reader.readAsDataURL(imgBlob);
+                });
+ 
+                const backendResponse = await fetch('http://localhost:8000/translate',{
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        image: base64Image,
+                        translator: 'auto',
+                        target_lang: targetLang,
+                        source_lang: sourceLang
+                    })
                 });
 
+                const response = await backendResponse.json();
+
                 console.log(`Got Response:`, response);
+                // // Send URL to background.js, worker fetches bypass CORS via host_permissions
+                // const response = await new Promise((resolve, reject) => {
+                //     if (!chrome?.runtime?.id) {
+                //         reject(new Error('Extension context invalidated. Please reload the page (F5) and try again.'));
+                //         return;
+                //     }
+                //     chrome.runtime.sendMessage(
+                //         { action: 'fetchImage', url: img.src, targetLang, sourceLang },
+                //         (res) => {
+                //             if (chrome.runtime.lastError) reject(new Error(chrome.runtime.lastError.message));
+                //             else resolve(res);
+                //         }
+                //     );
+                // });
 
                 if (response && response.results) {
                     console.log(`${response.results.length} text blocks found`);

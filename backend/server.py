@@ -180,8 +180,9 @@ def init_ocr_system():
     args.det_algorithm = 'DB'
     args.use_gpu = False
     args.det_limit_side_len = 15000
-    args.det_db_thresh = 0.3
-    args.det_db_box_thresh = 0.5
+    args.det_db_thresh = 0.2
+    args.det_db_box_thresh = 0.3
+    args.det_db_unclip_ratio = 2.0
     det_engine = TextDetector(args)
     
     # KOREAN RECOGNIZER
@@ -321,13 +322,39 @@ async def translate(request: TranslateRequest):
         imagePIL = Image.open(io.BytesIO(decoded_bytes)).convert('RGB')
         img = cv2.cvtColor(np.array(imagePIL), cv2.COLOR_RGB2BGR)
 
+        print(f"Image size: {img.shape[1]}x{img.shape[0]} (width x height)")
+
         rec_engine = rec_engine_korean if request.source_lang == 'Korean' else rec_engine_english
         
         dt_boxes, _ = det_engine(img)
         print(f"Detected {len(dt_boxes) if dt_boxes is not None else 0} text boxes")
         
+        if dt_boxes is None or len(dt_boxes) == 0:
+            # Check if image is too small
+            if img.shape[0] < 100 or img.shape[1] < 100:
+                print("Image might be too small for text detection")
+            
+            # Check if image is mostly white/blank
+            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+            avg_brightness = np.mean(gray)
+            print(f"Average brightness: {avg_brightness:.1f} (0=black, 255=white)")
+            
+            if avg_brightness > 240:
+                print("Image appears to be mostly white/blank")
+
         final_results = []
         if dt_boxes is not None and len(dt_boxes) > 0:
+            
+            # # DEBUG IMAGE
+            # import time
+            # debug_img = img.copy()
+            # for box in dt_boxes:
+            #     pts = np.array(box, dtype=np.int32)
+            #     cv2.polylines(debug_img, [pts], True, (0, 255, 0), 2)
+            # timestamp = int(time.time() * 1000)
+            # cv2.imwrite(f"debug_{timestamp}_{len(dt_boxes)}boxes.jpg", debug_img)
+            # print(f"📸 Saved debug image: debug_{timestamp}_{len(dt_boxes)}boxes.jpg")
+
             for box in dt_boxes:
                 pts = np.array(box, dtype=np.float32)
                 x1, y1 = pts.min(axis=0).astype(int)
@@ -345,14 +372,14 @@ async def translate(request: TranslateRequest):
                 if rec_res and len(rec_res) > 0:
                     text, score = rec_res[0]
                     
-                    if score >= 0.70:
+                    if score >= 0.80:
                         colors = detect_colors(crop)
                         print(f"  {text} ({score:.2f})")
 
                         final_results.append({
                             'bbox': box.tolist(),
                             'original': text,
-                            'confidence': float(score),
+                            'confidence': float(score),  
                             'colors': colors
                         })
 
