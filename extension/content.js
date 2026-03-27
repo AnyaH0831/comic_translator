@@ -4,7 +4,7 @@ const fontURL = chrome.runtime.getURL('fonts/Bangers-Regular.ttf');
 const fontFace = new FontFace('Bangers', `url(${fontURL})`);
 fontFace.load().then((loadedFont) => {
     document.fonts.add(loadedFont);
-    console.log('Bangers font loaded!');
+    // console.log('Bangers font loaded!');
 }).catch((error) => {
     console.error('Font loading failed:', error);
 });
@@ -32,21 +32,39 @@ function createTopBar() {
 
     topBar = document.createElement('div');
     topBar.id = 'comic-translator-bar';
+    // topBar.style.cssText = `
+    //     position: fixed; 
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 60px;
+    //     background: #E2EAFC;
+    //     color: #173E99;
+    //     z-index: 999999;
+    //     display: flex;
+    //     align-items: center;
+    //     padding: 0 20px;
+    //     box-sizing: border-box;
+    //     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    //     font-family: 'Bangers', cursive, -apple-system, sans-serif;
+    // `;
+   
     topBar.style.cssText = `
         position: fixed; 
         top: 0;
         left: 0;
         width: 100%;
-        height: 60px;
-        background: #E2EAFC;
-        color: #173E99;
+        height: 50px;
+        background: linear-gradient(135deg, #111827  100%);
+        color: #ffffff;
         z-index: 999999;
         display: flex;
         align-items: center;
         padding: 0 20px;
         box-sizing: border-box;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        box-shadow: 0 4px 20px rgba(0, 145, 173, 0.4);
         font-family: 'Bangers', cursive, -apple-system, sans-serif;
+        border-bottom: 3px solid #0091ad;
     `;
 
     topBar.innerHTML = `
@@ -63,17 +81,19 @@ function createTopBar() {
             <option value="Chinese">Chinese</option>
         </select>
 
-        <button id="ct-scan" style="margin-left: 10px; padding: 8px 20px; background: #B6CCFE; color: #173E99; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
-             ▶ Scan
-        </button>
+        <div style="display: flex; justify-content: flex-end; width: 100%;">
+            <button id="ct-scan" style="margin-right: 10px; padding: 4px 10px; background: #0091ad; color: white; border: none; border-radius: 2px; cursor: pointer; font-weight: bold; font-size: 14px">
+                Scan
+            </button>   
 
-        <button id="ct-toggle" style="margin-left: 10px; padding: 8px 20px; background:  #FFA500; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
-             Hide
-        </button>
-
-        <button id="ct-clear" style="margin-left: 10px; padding: 8px 20px; background: rgb(100, 6, 6); color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
-             Clear
-        </button>
+            <button id="ct-toggle" style="margin-right: 10px; padding: 4px 10px; background: #5c4d7d; color: white; border: none; border-radius: 2px; cursor: pointer; font-weight: bold; font-size: 14px">
+                Hide
+            </button>
+            <button id="ct-clear" style=" padding: 4px 10px; background: #a01a58; color: white; border: none; border-radius: 2px; cursor: pointer; font-weight: bold; font-size: 14px">
+                Clear
+            </button>
+ 
+        </div>
 
         <div id="ct-progress" 
             style="margin-left: auto; 
@@ -84,7 +104,26 @@ function createTopBar() {
                 <div id="ct-progress-bar" style="width: 0%; height: 100%; background: #173E99; transition: width 0.3s;"></div>
             </div>
         </div>
+    `; 
+
+    const style = document.createElement('style');
+    style.textContent = `
+        #ct-scan:hover {
+            box-shadow: 0 0 25px rgba(0, 145, 173, 0.8) !important;
+            transform: translateY(-2px);
+        }
+        #ct-toggle:hover {
+            box-shadow: 0 0 25px rgba(92, 77, 125, 0.8) !important;
+            transform: translateY(-2px);
+        }
+        #ct-clear:hover {
+            box-shadow: 0 0 25px rgba(183, 9, 76, 0.8) !important;
+            transform: translateY(-2px);
+        }
     `;
+
+    document.head.appendChild(style);
+
 
     topBar.style.display = 'none';
     document.body.prepend(topBar);
@@ -112,8 +151,12 @@ if (document.readyState === 'loading') {
 }
 
 
-
+ 
 async function loadAllImages() {
+
+    window.scrollTo(0,0);
+    await new Promise(resolve => setTimeout(resolve, 500));
+
     const originalScroll = window.scrollY;
     
     // Create loading overlay with spinner
@@ -237,7 +280,7 @@ async function scanPage() {
                 }
 
                 return true;
-
+ 
                 // img.offsetWidth >= 300);
                 // }
             }); 
@@ -263,41 +306,96 @@ async function scanPage() {
         for (let i = 0; i < images.length; i++) {
             const img = images[i];
 
-            console.log(`\nImage ${i + 1}/${images.length}:`);
-            console.log(`  URL: ${img.src.substring(0, 80)}...`);
-            console.log(`  Position: (${img.getBoundingClientRect().top}, ${img.getBoundingClientRect().left})`);
+            // console.log(`\nImage ${i + 1}/${images.length}:`);
+            // console.log(`  URL: ${img.src.substring(0, 80)}...`);
+            // console.log(`  Position: (${img.getBoundingClientRect().top}, ${img.getBoundingClientRect().left})`);
 
             progressText.textContent = `${i + 1} / ${images.length}`;
             progressBar.style.width = `${((i + 1) / images.length) * 100}%`;
 
             try {
 
-                const imgBlob = await fetch(img.src).then(r=> r.blob());
-                const reader = new FileReader();
+                let base64Image;
 
-                const base64Image = await new Promise((resolve, reject) => {
-                    reader.onloadend = () => {
-                        const base64 = reader.result.split(',')[1];
-                        resolve(base64);
-                    };
-                    reader.onerror = reject;
-                    reader.readAsDataURL(imgBlob);
-                });
- 
-                const backendResponse = await fetch('http://localhost:8000/translate',{
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({
-                        image: base64Image,
-                        translator: 'auto',
-                        target_lang: targetLang,
-                        source_lang: sourceLang
-                    })
-                });
+                try{
+                    const imgBlob = await fetch(img.src).then(r=> r.blob());
+                    const reader = new FileReader();
 
-                const response = await backendResponse.json();
+                    base64Image = await new Promise((resolve, reject) => {
+                        reader.onloadend = () => {
+                            const base64 = reader.result.split(',')[1];
+                            resolve(base64);
+                        };
+                        reader.onerror = reject;
+                        reader.readAsDataURL(imgBlob);
+                    });
+     
+                }catch (fetchError){
+                    // console.log('Direct fetch failed, using background script...');
 
-                console.log(`Got Response:`, response);
+                    const bgResponse = await new Promise((resolve, reject) => {
+                        if (!chrome?.runtime?.id) {      
+                            reject(new Error('Extension context invalidated. Please reload the page (F5) and try again.'));
+                            return;
+                        }
+                        chrome.runtime.sendMessage(
+                            { action: 'fetchImage', url: img.src, targetLang, sourceLang },
+                            (res) => {
+                                if (chrome.runtime.lastError) reject(new Error(chrome.runtime.lastError.message));
+                                else resolve(res);
+                            }
+                        );   
+                    });
+
+                    if (bgResponse && bgResponse.results) {
+                        // console.log(`${bgResponse.results.length} text blocks found`);
+                        renderOverlays(img, bgResponse.results);
+                        continue; // Skip to next image
+                    } else if (bgResponse && bgResponse.error) {
+                        console.error('Background fetch error:', bgResponse.error);
+                        continue;
+                    }
+                }
+
+                if (base64Image) {
+                    const backendResponse = await fetch('http://localhost:8000/translate', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            image: base64Image,
+                            translator: 'auto',
+                            target_lang: targetLang,
+                            source_lang: sourceLang
+                        })
+                    });
+
+                    const response = await backendResponse.json();
+
+                    // console.log(`Got Response:`, response);
+
+                    if (response && response.results) {
+                        console.log(`${response.results.length} text blocks found`);
+                        renderOverlays(img, response.results);
+                    } else {
+                        console.log('No results');
+                    }
+                }
+
+                // const backendResponse = await fetch('http://localhost:8000/translate',{
+                //     method: 'POST',
+                //     headers: {'Content-Type': 'application/json'},
+                //     body: JSON.stringify({
+                //         image: base64Image,
+                //         translator: 'auto',
+                //         target_lang: targetLang,
+                //         source_lang: sourceLang
+                //     })
+                // });
+
+                // const response = await backendResponse.json();
+
+                // console.log(`Got Response:`, response);
+
                 // // Send URL to background.js, worker fetches bypass CORS via host_permissions
                 // const response = await new Promise((resolve, reject) => {
                 //     if (!chrome?.runtime?.id) {
@@ -309,16 +407,16 @@ async function scanPage() {
                 //         (res) => {
                 //             if (chrome.runtime.lastError) reject(new Error(chrome.runtime.lastError.message));
                 //             else resolve(res);
-                //         }
+                //         }  
                 //     );
                 // });
-
-                if (response && response.results) {
-                    console.log(`${response.results.length} text blocks found`);
-                    renderOverlays(img, response.results);
-                }else{
-                    console.log('No results');
-                }
+               
+                // if (response && response.results) {
+                //     console.log(`${response.results.length} text blocks found`);
+                //     renderOverlays(img, response.results);
+                // }else{
+                //     console.log('No results');
+                // }
             } catch (error) {
                 console.error('Error processing image:', img.src, error);
             }
@@ -467,8 +565,8 @@ function renderOverlays(imgElement, results) {
         document.body.appendChild(overlay);
         overlays.push(overlay);
 
-        console.log('Applied font-family:', overlay.style.fontFamily);
-        console.log('Computed font:', window.getComputedStyle(overlay).fontFamily);
+        // console.log('Applied font-family:', overlay.style.fontFamily);
+        // console.log('Computed font:', window.getComputedStyle(overlay).fontFamily);
     }); 
 }   
 

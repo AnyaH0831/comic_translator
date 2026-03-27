@@ -228,14 +228,31 @@ def group_nearby_boxes(results, distance_threshold=100, target_lang='English', s
     grouped = [[sorted_results[0]]]
     
     for i in range(1, len(sorted_results)):
-        prev_y = sum(point[1] for point in grouped[-1][-1]['bbox']) / 4
-        curr_y = sum(point[1] for point in sorted_results[i]['bbox']) / 4
+
+        prev_bbox = grouped[-1][-1]['bbox']
+        curr_bbox = sorted_results[i]['bbox'] 
+
+        prev_ys = [point[1] for point in prev_bbox]
+        curr_ys = [point[1] for point in curr_bbox]
+
+        prev_height = max(prev_ys) - min(prev_ys)
+        curr_height = max(curr_ys) - min(prev_ys)
+
+        avg_height = (prev_height + curr_height) / 2
+
+        distance_threshold = avg_height*1.0
+
+        prev_y = sum(point[1] for point in prev_bbox) / 4
+        curr_y = sum(point[1] for point in curr_bbox) / 4
+
+        # prev_y = sum(point[1] for point in grouped[-1][-1]['bbox']) / 4
+        # curr_y = sum(point[1] for point in sorted_results[i]['bbox']) / 4
         
         if abs(curr_y - prev_y) < distance_threshold:
             grouped[-1].append(sorted_results[i])
         else:
             grouped.append([sorted_results[i]])
-    
+     
     combined = []
     for group in grouped:
         combined_text = ' '.join(item['original'] for item in group)
