@@ -398,7 +398,7 @@ async function scanPage() {
 
                 if (base64Image) {
                     // const backendResponse = await fetch('http://localhost:8000/translate', {
-                    const backendResponse = await fetch('https://comic-translator-backend.onrender.com/translate', {
+                    const backendResponse = await fetch('http://155.248.218.39:8000/translate', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({

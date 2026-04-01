@@ -5,7 +5,7 @@ chrome.action.onClicked.addListener((tab) => {
     }); 
 });
 
-const BACKEND_URL = 'https://comic-translator-backend.onrender.com/translate';
+const BACKEND_URL = 'http://155.248.218.39:8000/translate';
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
