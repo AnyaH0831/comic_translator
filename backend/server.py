@@ -1,6 +1,7 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 import base64, io, os
 from PIL import Image
 import cv2
@@ -37,11 +38,11 @@ if AZURE_KEY and AZURE_REGION:
         region=AZURE_REGION
     )
 else:
-    azure_client = None
+    azure_client = None 
     print("Azure credentials not found")
 app = FastAPI()    
 
-app.add_middleware(
+app.add_middleware( 
     CORSMiddleware,
     allow_origins=["*"],
     allow_methods=["*"],
@@ -171,12 +172,42 @@ def translate_text(text, source_lang='korean', target_lang='English', translator
 
 
 def init_ocr_system():
+
+    from paddleocr import PaddleOCR
     parser = utility.init_args()
     args = parser.parse_args(args=[])
+
+    def has_inference_files(model_dir):
+        return (
+            model_dir
+            and os.path.isdir(model_dir)
+            and os.path.exists(os.path.join(model_dir, "inference.pdmodel"))
+            and os.path.exists(os.path.join(model_dir, "inference.pdiparams"))
+        )
+
+    def resolve_det_model_dir():
+        custom_det_model_dir = os.getenv("DET_MODEL_DIR")
+        default_det_cache_dir = os.path.join(
+            os.path.expanduser("~"), ".paddleocr", "whl", "det", "en", "en_PP-OCRv3_det_infer"
+        )
+
+        candidate_paths = [
+            custom_det_model_dir,
+            default_det_cache_dir,
+        ]
+
+        for candidate in candidate_paths:
+            if has_inference_files(candidate):
+                return candidate
+
+        raise ValueError(
+            "Detector model not found. Set DET_MODEL_DIR to a detector inference model directory "
+            "(must contain inference.pdmodel and inference.pdiparams), or ensure the default "
+            f"cache path exists: {default_det_cache_dir}"
+        )
     
     # DETECTOR
-    default_det_path = os.path.join(os.path.expanduser("~"), ".paddleocr", "whl", "det", "en", "en_PP-OCRv3_det_infer")
-    args.det_model_dir = default_det_path 
+    args.det_model_dir = resolve_det_model_dir()
     args.det_algorithm = 'DB'
     args.use_gpu = False
     args.det_limit_side_len = 15000
@@ -314,7 +345,7 @@ def detect_colors(crop):
     else:
         text_color = np.array([0,0,0])
 
-    print(f"    Colors: BG brightness={bg_brightness:.0f}, bg=rgb({bg_color[2]},{bg_color[1]},{bg_color[0]}), text=rgb({text_color[2]},{text_color[1]},{text_color[0]})")
+    # print(f"    Colors: BG brightness={bg_brightness:.0f}, bg=rgb({bg_color[2]},{bg_color[1]},{bg_color[0]}), text=rgb({text_color[2]},{text_color[1]},{text_color[0]})")
 
     # text_color = 255 - bg_color
 
@@ -333,18 +364,18 @@ class TranslateRequest(BaseModel):
 @app.post("/translate")
 async def translate(request: TranslateRequest):
     try: 
-        print(f"\n=== {request.source_lang} → {request.target_lang} ({request.translator}) ===")
+        # print(f"\n=== {request.source_lang} → {request.target_lang} ({request.translator}) ===")
 
         decoded_bytes = base64.b64decode(request.image)
         imagePIL = Image.open(io.BytesIO(decoded_bytes)).convert('RGB')
         img = cv2.cvtColor(np.array(imagePIL), cv2.COLOR_RGB2BGR)
 
-        print(f"Image size: {img.shape[1]}x{img.shape[0]} (width x height)")
+        # print(f"Image size: {img.shape[1]}x{img.shape[0]} (width x height)")
 
         rec_engine = rec_engine_korean if request.source_lang == 'Korean' else rec_engine_english
         
         dt_boxes, _ = det_engine(img)
-        print(f"Detected {len(dt_boxes) if dt_boxes is not None else 0} text boxes")
+        # print(f"Detected {len(dt_boxes) if dt_boxes is not None else 0} text boxes")
         
         if dt_boxes is None or len(dt_boxes) == 0:
             # Check if image is too small
@@ -354,7 +385,7 @@ async def translate(request: TranslateRequest):
             # Check if image is mostly white/blank
             gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
             avg_brightness = np.mean(gray)
-            print(f"Average brightness: {avg_brightness:.1f} (0=black, 255=white)")
+            # print(f"Average brightness: {avg_brightness:.1f} (0=black, 255=white)")
             
             if avg_brightness > 240:
                 print("Image appears to be mostly white/blank")
@@ -391,7 +422,7 @@ async def translate(request: TranslateRequest):
                     
                     if score >= 0.80:
                         colors = detect_colors(crop)
-                        print(f"  {text} ({score:.2f})")
+                        # print(f"  {text} ({score:.2f})")
 
                         final_results.append({
                             'bbox': box.tolist(),
@@ -409,5 +440,9 @@ async def translate(request: TranslateRequest):
     except Exception as e:
         import traceback
         traceback.print_exc()
-        return {"error": str(e)}, 500
+        return JSONResponse(status_code=500, content={"error": str(e)})
+
+@app.post("/")
+async def translate_root(request: TranslateRequest):
+    return await translate(request)
 

@@ -13,11 +13,11 @@ fontFace.load().then((loadedFont) => {
 //Bar toggle
 const _existingBar = document.getElementById('comic-translator-bar');
 
-if (_existingBar) {
+if (_existingBar) {  
     const isHidden = _existingBar.style.display === 'none' || _existingBar.style.display === '';
     _existingBar.style.display = isHidden ? 'flex' : 'none';
     document.body.style.marginTop = isHidden ? '60px' : '';
-} else {
+} else {   
     
 
 let topBar = null;
@@ -25,29 +25,14 @@ let overlays = [];
 let barVisible = false;
 let isScanning = false;
 let abortController = null;   
-let overlayVisible = true;
+let overlayVisible = true;  
 
 function createTopBar() {
     if (topBar) return;
 
     topBar = document.createElement('div');
-    topBar.id = 'comic-translator-bar';
-    // topBar.style.cssText = `
-    //     position: fixed; 
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 60px;
-    //     background: #E2EAFC;
-    //     color: #173E99;
-    //     z-index: 999999;
-    //     display: flex;
-    //     align-items: center;
-    //     padding: 0 20px;
-    //     box-sizing: border-box;
-    //     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    //     font-family: 'Bangers', cursive, -apple-system, sans-serif;
-    // `;
+
+    topBar.id = 'comic-translator-bar'
    
     topBar.style.cssText = `
         position: fixed; 
@@ -55,34 +40,37 @@ function createTopBar() {
         left: 0;
         width: 100%;
         height: 50px;
-        background: linear-gradient(135deg, #111827  100%);
-        color: #ffffff;
-        z-index: 999999;
-        display: flex;
-        align-items: center;
-        padding: 0 20px;
-        box-sizing: border-box;
+        background: linear-gradient(135deg, #111827  100%) !important;
+        color: #ffffff !important;
+        z-index: 999999 !important;
+        display: flex !important; 
+        align-items: center !important;
+        padding: 0 20px !important;
+        box-sizing: border-box !important;
         box-shadow: 0 4px 20px rgba(0, 145, 173, 0.4);
-        font-family: 'Bangers', cursive, -apple-system, sans-serif;
-        border-bottom: 3px solid #0091ad;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+        border-bottom: 4px solid #0091ad;
     `;
 
     topBar.innerHTML = `
+
+        <div id='ct-progress-bar' style='position: absolute; top:0; left:0; width:0%; height: 4px; background: #00ffcc; transition: width 0.3s; z-index:10;'></div>
         <h3 style="margin: 0; flex-shrink: 0;"> Comic Translator</h3>
-        <select id="ct-source-lang" style="margin-left: 20px; padding: 8px; border-radius: 5px; border: none;">
+
+        <select id="ct-source-lang">
             <option value="English">English</option>
             <option value="Korean" selected>Korean</option>
-        </select>
+        </select>  
 
         <span style="margin: 0 10px;">→</span>
 
-        <select id="ct-target-lang" style="padding: 8px; border-radius: 5px; border: none;">
+        <select id="ct-target-lang">
             <option value="English" selected>English</option>
-            <option value="Chinese">Chinese</option>
-        </select>
+            <option value="Chinese">Chinese</option>    
+        </select>   
 
         <div style="display: flex; justify-content: flex-end; width: 100%;">
-            <button id="ct-scan" style="margin-right: 10px; padding: 4px 10px; background: #0091ad; color: white; border: none; border-radius: 2px; cursor: pointer; font-weight: bold; font-size: 14px">
+            <button id="ct-scan" style="min-width: 50px; margin-right: 10px; padding: 4px 10px; background: #0091ad; color: white; border: none; border-radius: 2px; cursor: pointer; font-weight: bold; font-size: 14px">
                 Scan
             </button>   
 
@@ -91,35 +79,76 @@ function createTopBar() {
             </button>
             <button id="ct-clear" style=" padding: 4px 10px; background: #a01a58; color: white; border: none; border-radius: 2px; cursor: pointer; font-weight: bold; font-size: 14px">
                 Clear
-            </button>
+            </button>            
  
-        </div>
-
-        <div id="ct-progress" 
-            style="margin-left: auto; 
-                    display: none;
-                    align-items: center;">
-            <span id="ct-progress-text" style="margin-right: 10px;"> 0 / 0</span>
-            <div style="width: 200px; height: 8px; background: #c0c0c0; border-radius: 4px; overflow: hidden;">
-                <div id="ct-progress-bar" style="width: 0%; height: 100%; background: #173E99; transition: width 0.3s;"></div>
-            </div>
         </div>
     `; 
 
+    
+
     const style = document.createElement('style');
     style.textContent = `
+        #comic-translator-bar h3 {
+            color: white !important;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+            font-weight: normal;
+            font-size: 14px;
+        }
+
         #ct-scan:hover {
             box-shadow: 0 0 25px rgba(0, 145, 173, 0.8) !important;
             transform: translateY(-2px);
         }
         #ct-toggle:hover {
-            box-shadow: 0 0 25px rgba(92, 77, 125, 0.8) !important;
+            box-shadow: 0 0 25px rgba(92, 77, 125, 0.8) !important;   
             transform: translateY(-2px);
         }
         #ct-clear:hover {
             box-shadow: 0 0 25px rgba(183, 9, 76, 0.8) !important;
             transform: translateY(-2px);
         }
+
+        #ct-source-lang, 
+        #ct-target-lang {
+            appearance: none !important;
+            -webkit-appearance: none !important;
+            width: 130px !important;
+            margin-left: 20px !important;
+            padding: 4px 8px !important;
+            border-radius: 2px !important;
+            border: none;
+            background: #1a1a2e !important;
+            color: #e9ecef !important;
+            font-weight: bold !important;
+            font-size: 13px !important;
+            cursor: pointer !important;
+        }
+
+        #ct-source-lang option,
+        #ct-target-lang option {
+            background: #1a1a2e !important;
+            color: #e9ecef !important;
+        }
+
+        #ct-source-lang option:checked,  
+        #ct-target-lang option:checked {
+            background: #b7094c !important;  
+            color: white !important;
+            font-weight: bold !important; 
+        }
+
+        #ct-source-lang:hover,
+        #ct-target-lang:hover {
+            font-weight: bold !important;
+            color: #b7094c !important;
+        }
+
+        #ct-source-lang:focus,
+        #ct-target-lang:focus {
+            outline: none !important;
+            color: #b7094c !important;
+        }
+
     `;
 
     document.head.appendChild(style);
@@ -162,17 +191,17 @@ async function loadAllImages() {
     // Create loading overlay with spinner
     const loadingOverlay = document.createElement('div');
     loadingOverlay.style.cssText = `
-        position: fixed;
+        position: fixed !important;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(255, 255, 255, 0.95);
+        background: rgba(255, 255, 255, 0.95) !important;
         z-index: 9999999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: Arial, sans-serif;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
     `;
     loadingOverlay.innerHTML = `
         <div style="text-align: center;">
@@ -235,6 +264,9 @@ async function loadAllImages() {
 
 async function scanPage() {
 
+    const scanBtn = document.getElementById('ct-scan');
+    
+
     if (isScanning){
         console.log('Scan already in progress, canceling previous scan...');
         if (abortController){
@@ -252,16 +284,18 @@ async function scanPage() {
     const targetLang = document.getElementById('ct-target-lang').value;
     // const translator = document.getElementById('ct-translator').value;
 
-    const progressDiv = document.getElementById('ct-progress');
+    // const progressDiv = document.getElementById('ct-progress');
     const progressBar = document.getElementById('ct-progress-bar');
-    const progressText = document.getElementById('ct-progress-text');
 
-    progressDiv.style.display = 'flex';
-    progressText.textContent = 'Loading images...';
+    scanBtn.innerText = 'Waking up server...'
+    scanBtn.disabled = true;
+
     progressBar.style.width = '0%';
 
     try{
         await loadAllImages();
+
+        scanBtn.innerText = 'Scanning...';
 
         const images = Array.from(document.querySelectorAll('img'))
             .filter(img => {
@@ -286,32 +320,37 @@ async function scanPage() {
             }); 
         if (images.length === 0) {
             alert('No comic images found! Try scrolling down to load images.');
-            progressDiv.style.display = 'none';
+            // progressDiv.style.display = 'none';
             return;
         } 
 
         clearOverlays();
 
-        progressText.textContent = `0 / ${images.length}`;
+        // progressText.textContent = `0 / ${images.length}`;
         progressBar.style.width = '0%';
 
         // const progressDiv = document.getElementById('ct-progress');
         // const progressBar = document.getElementById('ct-progress-bar');
         // const progressText = document.getElementById('ct-progress-text');
 
-        progressDiv.style.display = 'flex';
-        progressText.textContent = `0 / ${images.length}`;
+        // progressDiv.style.display = 'flex';
+        // progressText.textContent = `0 / ${images.length}`;
         progressBar.style.width = '0%';
  
         for (let i = 0; i < images.length; i++) {
             const img = images[i];
 
-            // console.log(`\nImage ${i + 1}/${images.length}:`);
-            // console.log(`  URL: ${img.src.substring(0, 80)}...`);
-            // console.log(`  Position: (${img.getBoundingClientRect().top}, ${img.getBoundingClientRect().left})`);
+            if (signal.aborted){
+                break;
+            }
 
-            progressText.textContent = `${i + 1} / ${images.length}`;
+            const current = i+1;
+            const total = images.length
+            const percent = (current/total)*100;
+
+            // progressText.textContent = `${i + 1} / ${images.length}`;
             progressBar.style.width = `${((i + 1) / images.length) * 100}%`;
+            scanBtn.innerText = `Scanning ${current}/${total}`;
 
             try {
 
@@ -358,7 +397,8 @@ async function scanPage() {
                 }
 
                 if (base64Image) {
-                    const backendResponse = await fetch('http://localhost:8000/translate', {
+                    // const backendResponse = await fetch('http://localhost:8000/translate', {
+                    const backendResponse = await fetch('https://comic-translator-backend.onrender.com/translate', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
@@ -369,6 +409,12 @@ async function scanPage() {
                         })
                     });
 
+                    if (!backendResponse.ok) {
+                        const errorText = await backendResponse.text();
+                        console.error(`Backend error ${backendResponse.status}:`, errorText);
+                        continue;
+                    }
+
                     const response = await backendResponse.json();
 
                     // console.log(`Got Response:`, response);
@@ -377,10 +423,11 @@ async function scanPage() {
                         console.log(`${response.results.length} text blocks found`);
                         renderOverlays(img, response.results);
                     } else {
-                        console.log('No results');
+                        console.log('No results', response);
                     }
                 }
-
+                scanBtn.innerText = 'Scan';
+                scanBtn.disabled = false;
                 // const backendResponse = await fetch('http://localhost:8000/translate',{
                 //     method: 'POST',
                 //     headers: {'Content-Type': 'application/json'},
@@ -419,11 +466,13 @@ async function scanPage() {
                 // }
             } catch (error) {
                 console.error('Error processing image:', img.src, error);
+                scanBtn.innerText = 'Scan';
+                scanBtn.disabled = false;
             }
         }
 
         setTimeout(() => {
-            progressDiv.style.display = 'none';
+            // progressDiv.style.display = 'none';
         }, 2000);
     } catch(error){
         if (error.message === 'Scan cancelled'){
@@ -431,7 +480,7 @@ async function scanPage() {
         }else{
             console.error('Scan error:', error);
         }
-        progressDiv.style.display = 'none';
+        // progressDiv.style.display = 'none';
     }finally{
         isScanning = false;
         abortController = null;
@@ -480,7 +529,7 @@ function renderOverlays(imgElement, results) {
             position: absolute;
             visibility: hidden;
             width: ${boxWidth - 12}px;
-            font-family: ${fontFamily};
+            font-family: ${fontFamily} !important;
             font-weight: normal;
             word-wrap: break-word;
             overflow-wrap: break-word;
@@ -544,7 +593,7 @@ function renderOverlays(imgElement, results) {
             padding: 8px;
             font-size: ${fontSize}px;
             font-weight: normal;
-            font-family: ${fontFamily};
+            font-family: ${fontFamily} !important;
             letter-spacing: ${targetLang === 'English' ? '0.5px':'normal'};
             line-height: 1.2;
             z-index: 999998;
@@ -579,7 +628,7 @@ function clearOverlays() {
     if (toggleBtn) {
         toggleBtn.textContent = 'Hide';
     }
-}
+} 
 
 function toggleOverlays() {
     overlayVisible = !overlayVisible;
@@ -591,5 +640,4 @@ function toggleOverlays() {
 
     toggleBtn.textContent = overlayVisible ? 'Hide': 'Show';
 }
-
-} 
+}

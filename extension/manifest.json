@@ -20,6 +20,7 @@
     "tabs"
   ],
   "host_permissions": [
-    "<all_urls>"
+    "https://comic-translator-backend.onrender.com/*",
+    "https://*/*"
   ]
 } 
