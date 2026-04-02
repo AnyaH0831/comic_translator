@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Comic Translator",
+  "name": "PanelSync – Live Comic Translator",
   "version": "1.0.0",
 
   "web_accessible_resources":[
