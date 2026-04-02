@@ -16,8 +16,7 @@
   },
   "permissions": [
     "activeTab",
-    "scripting",
-    "tabs"
+    "scripting"
   ],
   "host_permissions": [
     "http://155.248.218.39:8000/*",

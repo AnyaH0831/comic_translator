@@ -397,30 +397,34 @@ async function scanPage() {
                 }
 
                 if (base64Image) {
-                    // const backendResponse = await fetch('http://localhost:8000/translate', {
-                    const backendResponse = await fetch('http://155.248.218.39:8000/translate', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                            image: base64Image,
-                            translator: 'auto',
-                            target_lang: targetLang,
-                            source_lang: sourceLang
-                        })
+                    const response = await new Promise((resolve, reject) => {
+                        if (!chrome?.runtime?.id) {
+                            reject(new Error('Extension context invalidated. Please reload the page (F5) and try again.'));
+                            return;
+                        }
+
+                        chrome.runtime.sendMessage(
+                            {
+                                action: 'translateImage',
+                                image: base64Image,
+                                translator: 'auto',
+                                targetLang,
+                                sourceLang
+                            },
+                            (res) => {
+                                if (chrome.runtime.lastError) reject(new Error(chrome.runtime.lastError.message));
+                                else resolve(res);
+                            }
+                        );
                     });
 
-                    if (!backendResponse.ok) {
-                        const errorText = await backendResponse.text();
-                        console.error(`Backend error ${backendResponse.status}:`, errorText);
+                    if (response && response.error) {
+                        console.error('Background translate error:', response.error);
                         continue;
                     }
 
-                    const response = await backendResponse.json();
-
-                    // console.log(`Got Response:`, response);
-
                     if (response && response.results) {
-                        console.log(`${response.results.length} text blocks found`);
+                        // console.log(`${response.results.length} text blocks found`);
                         renderOverlays(img, response.results);
                     } else {
                         console.log('No results', response);

@@ -75,4 +75,19 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
             });
         return true; // keep message channel open for async response
     }
+
+    if (message.action === 'translateImage') {
+        postToBackendWithRetry({
+            image: message.image,
+            translator: message.translator || 'auto',
+            target_lang: message.targetLang || 'English',
+            source_lang: message.sourceLang || 'Korean'
+        })
+            .then(data => sendResponse(data))
+            .catch(err => {
+                console.error('Error:', err);
+                sendResponse({ error: err.message });
+            });
+        return true;
+    }
 })
