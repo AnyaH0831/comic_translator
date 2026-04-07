@@ -2,6 +2,8 @@
 
 This is a chrome extension that help you translate your comics while you read! Some common platforms such as Webtoon and Kakao Pages are supported. If there are too many images or tasks happening at the same time, the loading may be slow so please be patient. There's a progress bar at the top of to show you the image upload and translation progress. 
 
+Please install the chrome extension from the link and go to a comic site like Webtoon or Kakao Pages. Click the puzzle icon in the top right and select PanelSync then you will see the bar at the top of the page!
+
 ### Currently the supported languages:
 Source Languages: English, Korean
 Target Languages: English, Chinese
