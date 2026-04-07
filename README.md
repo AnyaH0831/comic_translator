@@ -4,8 +4,9 @@ This is a chrome extension that help you translate your comics while you read! S
 
 Please install the chrome extension from the link and go to a comic site like Webtoon or Kakao Pages. Click the puzzle icon in the top right and select PanelSync then you will see the bar at the top of the page!
 
-### Currently the supported languages:
+### Supported languages:
 Source Languages: English, Korean
+
 Target Languages: English, Chinese
 
 Please be sure to select the correct languages when you translate!
